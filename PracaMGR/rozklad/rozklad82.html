@@ -1,0 +1,227 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<style type="text/css">
+
+.nagl_przystanek
+{
+	font-size:14px;
+	font-weight:bold;
+}
+.nagl_opis
+{
+	font-size:12px;
+	font-weight:bold;
+}
+.linia
+{
+	font-size:14px;
+	font-weight:bold;
+	background-color:#B0D8FF;
+}
+
+.typ
+{
+	font-size:12px;
+	font-weight:bold;
+	background-color:#CCCCCC;
+}
+.podkresl
+{
+border: 1px #CCCCCC solid;
+}
+.odjazdy
+{
+font-weight:bold;
+font-size:1.2em;
+}
+</style>
+<script type="text/javascript">
+
+    function PrintElem(elem)
+    {
+        Popup(document.getElementById(elem).innerHTML);
+    }
+
+    function Popup(data) 
+    {
+        var mywindow = window.open('', 'rozklad', 'height=400,width=600');
+        mywindow.document.write('<html><head><title>Rozkład</title>');
+        /*optional stylesheet*/ //mywindow.document.write('<link rel="stylesheet" href="main.css" type="text/css" />');
+        mywindow.document.write('</head><body >');
+        mywindow.document.write(data);
+        mywindow.document.write('</body></html>');
+        mywindow.document.close();
+        mywindow.print();
+        return true;
+    }
+
+</script>
+
+</head>
+
+<body>
+<div style="position: relative; top:40px; left:40px;"><a href="" onclick="PrintElem('printarea');return false;" style="text-decoration:none;"><img src="/Content/printButton.png" border="0" align="middle"/> Drukuj</a></div>
+<div id="printarea">
+  
+
+<table width="100%" border="0">
+  <tr>
+    <td colspan="3" align="right"> </td>
+  </tr>
+  <tr>
+    <td colspan="3" align="center">
+	<span  class="nagl_przystanek">(02)Siedlce Prus (1)</span><br />
+	<span class="nagl_opis">Rozkład jazdy autobusów MPK Siedlce<br />
+	ważny od 29.06.2015&nbsp;&nbsp;&nbsp;Strefa: I</span></td>
+  </tr>
+  <tr>
+    <th colspan="2">Linia</th>
+    <th width="167">Godziny odjazdów </th>
+  </tr>
+  	 <tr>
+    <td colspan="3" style="font-size:12px;font-weight:bold;	background-color:#CCCCCC;">Dni robocze</td>
+  </tr>
+	
+  	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">4</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">BRZESKA - Wyszyńskiego - Kazimierzowska - Prusa - Poniatowskiego - Jana Pawła II - Dąbrowskiego - Mireckiego - Chrobrego - Sokołowska - Wojskowa - PIŁSUDSKIEGO - Warszawska - Monte Cassino - KURPIOWSKA</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">04:47, 05:42, 06:07, 06:32, 06:52, 07:13, 07:33, 07:53, 08:13, 08:33, 08:53, 09:13, 09:33, 09:53, 10:13, 10:33, 10:53, 11:13, 11:33, 11:53, 12:13, 12:33, 12:53, 13:13, 13:33, 13:53, 14:13, 14:33, 14:53, 15:13, 15:33, 15:53, 16:13, 16:33, 16:53, 17:13, 17:33, 17:53, 18:13, 18:33, 18:53, 19:13, 19:42, 20:12, 21:12, 22:12, 22:52, 23:32m, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">7</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">FLORIAŃSKA - Torowa - Łukowska - GRABIANÓW - Białki - ZACHOJNIAK</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">04:36, 05:24^, 06:26^, 07:31E, 09:21, 10:36E, 12:26G, 14:31^HG, 14:31^E, 15:36HG, 15:36E, 16:36^, 18:31^G, 20:46, 22:26G, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">11</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">BRZESKA - Ujrzanowska - Terespolska - Ujrzanów - Borki Wyrki - ŚWIERCZE</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">04:42, 08:01, 12:34, 14:16EŁ, 17:06EŁ, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">12</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">BRZESKA - STARZYŃSKIEGO</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">07:36, 08:40D, 09:27, 11:00D, 12:00D, 16:02, 17:37, 19:07, 20:35D, 22:45, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">21</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">BRZESKA - Ujrzanowska - Terespolska - UJRZANÓW - Borki Wyrki - Świercze - Chromna - Zdany - ZBUCZYN</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">05:31, 06:38, 10:16, 14:26, 15:41, 18:19, 20:26, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">22</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">FLORIAŃSKA - Torowa - Łukowska - Południowa - Grabianowska - Składowa - Zbrojna - PARTYZANTÓW - Garwolińska - Niepodległości - UNITÓW PODLASKICH</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">08:26, 10:11, 12:11, 13:21, 15:26, 17:31, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">24</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">BRZESKA - STARZYŃSKIEGO</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">09:15E, 16:45E, 18:16E, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">30</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">BRZESKA - Ujrzanowska - TERESPOLSKA</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">06:27, 07:37E, 13:27, 14:50, 16:02B, 17:54EPB, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">31</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">BRZESKA - Ujrzanowska - TERESPOLSKA</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">07:40, 08:51, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">32</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">BRZESKA - Ujrzanowska - TERESPOLSKA</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">06:41, 07:41, 13:16T, 14:41, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">33</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">BRZESKA - Ujrzanowska - TERESPOLSKA</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">05:24, 06:35, 13:17, 14:57, 21:38, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">35</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">FLORIAŃSKA - Torowa - Składowa - Zbrojna - PARTYZANTÓW - Kurpiowska - Pescantina - Unitów Podlaskich - LEŚNA</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">05:54E, 06:59E, 08:14E, 14:19E, 15:24E, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">38</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">BRZESKA - Ujrzanowska - TERESPOLSKA</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">05:27, 22:45M, </td>
+  </tr>
+	 <tr>
+    <td colspan="3" style="font-size:12px;font-weight:bold;	background-color:#CCCCCC;">Soboty</td>
+  </tr>
+	
+  	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">4</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">BRZESKA - Wyszyńskiego - Kazimierzowska - Prusa - Poniatowskiego - Jana Pawła II - Dąbrowskiego - Mireckiego - Chrobrego - Sokołowska - Wojskowa - PIŁSUDSKIEGO - Warszawska - Monte Cassino - KURPIOWSKA</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">06:02, 06:52, 07:43, 08:33, 09:13, 09:43, 10:13, 10:43, 11:13, 11:43, 12:13, 12:43, 13:13, 13:43, 14:13, 14:43, 15:13, 15:43, 16:13, 16:43, 17:13, 17:43, 18:13, 18:43, 19:13, 20:12, 21:22, 22:02, 22:42m, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">7</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">FLORIAŃSKA - Torowa - Łukowska - GRABIANÓW - Białki - ZACHOJNIAK</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">05:46, 07:06, 09:11, 11:26, 13:16G, 15:36G, 18:21, 20:31G, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">11</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">BRZESKA - Ujrzanowska - Terespolska - Ujrzanów - Borki Wyrki - ŚWIERCZE</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">05:51, 08:21, 12:11, 14:31, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">12</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">BRZESKA - STARZYŃSKIEGO</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">07:50, 09:52, 10:57, 12:57, 15:52, 18:22, 19:52, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">21</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">BRZESKA - Ujrzanowska - Terespolska - UJRZANÓW - Borki Wyrki - Świercze - Chromna - Zdany - ZBUCZYN</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">06:46, 10:06, 15:31, 18:21, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">33</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">BRZESKA - Ujrzanowska - TERESPOLSKA</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">06:45, 14:47, </td>
+  </tr>
+	 <tr>
+    <td colspan="3" style="font-size:12px;font-weight:bold;	background-color:#CCCCCC;">Dni świąteczne</td>
+  </tr>
+	
+  	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">4</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">BRZESKA - Wyszyńskiego - Kazimierzowska - Prusa - Poniatowskiego - Jana Pawła II - Dąbrowskiego - Mireckiego - Chrobrego - Sokołowska - Wojskowa - PIŁSUDSKIEGO - Warszawska - Monte Cassino - KURPIOWSKA</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">06:02, 06:52, 07:43, 08:33, 09:13, 09:43, 10:13, 10:43, 11:13, 11:43, 12:13, 12:43, 13:13, 13:43, 14:13, 14:43, 15:13, 15:43, 16:13, 16:43, 17:13, 17:43, 18:13, 18:43, 19:13, 20:12, 21:22, 22:02, 22:42m, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">7</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">FLORIAŃSKA - Torowa - Łukowska - GRABIANÓW - Białki - ZACHOJNIAK</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">06:06, 08:03, 09:11, 10:01, 11:31G, 14:21, 15:46, 17:46G, 19:36, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">11</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">BRZESKA - Ujrzanowska - Terespolska - Ujrzanów - Borki Wyrki - ŚWIERCZE</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">08:06, 19:11, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">12</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">BRZESKA - STARZYŃSKIEGO</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">07:32, 09:52, 11:05, 12:02, 13:25, 14:37, 15:47, 16:42, 17:47, 20:02, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">21</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">BRZESKA - Ujrzanowska - Terespolska - UJRZANÓW - Borki Wyrki - Świercze - Chromna - Zdany - ZBUCZYN</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">06:01, 09:56, 12:56, 16:06, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">22</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">FLORIAŃSKA - Torowa - Łukowska - Południowa - Grabianowska - Składowa - Zbrojna - PARTYZANTÓW - Garwolińska - Niepodległości - UNITÓW PODLASKICH</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">08:26, </td>
+  </tr>
+
+<tr><td colspan="3" align="left">m - zjazd do MPK przez ul.Piłsudskiego <br>^ - kursuje do Wólki Wiśniewskiej <br>E - nie kursuje w okresie letnich wakacji szkolnych <br>G - kursuje przez Grabianów Wieś <br>H - kursuje w okresie letnich wakacji szkolnych <br>Ł - kursuje do m. Rzążew, Bzów p. Ługi W. Tarcze <br>D - w okresie letnich wakacji szkolnych kursuje do /z/ działek <br>B - z ul.Brzeskiej do MPK ul.Starzyńskiego <br>P - kursuje ul.Plażową i Poznańską <br>T - kursuje przez Ujrzanów (Brzeska/Terespolska) <br>M - kursuje do ul. Starzyńskiego <br>Autobusy MPK kursują z tolerancją +2min. W autobusach obowiązują wyłącznie bilety MPK Siedlce <br>W dn.5.06.2015r. autobusy kursują wg. sobotniego rozkladu jazdy <br></td></tr>
+</table>
+<p>&nbsp;</p>
+</div>
+</body>
+</html>

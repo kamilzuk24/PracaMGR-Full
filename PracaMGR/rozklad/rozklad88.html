@@ -1,0 +1,132 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<style type="text/css">
+
+.nagl_przystanek
+{
+	font-size:14px;
+	font-weight:bold;
+}
+.nagl_opis
+{
+	font-size:12px;
+	font-weight:bold;
+}
+.linia
+{
+	font-size:14px;
+	font-weight:bold;
+	background-color:#B0D8FF;
+}
+
+.typ
+{
+	font-size:12px;
+	font-weight:bold;
+	background-color:#CCCCCC;
+}
+.podkresl
+{
+border: 1px #CCCCCC solid;
+}
+.odjazdy
+{
+font-weight:bold;
+font-size:1.2em;
+}
+</style>
+<script type="text/javascript">
+
+    function PrintElem(elem)
+    {
+        Popup(document.getElementById(elem).innerHTML);
+    }
+
+    function Popup(data) 
+    {
+        var mywindow = window.open('', 'rozklad', 'height=400,width=600');
+        mywindow.document.write('<html><head><title>Rozkład</title>');
+        /*optional stylesheet*/ //mywindow.document.write('<link rel="stylesheet" href="main.css" type="text/css" />');
+        mywindow.document.write('</head><body >');
+        mywindow.document.write(data);
+        mywindow.document.write('</body></html>');
+        mywindow.document.close();
+        mywindow.print();
+        return true;
+    }
+
+</script>
+
+</head>
+
+<body>
+<div style="position: relative; top:40px; left:40px;"><a href="" onclick="PrintElem('printarea');return false;" style="text-decoration:none;"><img src="/Content/printButton.png" border="0" align="middle"/> Drukuj</a></div>
+<div id="printarea">
+  
+
+<table width="100%" border="0">
+  <tr>
+    <td colspan="3" align="right"> </td>
+  </tr>
+  <tr>
+    <td colspan="3" align="center">
+	<span  class="nagl_przystanek">(08)Golice-Skrzyżowanie (1)</span><br />
+	<span class="nagl_opis">Rozkład jazdy autobusów MPK Siedlce<br />
+	ważny od 29.06.2015&nbsp;&nbsp;&nbsp;Strefa: II</span></td>
+  </tr>
+  <tr>
+    <th colspan="2">Linia</th>
+    <th width="167">Godziny odjazdów </th>
+  </tr>
+  	 <tr>
+    <td colspan="3" style="font-size:12px;font-weight:bold;	background-color:#CCCCCC;">Dni robocze</td>
+  </tr>
+	
+  	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">5</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">GOLICE</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">06:03E, 06:58E, 07:54HP, 07:54E, 09:02E, 11:17E, 12:47E, 14:35, 16:17E, 17:47E, 19:37E, 20:27H, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">15</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">GOLICE - Błogoszcz - Pruszynek - PRUSZYN</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">04:55g, 06:09gH, 07:24gH, 10:24gH, 12:22gH, 12:56gH, 15:47g, 17:07g, 18:32g, 19:09g, 22:35g, </td>
+  </tr>
+	 <tr>
+    <td colspan="3" style="font-size:12px;font-weight:bold;	background-color:#CCCCCC;">Soboty</td>
+  </tr>
+	
+  	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">5</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">GOLICE</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">07:17, 10:27, 12:57, 14:52, 17:57, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">15</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">GOLICE - Błogoszcz - Pruszynek - PRUSZYN</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">06:09g, 15:47g, </td>
+  </tr>
+	 <tr>
+    <td colspan="3" style="font-size:12px;font-weight:bold;	background-color:#CCCCCC;">Dni świąteczne</td>
+  </tr>
+	
+  	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">5</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">GOLICE</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">08:12, 10:12, 13:17, 17:12, 18:17, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">15</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">GOLICE - Błogoszcz - Pruszynek - PRUSZYN</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">06:35g, 15:14g, 19:47g, 20:24g, </td>
+  </tr>
+
+<tr><td colspan="3" align="left">E - nie kursuje w okresie letnich wakacji szkolnych <br>H - kursuje w okresie letnich wakacji szkolnych <br>P - w okresie letnich wakacji kursuje z PKP <br>g - kursuje przez Golice-Pętle <br>Autobusy MPK kursują z tolerancją +2min. W autobusach obowiązują wyłącznie bilety MPK Siedlce <br>W dn.5.06.2015r. autobusy kursują wg. sobotniego rozkladu jazdy <br></td></tr>
+</table>
+<p>&nbsp;</p>
+</div>
+</body>
+</html>

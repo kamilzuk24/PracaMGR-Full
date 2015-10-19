@@ -1,0 +1,157 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<style type="text/css">
+
+.nagl_przystanek
+{
+	font-size:14px;
+	font-weight:bold;
+}
+.nagl_opis
+{
+	font-size:12px;
+	font-weight:bold;
+}
+.linia
+{
+	font-size:14px;
+	font-weight:bold;
+	background-color:#B0D8FF;
+}
+
+.typ
+{
+	font-size:12px;
+	font-weight:bold;
+	background-color:#CCCCCC;
+}
+.podkresl
+{
+border: 1px #CCCCCC solid;
+}
+.odjazdy
+{
+font-weight:bold;
+font-size:1.2em;
+}
+</style>
+<script type="text/javascript">
+
+    function PrintElem(elem)
+    {
+        Popup(document.getElementById(elem).innerHTML);
+    }
+
+    function Popup(data) 
+    {
+        var mywindow = window.open('', 'rozklad', 'height=400,width=600');
+        mywindow.document.write('<html><head><title>Rozkład</title>');
+        /*optional stylesheet*/ //mywindow.document.write('<link rel="stylesheet" href="main.css" type="text/css" />');
+        mywindow.document.write('</head><body >');
+        mywindow.document.write(data);
+        mywindow.document.write('</body></html>');
+        mywindow.document.close();
+        mywindow.print();
+        return true;
+    }
+
+</script>
+
+</head>
+
+<body>
+<div style="position: relative; top:40px; left:40px;"><a href="" onclick="PrintElem('printarea');return false;" style="text-decoration:none;"><img src="/Content/printButton.png" border="0" align="middle"/> Drukuj</a></div>
+<div id="printarea">
+  
+
+<table width="100%" border="0">
+  <tr>
+    <td colspan="3" align="right"> </td>
+  </tr>
+  <tr>
+    <td colspan="3" align="center">
+	<span  class="nagl_przystanek">(08)Siedlce Sokołowska Mieszka I (1)</span><br />
+	<span class="nagl_opis">Rozkład jazdy autobusów MPK Siedlce<br />
+	ważny od 28.01.2014&nbsp;&nbsp;&nbsp;Strefa: I</span></td>
+  </tr>
+  <tr>
+    <th colspan="2">Linia</th>
+    <th width="167">Godziny odjazdów </th>
+  </tr>
+  	 <tr>
+    <td colspan="3" style="font-size:12px;font-weight:bold;	background-color:#CCCCCC;">Dni robocze</td>
+  </tr>
+	
+  	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">10</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">SOKOŁOWSKA - STRZAŁA - CHODÓW</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">04:46, 05:49, 06:48, 07:50E, 09:03, 11:48, 12:48, 14:26, 15:32, 16:33, 18:23, 20:28, 22:20, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">17</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">SOKOŁOWSKA - Strzała - Purzec - BORKI SIEDLECKIE - Przygody - SUCHOŻEBRY</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">05:31, 06:38, 07:43ż, 07:45, 08:43ż, 10:38, 12:23B, 13:33ć, 14:38, 16:58, 18:48, 20:03E, 21:33C, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">32</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">SOKOŁOWSKA</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">06:22, 07:18, 13:00, 14:26T, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">35</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">SOKOŁOWSKA</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">05:35E, 06:43E, 07:50E, 10:48p, 13:35E, 15:08E, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">38</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">SOKOŁOWSKA - Strzała - Purzec - BORKI SIEDLECKIE - Przygody - SUCHOŻEBRY</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">04:59B, 15:30, 22:21TB, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">42</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">SOKOŁOWSKA</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">05:28, 06:28, 13:23, 15:13, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">43</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">SOKOŁOWSKA</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">06:27, 13:22, 15:07, </td>
+  </tr>
+	 <tr>
+    <td colspan="3" style="font-size:12px;font-weight:bold;	background-color:#CCCCCC;">Soboty</td>
+  </tr>
+	
+  	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">10</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">SOKOŁOWSKA - STRZAŁA - CHODÓW</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">05:43, 08:03, 11:18, 14:28, 15:33, 17:18, 19:58, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">17</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">SOKOŁOWSKA - Strzała - Purzec - BORKI SIEDLECKIE - Przygody - SUCHOŻEBRY</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">05:38B, 06:48, 09:58, 12:38B, 15:48, 18:58, </td>
+  </tr>
+	 <tr>
+    <td colspan="3" style="font-size:12px;font-weight:bold;	background-color:#CCCCCC;">Dni świąteczne</td>
+  </tr>
+	
+  	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">10</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">SOKOŁOWSKA - STRZAŁA - CHODÓW</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">07:48, 09:29, 11:18, 14:43, 17:23, 19:38, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">17</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">SOKOŁOWSKA - Strzała - Purzec - BORKI SIEDLECKIE - Przygody - SUCHOŻEBRY</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">07:43, 09:18, 11:13B, 13:33, 18:28, </td>
+  </tr>
+
+<tr><td colspan="3" align="left">E - nie kursuje w okresie letnich wakacji szkolnych <br>ż - kursuje w dni nauki szkolnej z dw. PKP do Sokołowska Pętla <br>B - kursuje do m.Borki Siedleckie <br>ć - kursuje do /z/Sokołowska Pętla okresie letnich wakacji szkolnych <br>C - kursuje do /z/ Sokołowska Pętla <br>T - kursuje przez Ujrzanów (Brzeska/Terespolska) <br>p - kursuje w dni nauki szkolnej z ul.Prusa/Amfiteatr na ul.Sokołowska/WSFiZ i z powrotem <br>Autobusy MPK kursują z tolerancją +2min. <br>W autobusach obowiązują wyłącznie bilety MPK Siedlce <br></td></tr>
+</table>
+<p>&nbsp;</p>
+</div>
+</body>
+</html>

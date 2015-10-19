@@ -1,0 +1,24 @@
+﻿@{
+    ViewBag.Title = "Zarządzanie użytkownikami";
+}
+
+<h2>Zarządzanie użytkownikami</h2>
+<h3>Wybierz typ użytkowników</h3>
+<br />
+<table class="table">
+    <tr>
+        <td>
+            @Html.ActionLink("Zwykli użytkownicy", "SimpleUsers", null, new { @class = "btn btn-default" })
+        </td>
+    </tr>
+    <tr>
+        <td>
+            @Html.ActionLink("Administratorzy", "Admins", null, new { @class = "btn btn-default" })
+        </td>
+    </tr>
+    <tr>
+        <td>
+            @Html.ActionLink("Dodaj konto Administracyjne", "AddAdminAccount", null, new { @class = "btn btn-default" })
+        </td>
+    </tr>
+</table>

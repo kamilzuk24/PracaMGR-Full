@@ -1,0 +1,147 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<style type="text/css">
+
+.nagl_przystanek
+{
+	font-size:14px;
+	font-weight:bold;
+}
+.nagl_opis
+{
+	font-size:12px;
+	font-weight:bold;
+}
+.linia
+{
+	font-size:14px;
+	font-weight:bold;
+	background-color:#B0D8FF;
+}
+
+.typ
+{
+	font-size:12px;
+	font-weight:bold;
+	background-color:#CCCCCC;
+}
+.podkresl
+{
+border: 1px #CCCCCC solid;
+}
+.odjazdy
+{
+font-weight:bold;
+font-size:1.2em;
+}
+</style>
+<script type="text/javascript">
+
+    function PrintElem(elem)
+    {
+        Popup(document.getElementById(elem).innerHTML);
+    }
+
+    function Popup(data) 
+    {
+        var mywindow = window.open('', 'rozklad', 'height=400,width=600');
+        mywindow.document.write('<html><head><title>Rozkład</title>');
+        /*optional stylesheet*/ //mywindow.document.write('<link rel="stylesheet" href="main.css" type="text/css" />');
+        mywindow.document.write('</head><body >');
+        mywindow.document.write(data);
+        mywindow.document.write('</body></html>');
+        mywindow.document.close();
+        mywindow.print();
+        return true;
+    }
+
+</script>
+
+</head>
+
+<body>
+<div style="position: relative; top:40px; left:40px;"><a href="" onclick="PrintElem('printarea');return false;" style="text-decoration:none;"><img src="/Content/printButton.png" border="0" align="middle"/> Drukuj</a></div>
+<div id="printarea">
+  
+
+<table width="100%" border="0">
+  <tr>
+    <td colspan="3" align="right"> </td>
+  </tr>
+  <tr>
+    <td colspan="3" align="center">
+	<span  class="nagl_przystanek">(04)Stok Lacki  (1)</span><br />
+	<span class="nagl_opis">Rozkład jazdy autobusów MPK Siedlce<br />
+	ważny od 01.04.2014&nbsp;&nbsp;&nbsp;Strefa: II</span></td>
+  </tr>
+  <tr>
+    <th colspan="2">Linia</th>
+    <th width="167">Godziny odjazdów </th>
+  </tr>
+  	 <tr>
+    <td colspan="3" style="font-size:12px;font-weight:bold;	background-color:#CCCCCC;">Dni robocze</td>
+  </tr>
+	
+  	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">14</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">STOK LACKI - Pruszyn Pieńki - WYCZÓŁKI</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">04:38, 05:38L, 06:41L, 08:23EL, 09:48, 12:30L, 14:39L, 16:03L, 17:23L, 18:48L, 20:33, 22:38L, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">23</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">STOK LACKI - STOK LACKI-FOLWARK</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">07:18w, 13:58w, 15:43w, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">26</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">STOK LACKI - Stok Lacki-Folwark - Stok Lacki - Pustki - GRUBALE - Tarcze - Cielemęc - CZURYŁY</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">04:36, 05:38, 06:48, 08:06b, 10:06, 12:26o, 14:36o, 15:51o, 17:06o, 19:31o, 22:34o, </td>
+  </tr>
+	 <tr>
+    <td colspan="3" style="font-size:12px;font-weight:bold;	background-color:#CCCCCC;">Soboty</td>
+  </tr>
+	
+  	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">6</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">STOK LACKI - Stok Lacki-Folwark - Stok Lacki - Pustki - Grubale - OSINY</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">06:56, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">14</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">STOK LACKI - Pruszyn Pieńki - WYCZÓŁKI</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">05:38L, 08:18, 10:23L, 14:43, 16:03L, 17:28, 19:23L, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">26</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">STOK LACKI - Stok Lacki-Folwark - Stok Lacki - Pustki - GRUBALE - Tarcze - Cielemęc - CZURYŁY</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">05:41, 09:36, 12:36, 15:41o, 18:46, </td>
+  </tr>
+	 <tr>
+    <td colspan="3" style="font-size:12px;font-weight:bold;	background-color:#CCCCCC;">Dni świąteczne</td>
+  </tr>
+	
+  	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">6</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">STOK LACKI - Stok Lacki-Folwark - Stok Lacki - Pustki - Grubale - OSINY</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">06:16, 13:51, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">14</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">STOK LACKI - Pruszyn Pieńki - WYCZÓŁKI</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">06:11, 09:18, 11:38L, 15:18L, 18:18L, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">26</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">STOK LACKI - Stok Lacki-Folwark - Stok Lacki - Pustki - GRUBALE - Tarcze - Cielemęc - CZURYŁY</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">08:06, 10:26o, 12:21o, 16:36o, 19:36, </td>
+  </tr>
+
+<tr><td colspan="3" align="left">L - kursuje przez Leśniczówkę i Krzymosze <br>E - nie kursuje w okresie letnich wakacji szkolnych <br>w - kursuje w dni nauki szkolnej <br>b - kursuje do Bzowa przez Czuryły, Rzążew w okresie roku szkolnego <br>o - kursuje przez Osiny <br>Autobusy MPK kursują z tolerancją +2min. <br>W autobusach obowiązują wyłącznie bilety MPK Siedlce <br></td></tr>
+</table>
+<p>&nbsp;</p>
+</div>
+</body>
+</html>

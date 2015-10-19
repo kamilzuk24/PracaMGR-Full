@@ -1,0 +1,147 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<style type="text/css">
+
+.nagl_przystanek
+{
+	font-size:14px;
+	font-weight:bold;
+}
+.nagl_opis
+{
+	font-size:12px;
+	font-weight:bold;
+}
+.linia
+{
+	font-size:14px;
+	font-weight:bold;
+	background-color:#B0D8FF;
+}
+
+.typ
+{
+	font-size:12px;
+	font-weight:bold;
+	background-color:#CCCCCC;
+}
+.podkresl
+{
+border: 1px #CCCCCC solid;
+}
+.odjazdy
+{
+font-weight:bold;
+font-size:1.2em;
+}
+</style>
+<script type="text/javascript">
+
+    function PrintElem(elem)
+    {
+        Popup(document.getElementById(elem).innerHTML);
+    }
+
+    function Popup(data) 
+    {
+        var mywindow = window.open('', 'rozklad', 'height=400,width=600');
+        mywindow.document.write('<html><head><title>Rozkład</title>');
+        /*optional stylesheet*/ //mywindow.document.write('<link rel="stylesheet" href="main.css" type="text/css" />');
+        mywindow.document.write('</head><body >');
+        mywindow.document.write(data);
+        mywindow.document.write('</body></html>');
+        mywindow.document.close();
+        mywindow.print();
+        return true;
+    }
+
+</script>
+
+</head>
+
+<body>
+<div style="position: relative; top:40px; left:40px;"><a href="" onclick="PrintElem('printarea');return false;" style="text-decoration:none;"><img src="/Content/printButton.png" border="0" align="middle"/> Drukuj</a></div>
+<div id="printarea">
+  
+
+<table width="100%" border="0">
+  <tr>
+    <td colspan="3" align="right"> </td>
+  </tr>
+  <tr>
+    <td colspan="3" align="center">
+	<span  class="nagl_przystanek">(05)Siedlce Floriańska F.Zaremby (1)</span><br />
+	<span class="nagl_opis">Rozkład jazdy autobusów MPK Siedlce<br />
+	ważny od 19.05.2015&nbsp;&nbsp;&nbsp;Strefa: I</span></td>
+  </tr>
+  <tr>
+    <th colspan="2">Linia</th>
+    <th width="167">Godziny odjazdów </th>
+  </tr>
+  	 <tr>
+    <td colspan="3" style="font-size:12px;font-weight:bold;	background-color:#CCCCCC;">Dni robocze</td>
+  </tr>
+	
+  	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">7</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">FLORIAŃSKA - Piłsudskiego - Armii Krajowej - PLAC ZDANOWSKIEGO - DW. PKP</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">05:08, 06:11E, 06:20HG, 07:14E, 07:23GH, 08:03E, 10:14G, 11:19GE, 13:10, 15:18, 15:26H, 16:17, 17:27, 19:36G, 21:18, 22:59, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">9</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">FLORIAŃSKA - Piłsudskiego - Konarskiego - Prusa - Kazimierzowska - Bema - Poniatowskiego - Dąbrowskiego - Mireckiego - Chrobrego - SOKOŁOWSKA - Wojskowa - Armii Krajowej - PLAC ZDANOWSKIEGO - DW. PKP</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">05:14, 06:14, 07:34, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">22</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">FLORIAŃSKA - Piłsudskiego - Armii Krajowej - PLAC ZDANOWSKIEGO - DW. PKP</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">09:09, 10:57, 13:02, 14:02, 16:17, 19:07, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">35</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">FLORIAŃSKA - Piłsudskiego - Konarskiego - Poniatowskiego - Dąbrowskiego - MIRECKIEGO - Mieszka I - SOKOŁOWSKA</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">05:22E, 06:31E, 07:37E, 13:22E, 14:55E, </td>
+  </tr>
+	 <tr>
+    <td colspan="3" style="font-size:12px;font-weight:bold;	background-color:#CCCCCC;">Soboty</td>
+  </tr>
+	
+  	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">7</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">FLORIAŃSKA - Piłsudskiego - Armii Krajowej - PLAC ZDANOWSKIEGO - DW. PKP</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">06:20, 07:40, 09:52G, 12:00, 14:09G, 16:25G, 18:55, 21:12, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">9</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">FLORIAŃSKA - Piłsudskiego - Konarskiego - Prusa - Kazimierzowska - Bema - Poniatowskiego - Dąbrowskiego - Mireckiego - Chrobrego - SOKOŁOWSKA - Wojskowa - Armii Krajowej - PLAC ZDANOWSKIEGO - DW. PKP</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">07:14, 11:19, 14:34, 18:29, </td>
+  </tr>
+	 <tr>
+    <td colspan="3" style="font-size:12px;font-weight:bold;	background-color:#CCCCCC;">Dni świąteczne</td>
+  </tr>
+	
+  	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">7</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">FLORIAŃSKA - Piłsudskiego - Armii Krajowej - PLAC ZDANOWSKIEGO - DW. PKP</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">06:40, 08:35, 09:54G, 11:28G, 12:54G, 14:50, 16:26G, 18:26, 20:07, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">9</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">FLORIAŃSKA - Piłsudskiego - Konarskiego - Prusa - Kazimierzowska - Bema - Poniatowskiego - Dąbrowskiego - Mireckiego - Chrobrego - SOKOŁOWSKA - Wojskowa - Armii Krajowej - PLAC ZDANOWSKIEGO - DW. PKP</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">07:19, 11:59, 14:34, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">22</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">FLORIAŃSKA - Piłsudskiego - Armii Krajowej - PLAC ZDANOWSKIEGO - DW. PKP</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">10:32, 13:27, </td>
+  </tr>
+
+<tr><td colspan="3" align="left">E - nie kursuje w okresie letnich wakacji szkolnych <br>H - kursuje w okresie letnich wakacji szkolnych <br>G - kursuje przez Grabianów Wieś <br>Autobusy MPK kursują z tolerancją +2min. W autobusach obowiązują wyłącznie bilety MPK Siedlce <br>W dn.5.06.2015r. autobusy kursują wg. sobotniego rozkladu jazdy <br></td></tr>
+</table>
+<p>&nbsp;</p>
+</div>
+</body>
+</html>

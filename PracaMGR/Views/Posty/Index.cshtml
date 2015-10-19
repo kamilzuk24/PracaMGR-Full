@@ -1,0 +1,64 @@
+﻿@using PagedList
+@using PagedList.Mvc
+@using Microsoft.AspNet.Identity
+
+@model IPagedList<PracaMGR.Posty>
+
+@{
+    ViewBag.Title = "Posty";
+}
+
+<h2>Widok Postów</h2>
+<br />
+@if (User.Identity.IsAuthenticated)
+{ 
+    <p>
+        @Html.ActionLink("Dodaj Post...", "Create", null, new { @class = "btn btn-default" })
+    </p>
+}
+<table class="table">
+    <tr>
+        <th>
+            Treść
+        </th>
+        <th>
+           Data
+        </th>
+        <th>
+            Uzytkownik
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Tresc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Data)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Uzytkownik)
+        </td>
+        <td>
+            @Html.ActionLink("Przeglądaj...", "Odpowiedzi", new { id = item.Id }, new { @class = "btn btn-default" }) 
+            @if (User.Identity.GetUserName() == item.Uzytkownik || User.IsInRole("Admin"))
+            {
+                @Html.ActionLink("Edytuj", "Edit", new { id = item.Id }, new { @class = "btn btn-default" })
+            }
+            @if (User.Identity.GetUserName() == item.Uzytkownik || User.IsInRole("Admin"))
+            {
+                @Html.ActionLink("Usuń", "Delete", new { id = item.Id }, new { @class = "btn btn-default" })
+            }
+        </td>
+    </tr>
+}
+
+</table>
+    <div class="pagedList">
+        @Html.PagedListPager(Model, page => Url.Action("Index", new { Model, page }), PagedListRenderOptions.OnlyShowFivePagesAtATime)
+    </div>
+    <br />
+
+    <a class="btn btn-default" href="~/Forum/Index">Wróć</a>

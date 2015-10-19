@@ -1,0 +1,187 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<style type="text/css">
+
+.nagl_przystanek
+{
+	font-size:14px;
+	font-weight:bold;
+}
+.nagl_opis
+{
+	font-size:12px;
+	font-weight:bold;
+}
+.linia
+{
+	font-size:14px;
+	font-weight:bold;
+	background-color:#B0D8FF;
+}
+
+.typ
+{
+	font-size:12px;
+	font-weight:bold;
+	background-color:#CCCCCC;
+}
+.podkresl
+{
+border: 1px #CCCCCC solid;
+}
+.odjazdy
+{
+font-weight:bold;
+font-size:1.2em;
+}
+</style>
+<script type="text/javascript">
+
+    function PrintElem(elem)
+    {
+        Popup(document.getElementById(elem).innerHTML);
+    }
+
+    function Popup(data) 
+    {
+        var mywindow = window.open('', 'rozklad', 'height=400,width=600');
+        mywindow.document.write('<html><head><title>Rozkład</title>');
+        /*optional stylesheet*/ //mywindow.document.write('<link rel="stylesheet" href="main.css" type="text/css" />');
+        mywindow.document.write('</head><body >');
+        mywindow.document.write(data);
+        mywindow.document.write('</body></html>');
+        mywindow.document.close();
+        mywindow.print();
+        return true;
+    }
+
+</script>
+
+</head>
+
+<body>
+<div style="position: relative; top:40px; left:40px;"><a href="" onclick="PrintElem('printarea');return false;" style="text-decoration:none;"><img src="/Content/printButton.png" border="0" align="middle"/> Drukuj</a></div>
+<div id="printarea">
+  
+
+<table width="100%" border="0">
+  <tr>
+    <td colspan="3" align="right"> </td>
+  </tr>
+  <tr>
+    <td colspan="3" align="center">
+	<span  class="nagl_przystanek">(04)Siedlce Starowiejska Geodetów (1)</span><br />
+	<span class="nagl_opis">Rozkład jazdy autobusów MPK Siedlce<br />
+	ważny od 01.02.2015&nbsp;&nbsp;&nbsp;Strefa: I</span></td>
+  </tr>
+  <tr>
+    <th colspan="2">Linia</th>
+    <th width="167">Godziny odjazdów </th>
+  </tr>
+  	 <tr>
+    <td colspan="3" style="font-size:12px;font-weight:bold;	background-color:#CCCCCC;">Dni robocze</td>
+  </tr>
+	
+  	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">14</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">STAROWIEJSKA - Kasztanowa - JANOWSKA - Stok Lacki - Pruszyn Pieńki - WYCZÓŁKI</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">04:30, 05:30L, 06:33L, 08:15EL, 09:40, 12:22L, 14:31L, 15:55L, 17:15L, 18:40L, 20:25, 22:30L, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">16</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">STAROWIEJSKA - TERESPOLSKA</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">05:40k, 06:45, 07:40, 09:25J, 11:10J, 12:35, 13:35k, 14:50, 15:55, 16:20J, 19:05J, 21:30, 22:50M, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">18</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">STAROWIEJSKA - STARZYŃSKIEGO</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">05:51, 06:50, 07:39Ep, 07:50, 08:50, 09:20E, 09:50, 10:20E, 10:50, 11:20E, 11:50, 12:20E, 12:50, 13:21E, 13:50, 14:20E, 14:50, 15:20E, 15:50, 16:20E, 16:50, 17:20E, 17:50e, 18:50, 19:50, 21:13, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">23</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">STAROWIEJSKA - Kasztanowa - Janowska - Stok Lacki - STOK LACKI-FOLWARK</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">07:10w, 13:50w, 15:35w, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">26</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">JANOWSKA - Stok Lacki - Stok Lacki-Folwark - STOK LACKI - Pustki - Grubale - Tarcze - Cielemęc - CZURYŁY</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">04:30, 05:32, 06:42, 08:00b, 10:00, 12:20o, 14:30o, 15:45o, 17:00o, 19:25o, 22:28o, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">27</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">JANOWSKA - Kasztanowa - STAROWIEJSKA</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">07:13, 08:24, 09:39, 10:52#K, 12:06#, 13:26#, 14:36#, 16:14, 17:34, 18:35K, 20:03, 21:28, </td>
+  </tr>
+	 <tr>
+    <td colspan="3" style="font-size:12px;font-weight:bold;	background-color:#CCCCCC;">Soboty</td>
+  </tr>
+	
+  	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">6</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">JANOWSKA - Stok Lacki - Stok Lacki-Folwark - Stok Lacki - Pustki - Grubale - OSINY</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">06:50, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">14</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">STAROWIEJSKA - Kasztanowa - JANOWSKA - Stok Lacki - Pruszyn Pieńki - WYCZÓŁKI</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">05:30L, 08:10, 10:15L, 14:35, 15:55L, 17:20, 19:15L, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">16</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">STAROWIEJSKA - TERESPOLSKA</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">05:40, 06:50, 09:00, 11:35, 13:40, 14:50, 17:35, 20:35, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">18</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">STAROWIEJSKA - STARZYŃSKIEGO</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">10:26, 12:41, 13:56, 17:26, 21:33, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">26</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">JANOWSKA - Stok Lacki - Stok Lacki-Folwark - STOK LACKI - Pustki - Grubale - Tarcze - Cielemęc - CZURYŁY</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">05:35, 09:30, 12:30, 15:35o, 18:40, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">27</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">JANOWSKA - Kasztanowa - STAROWIEJSKA</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">07:57K, 10:00K, 11:30K, 14:35K, 16:40K, 20:09K, </td>
+  </tr>
+	 <tr>
+    <td colspan="3" style="font-size:12px;font-weight:bold;	background-color:#CCCCCC;">Dni świąteczne</td>
+  </tr>
+	
+  	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">6</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">JANOWSKA - Stok Lacki - Stok Lacki-Folwark - Stok Lacki - Pustki - Grubale - OSINY</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">06:10, 13:45, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">14</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">STAROWIEJSKA - Kasztanowa - JANOWSKA - Stok Lacki - Pruszyn Pieńki - WYCZÓŁKI</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">06:03, 09:10, 11:30L, 15:10L, 18:10L, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">16</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">STAROWIEJSKA - TERESPOLSKA</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">07:15J, 10:35J, 12:30J, 14:25, 16:30, 18:35, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">26</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">JANOWSKA - Stok Lacki - Stok Lacki-Folwark - STOK LACKI - Pustki - Grubale - Tarcze - Cielemęc - CZURYŁY</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">08:00, 10:20o, 12:15o, 16:30o, 19:30, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">27</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">JANOWSKA - Kasztanowa - STAROWIEJSKA</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">09:10K, 15:35K, </td>
+  </tr>
+
+<tr><td colspan="3" align="left">L - kursuje przez Leśniczówkę i Krzymosze <br>E - nie kursuje w okresie letnich wakacji szkolnych <br>k - kursuje przez dw PKP <br>J - kursuje ul.Janowską i Kasztanową <br>M - kursuje do ul.Starzyńskiego <br>p - w dni nauki szkolnej kursuje ul. Prusa <br>e - kursuje w okresie letnich wakacji szkolnych <br>w - kursuje w dni nauki szkolnej <br>b - kursuje do Bzowa przez Czuryły, Rzążew w okresie roku szkolnego <br>o - kursuje przez Osiny <br># - kursuje przez Plac Wolnosci <br>K - kursuje do(z) Dworca PKP <br>Autobusy MPK kursują z tolerancją +2min. W autobusach obowiązują wyłącznie bilety MPK Siedlce <br>W dn.5.06.2015r. autobusy kursują wg. sobotniego rozkladu jazdy <br></td></tr>
+</table>
+<p>&nbsp;</p>
+</div>
+</body>
+</html>

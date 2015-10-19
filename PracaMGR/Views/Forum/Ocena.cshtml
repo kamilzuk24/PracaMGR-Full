@@ -1,0 +1,128 @@
+﻿@model PracaMGR.Oceny
+
+@{
+    ViewBag.Title = "Ocena";
+}
+
+<link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+<script src="~/Scripts/jquery-1.10.2.js"></script>
+
+
+
+<h2>Oceniaj linie autobusowe</h2>
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>Oceny</h4>
+        <hr />    
+            <div class="grupa">
+                <p>
+                    <label for="Punktualnosc">Punktualność:</label>
+                    <input type="text" id="Punktualnosc" name="Punktualnosc" style="font-size: 20px; border: 0; background-color: transparent; color: #000000; font-weight: bold;">
+                </p>
+                <div id="punktualnosc" style="width: 60%;"></div>
+                <br />
+                <p>
+                    <label for="Czystosc">Czystość:</label>
+                    <input type="text" id="Czystosc" name="Czystosc" style="font-size: 20px; border: 0; background-color: transparent; color: #000000; font-weight: bold;">
+                </p>
+                <div id="czystosc" style="width: 60%;"></div>
+                <br />
+                <p>
+                    <label for="Kultura_os_kierowcy">Kultura osobista kierowcy:</label>
+                    <input type="text" id="Kultura_os_kierowcy" name="Kultura_os_kierowcy" style="font-size: 20px; border: 0; background-color: transparent; color: #000000; font-weight: bold;">
+                </p>
+                <div id="kultura" style="width: 60%;"></div>
+                <br />
+                <p>
+                    <label for="Komfort_jazdy">Komfort Jazdy:</label>
+                    <input type="text" id="Komfort_jazdy" name="Komfort_jazdy" style="font-size: 20px; border: 0; background-color: transparent; color: #000000; font-weight: bold;">
+                </p>
+                <div id="komfort" style="width: 60%;"></div>
+                <br />
+                <p>
+                    <label for="Poczucie_bezpieczenstwa">Poczucie bezpieczeństwa:</label>
+                    <input type="text" id="Poczucie_bezpieczenstwa" name="Poczucie_bezpieczenstwa" style="font-size: 20px; border: 0; background-color: transparent; color: #000000; font-weight: bold;">
+                </p>
+                <div id="bezpieczenstwo" style="width: 60%;"></div>
+                <br />              
+                <input type="submit" id="area1" value="Oceń" class="btn btn-default" />
+                @Html.ActionLink("Wróć", "Linie", null, new { @class = "btn btn-default", id = "area1" })
+                <br />
+            </div>
+        </div>
+}
+<br />
+
+@section scripts {
+
+    <script type="text/javascript">
+        $(function() {
+            $("#punktualnosc").slider({
+                range: "max",
+                min: 0,
+                max: 10,
+                value: 5,
+                slide: function(event, ui) {
+                    $("#Punktualnosc").val(ui.value);
+                }
+            });
+            $("#Punktualnosc").val($("#punktualnosc").slider("value"));
+        });
+
+        $(function() {
+            $("#czystosc").slider({
+                range: "max",
+                min: 0,
+                max: 10,
+                value: 5,
+                slide: function(event, ui) {
+                    $("#Czystosc").val(ui.value);
+                }
+            });
+            $("#Czystosc").val($("#czystosc").slider("value"));
+        });
+
+        $(function() {
+            $("#kultura").slider({
+                range: "max",
+                min: 0,
+                max: 10,
+                value: 5,
+                slide: function(event, ui) {
+                    $("#Kultura_os_kierowcy").val(ui.value);
+                }
+            });
+            $("#Kultura_os_kierowcy").val($("#kultura").slider("value"));
+        });
+
+        $(function() {
+            $("#komfort").slider({
+                range: "max",
+                min: 0,
+                max: 10,
+                value: 5,
+                slide: function(event, ui) {
+                    $("#Komfort_jazdy").val(ui.value);
+                }
+            });
+            $("#Komfort_jazdy").val($("#komfort").slider("value"));
+        });
+
+        $(function() {
+            $("#bezpieczenstwo").slider({
+                range: "max",
+                min: 0,
+                max: 10,
+                value: 5,
+                slide: function(event, ui) {
+                    $("#Poczucie_bezpieczenstwa").val(ui.value);
+                }
+            });
+            $("#Poczucie_bezpieczenstwa").val($("#bezpieczenstwo").slider("value"));
+        });
+    </script>
+}

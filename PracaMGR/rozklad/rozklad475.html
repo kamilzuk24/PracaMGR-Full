@@ -1,0 +1,202 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<style type="text/css">
+
+.nagl_przystanek
+{
+	font-size:14px;
+	font-weight:bold;
+}
+.nagl_opis
+{
+	font-size:12px;
+	font-weight:bold;
+}
+.linia
+{
+	font-size:14px;
+	font-weight:bold;
+	background-color:#B0D8FF;
+}
+
+.typ
+{
+	font-size:12px;
+	font-weight:bold;
+	background-color:#CCCCCC;
+}
+.podkresl
+{
+border: 1px #CCCCCC solid;
+}
+.odjazdy
+{
+font-weight:bold;
+font-size:1.2em;
+}
+</style>
+<script type="text/javascript">
+
+    function PrintElem(elem)
+    {
+        Popup(document.getElementById(elem).innerHTML);
+    }
+
+    function Popup(data) 
+    {
+        var mywindow = window.open('', 'rozklad', 'height=400,width=600');
+        mywindow.document.write('<html><head><title>Rozkład</title>');
+        /*optional stylesheet*/ //mywindow.document.write('<link rel="stylesheet" href="main.css" type="text/css" />');
+        mywindow.document.write('</head><body >');
+        mywindow.document.write(data);
+        mywindow.document.write('</body></html>');
+        mywindow.document.close();
+        mywindow.print();
+        return true;
+    }
+
+</script>
+
+</head>
+
+<body>
+<div style="position: relative; top:40px; left:40px;"><a href="" onclick="PrintElem('printarea');return false;" style="text-decoration:none;"><img src="/Content/printButton.png" border="0" align="middle"/> Drukuj</a></div>
+<div id="printarea">
+  
+
+<table width="100%" border="0">
+  <tr>
+    <td colspan="3" align="right"> </td>
+  </tr>
+  <tr>
+    <td colspan="3" align="center">
+	<span  class="nagl_przystanek">(06)Siedlce Warszawska Łomżyńska (1)</span><br />
+	<span class="nagl_opis">Rozkład jazdy autobusów MPK Siedlce<br />
+	ważny od 19.05.2015&nbsp;&nbsp;&nbsp;Strefa: I</span></td>
+  </tr>
+  <tr>
+    <th colspan="2">Linia</th>
+    <th width="167">Godziny odjazdów </th>
+  </tr>
+  	 <tr>
+    <td colspan="3" style="font-size:12px;font-weight:bold;	background-color:#CCCCCC;">Dni robocze</td>
+  </tr>
+	
+  	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">1</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">WARSZAWSKA</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">06:58Z, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">12</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">WARSZAWSKA - Daszyńskiego - PIASKI ZAMIEJSKIE</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">04:59, 08:10D, 09:00, 10:30D, 11:30D, 12:30, 17:00, 18:30, 20:05D, 21:12, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">13</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">WARSZAWSKA - Nowe Iganie - NOWE OPOLE - Ostrówek - Wyłazy - NIWISKI</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">04:28, 05:33, 06:38, 07:53eE, 09:32, 12:20, 14:38, 15:50, 17:53E, 19:33, 22:25e, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">18</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">WARSZAWSKA - Daszyńskiego - PRZYMIARKI</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">05:24, 06:21, 07:01E, 07:21, 08:16, 08:46E, 09:16, 09:46E, 10:16, 10:46E, 11:16, 11:46E, 12:16, 12:46E*, 13:16, 13:46E, 14:16, 14:46E, 15:19, 15:46E, 16:16, 16:46E, 17:16e, 18:16, 19:16, 20:23, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">19</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">WARSZAWSKA - Nowe Iganie - Nowe Opole - Stare Opole - GRĘZÓW</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">05:43, 07:41, 08:38, 10:38, 12:33, 16:33, 18:33, 20:43, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">27</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">WARSZAWSKA - Daszyńskiego - PRZYMIARKI</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">06:45, 07:50, 09:02, 11:34#, 12:54#, 14:04#, 15:24#, 16:57, 19:27, 20:57, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">28</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">WARSZAWSKA - Daszyńskiego - PRZYMIARKI</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">08:01w, 09:01w, 10:01w, 11:01w, 11:56w, 12:56w, 13:56w, 14:56w, 15:46w, 16:31w, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">30</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">WARSZAWSKA - Nowe Iganie - NOWE OPOLE - Stare Opole - Seminaryjna - NOWE OPOLE</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">05:51, 07:00E, 12:45, 14:20W, 15:23, 17:15E, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">33</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">WARSZAWSKA - Daszyńskiego - PIASKI ZAMIEJSKIE</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">06:08, 07:08, 14:28, 15:33, 22:20, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">43</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">WARSZAWSKA - Nowe Iganie - Nowe Opole - Stare Opole - GRĘZÓW</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">06:45, 14:24, 15:29, </td>
+  </tr>
+	 <tr>
+    <td colspan="3" style="font-size:12px;font-weight:bold;	background-color:#CCCCCC;">Soboty</td>
+  </tr>
+	
+  	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">1</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">WARSZAWSKA</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">08:18, 17:18, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">12</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">WARSZAWSKA - Daszyńskiego - PIASKI ZAMIEJSKIE</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">06:15, 09:20, 10:30, 12:25, 17:45, 19:25, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">13</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">WARSZAWSKA - Nowe Iganie - NOWE OPOLE - Ostrówek - Wyłazy - NIWISKI</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">05:38e, 10:08, 13:43e, 15:53, 18:53, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">18</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">WARSZAWSKA - Daszyńskiego - PRZYMIARKI</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">09:46, 12:01, 13:01, 16:36, 21:06, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">19</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">WARSZAWSKA - Nowe Iganie - Nowe Opole - Stare Opole - GRĘZÓW</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">05:48, 06:58, 08:48, 11:38, 15:33, 18:18, 20:13, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">33</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">WARSZAWSKA - Daszyńskiego - PIASKI ZAMIEJSKIE</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">07:20, 14:20, 15:20, </td>
+  </tr>
+	 <tr>
+    <td colspan="3" style="font-size:12px;font-weight:bold;	background-color:#CCCCCC;">Dni świąteczne</td>
+  </tr>
+	
+  	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">1</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">WARSZAWSKA</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">08:18, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">12</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">WARSZAWSKA - Daszyńskiego - PIASKI ZAMIEJSKIE</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">07:00, 09:20, 10:25, 11:35, 13:00, 14:05, 15:15, 16:15, 17:15, 19:35, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">13</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">WARSZAWSKA - Nowe Iganie - NOWE OPOLE - Ostrówek - Wyłazy - NIWISKI</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">05:48e, 10:13, 13:48e, 18:28, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">19</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">WARSZAWSKA - Nowe Iganie - Nowe Opole - Stare Opole - GRĘZÓW</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">06:08, 07:02, 09:08, 11:15, 15:08, 17:18, 20:13, </td>
+  </tr>
+
+<tr><td colspan="3" align="left">Z - kursuje do Zalewu <br>D - w okresie letnich wakacji szkolnych kursuje do /z/ działek <br>e - kursuje do Ostrówka <br>E - nie kursuje w okresie letnich wakacji szkolnych <br>* - kursuje do Pętli Piaski Zamiejski <br># - kursuje przez Plac Wolnosci <br>w - kursuje tylko w dni nauki szkolnej <br>W - kursuje do Opola wiadukt <br>Autobusy MPK kursują z tolerancją +2min. W autobusach obowiązują wyłącznie bilety MPK Siedlce <br>W dn.5.06.2015r. autobusy kursują wg. sobotniego rozkladu jazdy <br></td></tr>
+</table>
+<p>&nbsp;</p>
+</div>
+</body>
+</html>

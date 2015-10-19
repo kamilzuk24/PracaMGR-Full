@@ -1,0 +1,222 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<style type="text/css">
+
+.nagl_przystanek
+{
+	font-size:14px;
+	font-weight:bold;
+}
+.nagl_opis
+{
+	font-size:12px;
+	font-weight:bold;
+}
+.linia
+{
+	font-size:14px;
+	font-weight:bold;
+	background-color:#B0D8FF;
+}
+
+.typ
+{
+	font-size:12px;
+	font-weight:bold;
+	background-color:#CCCCCC;
+}
+.podkresl
+{
+border: 1px #CCCCCC solid;
+}
+.odjazdy
+{
+font-weight:bold;
+font-size:1.2em;
+}
+</style>
+<script type="text/javascript">
+
+    function PrintElem(elem)
+    {
+        Popup(document.getElementById(elem).innerHTML);
+    }
+
+    function Popup(data) 
+    {
+        var mywindow = window.open('', 'rozklad', 'height=400,width=600');
+        mywindow.document.write('<html><head><title>Rozkład</title>');
+        /*optional stylesheet*/ //mywindow.document.write('<link rel="stylesheet" href="main.css" type="text/css" />');
+        mywindow.document.write('</head><body >');
+        mywindow.document.write(data);
+        mywindow.document.write('</body></html>');
+        mywindow.document.close();
+        mywindow.print();
+        return true;
+    }
+
+</script>
+
+</head>
+
+<body>
+<div style="position: relative; top:40px; left:40px;"><a href="" onclick="PrintElem('printarea');return false;" style="text-decoration:none;"><img src="/Content/printButton.png" border="0" align="middle"/> Drukuj</a></div>
+<div id="printarea">
+  
+
+<table width="100%" border="0">
+  <tr>
+    <td colspan="3" align="right"> </td>
+  </tr>
+  <tr>
+    <td colspan="3" align="center">
+	<span  class="nagl_przystanek">(02)Siedlce Partyzantów J.Chełmońskiego (1)</span><br />
+	<span class="nagl_opis">Rozkład jazdy autobusów MPK Siedlce<br />
+	ważny od 29.06.2015&nbsp;&nbsp;&nbsp;Strefa: I</span></td>
+  </tr>
+  <tr>
+    <th colspan="2">Linia</th>
+    <th width="167">Godziny odjazdów </th>
+  </tr>
+  	 <tr>
+    <td colspan="3" style="font-size:12px;font-weight:bold;	background-color:#CCCCCC;">Dni robocze</td>
+  </tr>
+	
+  	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">2</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">GARWOLIŃSKA - Żelków Kolonia - Żelków - Żelków Kolonia - ŻELKÓW</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">04:44, 07:37E, 09:49, 12:29, 16:34, 18:29, 20:39E, 22:20, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">3</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">GARWOLIŃSKA - Romanówka - Unitów Podlaskich - LEŚNA</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">05:37k, 06:12, 06:42, 07:12, 07:32, 07:58, 08:23, 08:43, 09:03, 09:23, 09:43, 10:03, 10:23, 10:43, 11:03, 11:23, 11:43, 12:03, 12:23, 12:43, 13:03, 13:23, 13:43, 14:03, 14:23, 14:43, 15:03, 15:23, 15:43, 16:03, 16:23, 16:43, 17:03, 17:23, 17:43, 18:03, 18:23, 18:43, 19:03, 19:23, 19:42, 20:11, 20:56, 22:21, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">5</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">GARWOLIŃSKA - Niepodległości - UNITÓW PODLASKICH</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">06:27UE, 07:21UE, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">8</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">ARTYLERYJSKA - Domanicka - Rakowiec - WOŁYŃCE</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">04:39, 05:41, 06:49, 07:44E, 08:47, 09:59a, 10:44, 12:24, 13:04a, 14:39, 15:34, 16:19, 17:14E, 18:34, 20:44, 22:24, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">10</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">KURPIOWSKA</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">05:26, 06:31, 07:28, 08:41E, 09:46, 12:26, 13:28, 15:06, 16:10, 17:11, 19:01, 21:16, 22:51, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">16</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">KURPIOWSKA - Garwolińska - NIEPODLEGŁOŚCI - UNITÓW PODLASKICH</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">06:11k, 07:11, 08:11, 09:59J, 11:50J, 13:01, 14:16, 15:26, 16:51, 19:40J, 22:21, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">17</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">KURPIOWSKA</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">06:19, 07:25, 08:43, 11:28, 13:10, 14:19ć, 15:26, 16:23, 17:48, 19:38, 20:53E, 22:12C, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">22</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">GARWOLIŃSKA - Niepodległości - UNITÓW PODLASKICH</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">08:39, 10:24, 12:24, 13:34, 15:39, 17:44, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">31</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">KURPIOWSKA - Garwolińska - NIEPODLEGŁOŚCI - UNITÓW PODLASKICH</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">06:14d, 07:13, 08:18, 14:14dk, 15:17d, 16:18, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">35</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">KURPIOWSKA - Pescantina - UNITÓW PODLASKICH - LEŚNA</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">06:03E, 07:08E, 08:23E, 14:28E, 15:33E, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">42</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">GARWOLIŃSKA - Żelków Kolonia - Żelków - Żelków Kolonia - ŻELKÓW</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">05:47, 06:47, 14:22, 15:32, </td>
+  </tr>
+	 <tr>
+    <td colspan="3" style="font-size:12px;font-weight:bold;	background-color:#CCCCCC;">Soboty</td>
+  </tr>
+	
+  	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">2</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">GARWOLIŃSKA - Żelków Kolonia - Żelków - Żelków Kolonia - ŻELKÓW</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">05:54, 08:09, 10:09, 12:19, 14:34, 15:34, 17:04, 19:29, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">3</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">GARWOLIŃSKA - Romanówka - Unitów Podlaskich - LEŚNA</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">06:57, 07:58, 08:53, 09:33, 10:03, 10:33, 11:03, 11:33, 12:03, 12:33, 13:03, 13:33, 14:03, 14:33, 15:03, 15:33, 16:03, 16:33, 17:03, 17:33, 18:03, 18:33, 19:03, 20:11, 21:21, 22:21, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">8</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">ARTYLERYJSKA - Domanicka - Rakowiec - WOŁYŃCE</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">05:54, 07:09, 08:44, 11:14, 13:54, 15:29, 17:14, 19:34, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">10</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">KURPIOWSKA</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">06:31, 08:46, 12:01, 15:14, 16:16, 18:01, 20:41, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">16</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">KURPIOWSKA - Garwolińska - NIEPODLEGŁOŚCI - UNITÓW PODLASKICH</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">06:16, 07:16, 09:26, 12:06, 14:16, 15:18, 18:16, 21:06, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">17</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">KURPIOWSKA</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">06:10, 07:38, 10:48, 13:15, 16:38, 19:48, </td>
+  </tr>
+	 <tr>
+    <td colspan="3" style="font-size:12px;font-weight:bold;	background-color:#CCCCCC;">Dni świąteczne</td>
+  </tr>
+	
+  	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">2</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">GARWOLIŃSKA - Żelków Kolonia - Żelków - Żelków Kolonia - ŻELKÓW</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">06:14, 08:09, 10:09, 12:19, 15:14, 17:04, 19:29, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">3</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">GARWOLIŃSKA - Romanówka - Unitów Podlaskich - LEŚNA</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">06:57, 07:58, 08:53, 10:03, 11:03, 12:03, 13:03, 14:03, 15:03, 16:03, 17:03, 18:03, 19:03, 20:11, 21:21, 22:21, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">8</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">ARTYLERYJSKA - Domanicka - Rakowiec - WOŁYŃCE</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">07:14, 08:11, 10:10, 11:19, 13:09, 15:04, 16:44, 18:44, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">10</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">KURPIOWSKA</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">08:33, 10:06, 11:56, 15:31, 18:06, 20:21, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">16</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">KURPIOWSKA - Garwolińska - NIEPODLEGŁOŚCI - UNITÓW PODLASKICH</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">07:50J, 11:10J, 13:05J, 14:51, 16:56, 19:01, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">17</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">KURPIOWSKA</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">08:33, 10:06, 11:45, 14:23, 19:18, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">22</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">GARWOLIŃSKA - Niepodległości - UNITÓW PODLASKICH</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">08:39, 11:40ł, </td>
+  </tr>
+
+<tr><td colspan="3" align="left">E - nie kursuje w okresie letnich wakacji szkolnych <br>k - kursuje przez dworzec PKP <br>U - kursuje na Pętlę Unitów Podlaskich <br>a - kursuje w dni nauki szkolnej do pętli przy ul. Domanickiej <br>J - kursuje ul.Janowską i Kasztanową <br>ć - kursuje do /z/Sokołowska Pętla okresie letnich wakacji szkolnych <br>C - kursuje do /z/ Sokołowska Pętla <br>d - kursuje ul.Brzeska-3-go Maja <br>ł - kursuje od ul. Łukowskiej <br>Autobusy MPK kursują z tolerancją +2min. W autobusach obowiązują wyłącznie bilety MPK Siedlce <br>W dn.5.06.2015r. autobusy kursują wg. sobotniego rozkladu jazdy <br></td></tr>
+</table>
+<p>&nbsp;</p>
+</div>
+</body>
+</html>

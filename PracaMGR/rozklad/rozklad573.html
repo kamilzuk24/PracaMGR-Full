@@ -1,0 +1,132 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<style type="text/css">
+
+.nagl_przystanek
+{
+	font-size:14px;
+	font-weight:bold;
+}
+.nagl_opis
+{
+	font-size:12px;
+	font-weight:bold;
+}
+.linia
+{
+	font-size:14px;
+	font-weight:bold;
+	background-color:#B0D8FF;
+}
+
+.typ
+{
+	font-size:12px;
+	font-weight:bold;
+	background-color:#CCCCCC;
+}
+.podkresl
+{
+border: 1px #CCCCCC solid;
+}
+.odjazdy
+{
+font-weight:bold;
+font-size:1.2em;
+}
+</style>
+<script type="text/javascript">
+
+    function PrintElem(elem)
+    {
+        Popup(document.getElementById(elem).innerHTML);
+    }
+
+    function Popup(data) 
+    {
+        var mywindow = window.open('', 'rozklad', 'height=400,width=600');
+        mywindow.document.write('<html><head><title>Rozkład</title>');
+        /*optional stylesheet*/ //mywindow.document.write('<link rel="stylesheet" href="main.css" type="text/css" />');
+        mywindow.document.write('</head><body >');
+        mywindow.document.write(data);
+        mywindow.document.write('</body></html>');
+        mywindow.document.close();
+        mywindow.print();
+        return true;
+    }
+
+</script>
+
+</head>
+
+<body>
+<div style="position: relative; top:40px; left:40px;"><a href="" onclick="PrintElem('printarea');return false;" style="text-decoration:none;"><img src="/Content/printButton.png" border="0" align="middle"/> Drukuj</a></div>
+<div id="printarea">
+  
+
+<table width="100%" border="0">
+  <tr>
+    <td colspan="3" align="right"> </td>
+  </tr>
+  <tr>
+    <td colspan="3" align="center">
+	<span  class="nagl_przystanek">(04)Siedlce Piaski Zamiejskie II (1)</span><br />
+	<span class="nagl_opis">Rozkład jazdy autobusów MPK Siedlce<br />
+	ważny od 13.12.2014&nbsp;&nbsp;&nbsp;Strefa: I</span></td>
+  </tr>
+  <tr>
+    <th colspan="2">Linia</th>
+    <th width="167">Godziny odjazdów </th>
+  </tr>
+  	 <tr>
+    <td colspan="3" style="font-size:12px;font-weight:bold;	background-color:#CCCCCC;">Dni robocze</td>
+  </tr>
+	
+  	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">12</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">PIASKI ZAMIEJSKIE</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">05:03, 08:14D, 09:04, 10:34D, 11:34D, 12:34, 17:04, 18:34, 20:09D, 21:16, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">18</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">PIASKI ZAMIEJSKIE</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">12:50E*, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">33</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">PIASKI ZAMIEJSKIE</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">06:12, 07:12, 14:32, 15:37, 22:24, </td>
+  </tr>
+	 <tr>
+    <td colspan="3" style="font-size:12px;font-weight:bold;	background-color:#CCCCCC;">Soboty</td>
+  </tr>
+	
+  	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">12</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">PIASKI ZAMIEJSKIE</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">06:19, 09:24, 10:34, 12:29, 17:49, 19:29, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">33</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">PIASKI ZAMIEJSKIE</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">07:24, 14:24, 15:24, </td>
+  </tr>
+	 <tr>
+    <td colspan="3" style="font-size:12px;font-weight:bold;	background-color:#CCCCCC;">Dni świąteczne</td>
+  </tr>
+	
+  	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">12</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">PIASKI ZAMIEJSKIE</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">07:04, 09:24, 10:29, 11:39, 13:04, 14:09, 15:19, 16:19, 17:19, 19:39, </td>
+  </tr>
+
+<tr><td colspan="3" align="left">D - w okresie letnich wakacji szkolnych kursuje do /z/ działek <br>E - nie kursuje w okresie letnich wakacji szkolnych <br>* - kursuje do Pętli Piaski Zamiejski <br>Autobusy MPK kursują z tolerancją +2min. <br>W autobusach obowiązują wyłącznie bilety MPK Siedlce <br></td></tr>
+</table>
+<p>&nbsp;</p>
+</div>
+</body>
+</html>

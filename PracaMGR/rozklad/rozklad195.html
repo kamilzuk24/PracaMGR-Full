@@ -1,0 +1,142 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<style type="text/css">
+
+.nagl_przystanek
+{
+	font-size:14px;
+	font-weight:bold;
+}
+.nagl_opis
+{
+	font-size:12px;
+	font-weight:bold;
+}
+.linia
+{
+	font-size:14px;
+	font-weight:bold;
+	background-color:#B0D8FF;
+}
+
+.typ
+{
+	font-size:12px;
+	font-weight:bold;
+	background-color:#CCCCCC;
+}
+.podkresl
+{
+border: 1px #CCCCCC solid;
+}
+.odjazdy
+{
+font-weight:bold;
+font-size:1.2em;
+}
+</style>
+<script type="text/javascript">
+
+    function PrintElem(elem)
+    {
+        Popup(document.getElementById(elem).innerHTML);
+    }
+
+    function Popup(data) 
+    {
+        var mywindow = window.open('', 'rozklad', 'height=400,width=600');
+        mywindow.document.write('<html><head><title>Rozkład</title>');
+        /*optional stylesheet*/ //mywindow.document.write('<link rel="stylesheet" href="main.css" type="text/css" />');
+        mywindow.document.write('</head><body >');
+        mywindow.document.write(data);
+        mywindow.document.write('</body></html>');
+        mywindow.document.close();
+        mywindow.print();
+        return true;
+    }
+
+</script>
+
+</head>
+
+<body>
+<div style="position: relative; top:40px; left:40px;"><a href="" onclick="PrintElem('printarea');return false;" style="text-decoration:none;"><img src="/Content/printButton.png" border="0" align="middle"/> Drukuj</a></div>
+<div id="printarea">
+  
+
+<table width="100%" border="0">
+  <tr>
+    <td colspan="3" align="right"> </td>
+  </tr>
+  <tr>
+    <td colspan="3" align="center">
+	<span  class="nagl_przystanek">(02)Siedlce J.Mireckiego Jagiellońska (2)</span><br />
+	<span class="nagl_opis">Rozkład jazdy autobusów MPK Siedlce<br />
+	ważny od 29.06.2015&nbsp;&nbsp;&nbsp;Strefa: I</span></td>
+  </tr>
+  <tr>
+    <th colspan="2">Linia</th>
+    <th width="167">Godziny odjazdów </th>
+  </tr>
+  	 <tr>
+    <td colspan="3" style="font-size:12px;font-weight:bold;	background-color:#CCCCCC;">Dni robocze</td>
+  </tr>
+	
+  	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">4</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">MIRECKIEGO - Chrobrego - Sokołowska - Wojskowa - Piłsudskiego - WARSZAWSKA - Monte Cassino - KURPIOWSKA</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">05:01, 05:56, 06:21, 06:46, 07:06, 07:28, 07:49, 08:09, 08:29, 08:49, 09:09, 09:29, 09:49, 10:09, 10:29, 10:49, 11:09, 11:29, 11:49, 12:09, 12:29, 12:49, 13:09, 13:29, 13:49, 14:09, 14:29, 14:49, 15:09, 15:29, 15:49, 16:09, 16:29, 16:49, 17:09, 17:29, 17:48, 18:08, 18:28, 18:48, 19:08, 19:28, 19:56, 20:26, 21:26, 22:24, 23:04, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">9</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">MIRECKIEGO - Chrobrego - Sokołowska - Wojskowa - ARMII KRAJOWEJ - PLAC ZDANOWSKIEGO - DW. PKP</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">05:27, 06:27, 07:47, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">25</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">MIRECKIEGO - BRONIEWSKIEGO</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">06:33E, 07:53E, 15:23E, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">35</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">MIRECKIEGO - Mieszka I - SOKOŁOWSKA</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">05:32E, 06:40E, 07:47E, 10:45p, 13:32E, 15:05E, </td>
+  </tr>
+	 <tr>
+    <td colspan="3" style="font-size:12px;font-weight:bold;	background-color:#CCCCCC;">Soboty</td>
+  </tr>
+	
+  	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">4</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">MIRECKIEGO - Chrobrego - Sokołowska - Wojskowa - Piłsudskiego - WARSZAWSKA - Monte Cassino - KURPIOWSKA</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">06:16, 07:06, 07:59, 08:49, 09:29, 09:59, 10:29, 10:59, 11:29, 11:59, 12:29, 12:59, 13:29, 13:59, 14:29, 14:59, 15:29, 15:59, 16:29, 16:59, 17:29, 17:58, 18:28, 18:58, 19:28, 20:26, 21:34, 22:14, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">9</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">MIRECKIEGO - Chrobrego - Sokołowska - Wojskowa - ARMII KRAJOWEJ - PLAC ZDANOWSKIEGO - DW. PKP</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">07:27, 11:32, 14:47, 18:42, </td>
+  </tr>
+	 <tr>
+    <td colspan="3" style="font-size:12px;font-weight:bold;	background-color:#CCCCCC;">Dni świąteczne</td>
+  </tr>
+	
+  	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">4</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">MIRECKIEGO - Chrobrego - Sokołowska - Wojskowa - Piłsudskiego - WARSZAWSKA - Monte Cassino - KURPIOWSKA</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">06:16, 07:06, 07:59, 08:49, 09:29, 09:59, 10:29, 10:59, 11:29, 11:59, 12:29, 12:59, 13:29, 13:59, 14:29, 14:59, 15:29, 15:59, 16:29, 16:59, 17:29, 17:58, 18:28, 18:58, 19:28, 20:26, 21:34, 22:14, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">9</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">MIRECKIEGO - Chrobrego - Sokołowska - Wojskowa - ARMII KRAJOWEJ - PLAC ZDANOWSKIEGO - DW. PKP</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">07:32, 12:12, 14:47, </td>
+  </tr>
+
+<tr><td colspan="3" align="left">E - nie kursuje w okresie letnich wakacji szkolnych <br>p - kursuje w dni nauki szkolnej z ul.Prusa/Amfiteatr na ul.Sokołowska pętla i z powrotem <br>Autobusy MPK kursują z tolerancją +2min. W autobusach obowiązują wyłącznie bilety MPK Siedlce <br>W dn.5.06.2015r. autobusy kursują wg. sobotniego rozkladu jazdy <br></td></tr>
+</table>
+<p>&nbsp;</p>
+</div>
+</body>
+</html>

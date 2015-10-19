@@ -1,0 +1,172 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<style type="text/css">
+
+.nagl_przystanek
+{
+	font-size:14px;
+	font-weight:bold;
+}
+.nagl_opis
+{
+	font-size:12px;
+	font-weight:bold;
+}
+.linia
+{
+	font-size:14px;
+	font-weight:bold;
+	background-color:#B0D8FF;
+}
+
+.typ
+{
+	font-size:12px;
+	font-weight:bold;
+	background-color:#CCCCCC;
+}
+.podkresl
+{
+border: 1px #CCCCCC solid;
+}
+.odjazdy
+{
+font-weight:bold;
+font-size:1.2em;
+}
+</style>
+<script type="text/javascript">
+
+    function PrintElem(elem)
+    {
+        Popup(document.getElementById(elem).innerHTML);
+    }
+
+    function Popup(data) 
+    {
+        var mywindow = window.open('', 'rozklad', 'height=400,width=600');
+        mywindow.document.write('<html><head><title>Rozkład</title>');
+        /*optional stylesheet*/ //mywindow.document.write('<link rel="stylesheet" href="main.css" type="text/css" />');
+        mywindow.document.write('</head><body >');
+        mywindow.document.write(data);
+        mywindow.document.write('</body></html>');
+        mywindow.document.close();
+        mywindow.print();
+        return true;
+    }
+
+</script>
+
+</head>
+
+<body>
+<div style="position: relative; top:40px; left:40px;"><a href="" onclick="PrintElem('printarea');return false;" style="text-decoration:none;"><img src="/Content/printButton.png" border="0" align="middle"/> Drukuj</a></div>
+<div id="printarea">
+  
+
+<table width="100%" border="0">
+  <tr>
+    <td colspan="3" align="right"> </td>
+  </tr>
+  <tr>
+    <td colspan="3" align="center">
+	<span  class="nagl_przystanek">(01)Siedlce Kino (2)</span><br />
+	<span class="nagl_opis">Rozkład jazdy autobusów MPK Siedlce<br />
+	ważny od 01.04.2014&nbsp;&nbsp;&nbsp;Strefa: I</span></td>
+  </tr>
+  <tr>
+    <th colspan="2">Linia</th>
+    <th width="167">Godziny odjazdów </th>
+  </tr>
+  	 <tr>
+    <td colspan="3" style="font-size:12px;font-weight:bold;	background-color:#CCCCCC;">Dni robocze</td>
+  </tr>
+	
+  	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">14</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">PIŁSUDSKIEGO - ARMII KRAJOWEJ - PLAC ZDANOWSKIEGO - DW. PKP</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">05:12, 06:22, 07:36, 09:14E, 10:34, 13:19, 15:38, 16:53, 18:21, 19:38, 21:14, 23:21, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">16</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">PIŁSUDSKIEGO - Armii Krajowej - Świętojańska - Partyzantów - Kurpiowska - GARWOLIŃSKA - Niepodległości - UNITÓW PODLASKICH</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">06:03k, 07:03, 08:03, 09:51J, 11:42J, 12:53, 14:08, 15:18, 16:43, 19:32J, 22:13, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">18</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">PIŁSUDSKIEGO - Warszawska - Daszyńskiego - PRZYMIARKI</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">05:14, 06:11, 06:51E, 07:11, 08:06, 08:36E, 09:06, 09:36E, 10:06, 10:36E, 11:06, 11:36E, 12:06, 12:36E*, 13:06, 13:36E, 14:06, 14:36E, 15:09, 15:36E, 16:06, 16:36E, 17:06e, 18:06, 19:06, 20:13, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">23</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">PIŁSUDSKIEGO - ARMII KRAJOWEJ - PLAC ZDANOWSKIEGO - DW. PKP</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">07:32w, 14:12w, 15:57w, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">26</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">PIŁSUDSKIEGO - ARMII KRAJOWEJ - PLAC ZDANOWSKIEGO - DW. PKP</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">05:14, 06:22o, 07:32oz, 09:34bo, 10:51o, 13:14, 15:24, 16:39, 17:54, 20:19, 23:11, </td>
+  </tr>
+	 <tr>
+    <td colspan="3" style="font-size:12px;font-weight:bold;	background-color:#CCCCCC;">Soboty</td>
+  </tr>
+	
+  	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">6</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">PIŁSUDSKIEGO - ARMII KRAJOWEJ - PLAC ZDANOWSKIEGO - DW. PKP</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">07:28, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">14</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">PIŁSUDSKIEGO - ARMII KRAJOWEJ - PLAC ZDANOWSKIEGO - DW. PKP</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">06:22, 08:56, 11:12, 15:24, 16:52, 18:06, 20:12, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">16</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">PIŁSUDSKIEGO - Armii Krajowej - Świętojańska - Partyzantów - Kurpiowska - GARWOLIŃSKA - Niepodległości - UNITÓW PODLASKICH</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">06:08, 07:08, 09:18, 11:58, 14:08, 15:10, 18:08, 20:58, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">18</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">PIŁSUDSKIEGO - Warszawska - Daszyńskiego - PRZYMIARKI</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">09:36, 11:51, 12:51, 16:26, 20:56, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">26</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">PIŁSUDSKIEGO - ARMII KRAJOWEJ - PLAC ZDANOWSKIEGO - DW. PKP</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">06:24o, 10:24o, 13:21o, 16:29, 19:31o, </td>
+  </tr>
+	 <tr>
+    <td colspan="3" style="font-size:12px;font-weight:bold;	background-color:#CCCCCC;">Dni świąteczne</td>
+  </tr>
+	
+  	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">6</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">PIŁSUDSKIEGO - ARMII KRAJOWEJ - PLAC ZDANOWSKIEGO - DW. PKP</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">06:43, 14:23, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">14</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">PIŁSUDSKIEGO - ARMII KRAJOWEJ - PLAC ZDANOWSKIEGO - DW. PKP</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">06:47, 09:59, 12:35, 16:07, 19:07, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">16</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">PIŁSUDSKIEGO - Armii Krajowej - Świętojańska - Partyzantów - Kurpiowska - GARWOLIŃSKA - Niepodległości - UNITÓW PODLASKICH</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">07:42J, 11:02J, 12:57J, 14:43, 16:48, 18:53, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">26</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">PIŁSUDSKIEGO - ARMII KRAJOWEJ - PLAC ZDANOWSKIEGO - DW. PKP</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">08:50o, 11:19, 13:09, 17:24, 20:24o, </td>
+  </tr>
+
+<tr><td colspan="3" align="left">E - nie kursuje w okresie letnich wakacji szkolnych <br>k - kursuje przez dw PKP <br>J - kursuje ul.Janowską i Kasztanową <br>* - kursuje do Pętli Piaski Zamiejski <br>e - kursuje w okresie letnich wakacji szkolnych <br>w - kursuje w dni nauki szkolnej <br>o - kursuje przez Osiny <br>z - kursuje w dni nauki szkolnej przez ul.Praga w Stoku Lackim <br>b - kursuje do Bzowa przez Czuryły, Rzążew w okresie roku szkolnego <br>Autobusy MPK kursują z tolerancją +2min. <br>W autobusach obowiązują wyłącznie bilety MPK Siedlce <br></td></tr>
+</table>
+<p>&nbsp;</p>
+</div>
+</body>
+</html>

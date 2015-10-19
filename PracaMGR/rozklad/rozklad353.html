@@ -1,0 +1,312 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<style type="text/css">
+
+.nagl_przystanek
+{
+	font-size:14px;
+	font-weight:bold;
+}
+.nagl_opis
+{
+	font-size:12px;
+	font-weight:bold;
+}
+.linia
+{
+	font-size:14px;
+	font-weight:bold;
+	background-color:#B0D8FF;
+}
+
+.typ
+{
+	font-size:12px;
+	font-weight:bold;
+	background-color:#CCCCCC;
+}
+.podkresl
+{
+border: 1px #CCCCCC solid;
+}
+.odjazdy
+{
+font-weight:bold;
+font-size:1.2em;
+}
+</style>
+<script type="text/javascript">
+
+    function PrintElem(elem)
+    {
+        Popup(document.getElementById(elem).innerHTML);
+    }
+
+    function Popup(data) 
+    {
+        var mywindow = window.open('', 'rozklad', 'height=400,width=600');
+        mywindow.document.write('<html><head><title>Rozkład</title>');
+        /*optional stylesheet*/ //mywindow.document.write('<link rel="stylesheet" href="main.css" type="text/css" />');
+        mywindow.document.write('</head><body >');
+        mywindow.document.write(data);
+        mywindow.document.write('</body></html>');
+        mywindow.document.close();
+        mywindow.print();
+        return true;
+    }
+
+</script>
+
+</head>
+
+<body>
+<div style="position: relative; top:40px; left:40px;"><a href="" onclick="PrintElem('printarea');return false;" style="text-decoration:none;"><img src="/Content/printButton.png" border="0" align="middle"/> Drukuj</a></div>
+<div id="printarea">
+  
+
+<table width="100%" border="0">
+  <tr>
+    <td colspan="3" align="right"> </td>
+  </tr>
+  <tr>
+    <td colspan="3" align="center">
+	<span  class="nagl_przystanek">(04)Siedlce Dworzec PKS (1)</span><br />
+	<span class="nagl_opis">Rozkład jazdy autobusów MPK Siedlce<br />
+	ważny od 19.05.2015&nbsp;&nbsp;&nbsp;Strefa: I</span></td>
+  </tr>
+  <tr>
+    <th colspan="2">Linia</th>
+    <th width="167">Godziny odjazdów </th>
+  </tr>
+  	 <tr>
+    <td colspan="3" style="font-size:12px;font-weight:bold;	background-color:#CCCCCC;">Dni robocze</td>
+  </tr>
+	
+  	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">1</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">PLAC ZDANOWSKIEGO - DW. PKP</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">07:18, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">5</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">PLAC ZDANOWSKIEGO - DW. PKP</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">08:24, 09:29E, 11:59E, 13:24, 15:20, 16:49E, 18:19E, 20:04E, 20:59H, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">7</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">PLAC ZDANOWSKIEGO - DW. PKP</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">05:16, 06:19E, 06:28HG, 07:22E, 07:31GH, 08:11E, 10:22G, 11:27GE, 13:18, 15:26, 15:34H, 16:25, 17:35, 19:44G, 21:26, 23:07, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">9</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">PLAC ZDANOWSKIEGO - DW. PKP</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">05:38, 06:38, 07:58, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">11</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">PLAC ZDANOWSKIEGO - DW. PKP</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">05:24, 07:30E, 08:49, 13:21, 15:40E, 18:35E, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">13</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">PLAC ZDANOWSKIEGO - DW. PKP</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">05:19, 06:24, 07:31, 08:52E, 10:26, 13:14, 15:32, 16:49, 18:49E, 20:44, 22:58, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">14</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">PLAC ZDANOWSKIEGO - DW. PKP</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">05:18, 06:28, 07:42, 09:20E, 10:40, 13:25, 15:44, 16:59, 18:27, 19:44, 21:20, 23:27, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">15</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">PLAC ZDANOWSKIEGO - DW. PKP</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">05:17g, 06:25E, 06:31gH, 07:40E, 07:46gH, 08:50E, 10:40E, 10:46gH, 13:10E, 15:27E, 16:37, 18:00, 19:31g, 21:15E, 23:14, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">17</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">PLAC ZDANOWSKIEGO - DW. PKP</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">08:00ż, 09:00ż, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">19</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">PLAC ZDANOWSKIEGO - DW. PKP</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">07:25, 08:22, 09:32, 11:26, 16:22, 17:22, 19:27, 21:22, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">21</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">PLAC ZDANOWSKIEGO - DW. PKP</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">06:31, 07:40, 11:19, 15:29, 16:44, 19:23, 21:29, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">22</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">PLAC ZDANOWSKIEGO - DW. PKP</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">09:17, 11:05, 13:10, 14:10, 16:25, 19:15, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">23</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">PLAC ZDANOWSKIEGO - DW. PKP</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">07:38w, 14:18w, 16:03w, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">26</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">PLAC ZDANOWSKIEGO - DW. PKP</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">05:20, 06:28o, 07:38oz, 09:40bo, 10:57o, 13:20, 15:30, 16:45, 18:00, 20:25, 23:17, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">27</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">PLAC ZDANOWSKIEGO - DW. PKP</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">10:14K, 18:10K, </td>
+  </tr>
+	 <tr>
+    <td colspan="3" style="font-size:12px;font-weight:bold;	background-color:#CCCCCC;">Soboty</td>
+  </tr>
+	
+  	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">1</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">PLAC ZDANOWSKIEGO - DW. PKP</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">08:54, 17:47, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">5</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">PLAC ZDANOWSKIEGO - DW. PKP</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">07:44, 10:54, 13:24, 15:19, 18:24, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">6</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">PLAC ZDANOWSKIEGO - DW. PKP</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">07:34, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">7</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">PLAC ZDANOWSKIEGO - DW. PKP</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">06:28, 07:48, 10:00G, 12:08, 14:17G, 16:33G, 19:03, 21:20, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">9</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">PLAC ZDANOWSKIEGO - DW. PKP</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">07:38, 11:43, 14:58, 18:53, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">11</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">PLAC ZDANOWSKIEGO - DW. PKP</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">06:37, 09:04, 12:59, 15:19, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">13</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">PLAC ZDANOWSKIEGO - DW. PKP</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">06:27, 11:19, 14:27, 16:49, 19:45, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">14</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">PLAC ZDANOWSKIEGO - DW. PKP</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">06:28, 09:02, 11:18, 15:30, 16:58, 18:12, 20:18, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">15</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">PLAC ZDANOWSKIEGO - DW. PKP</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">06:31g, 09:40, 12:15, 16:40, 20:30, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">19</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">PLAC ZDANOWSKIEGO - DW. PKP</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">06:27, 07:37, 09:27, 12:22, 16:12, 18:57, 20:52, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">21</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">PLAC ZDANOWSKIEGO - DW. PKP</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">07:49, 11:09, 16:34, 19:24, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">26</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">PLAC ZDANOWSKIEGO - DW. PKP</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">06:30o, 10:30o, 13:27o, 16:35, 19:37o, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">27</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">PLAC ZDANOWSKIEGO - DW. PKP</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">08:35K, 10:35K, 12:25K, 15:20K, 17:20K, 20:50K, </td>
+  </tr>
+	 <tr>
+    <td colspan="3" style="font-size:12px;font-weight:bold;	background-color:#CCCCCC;">Dni świąteczne</td>
+  </tr>
+	
+  	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">1</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">PLAC ZDANOWSKIEGO - DW. PKP</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">08:54, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">5</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">PLAC ZDANOWSKIEGO - DW. PKP</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">08:44, 10:36, 13:44, 17:44, 18:49, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">6</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">PLAC ZDANOWSKIEGO - DW. PKP</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">06:49, 14:29, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">7</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">PLAC ZDANOWSKIEGO - DW. PKP</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">06:48, 08:43, 10:02G, 11:36G, 13:02G, 14:58, 16:34G, 18:34, 20:15, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">9</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">PLAC ZDANOWSKIEGO - DW. PKP</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">07:43, 12:23, 14:58, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">11</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">PLAC ZDANOWSKIEGO - DW. PKP</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">08:48, 19:54, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">13</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">PLAC ZDANOWSKIEGO - DW. PKP</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">06:27, 11:04, 14:32, 19:20, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">14</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">PLAC ZDANOWSKIEGO - DW. PKP</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">06:53, 10:05, 12:41, 16:13, 19:13, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">15</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">PLAC ZDANOWSKIEGO - DW. PKP</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">06:57g, 10:40, 15:36g, 20:46g, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">19</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">PLAC ZDANOWSKIEGO - DW. PKP</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">06:52, 07:40, 09:52, 12:07, 15:52, 17:57, 20:52, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">21</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">PLAC ZDANOWSKIEGO - DW. PKP</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">07:04, 11:42, 13:59, 17:09, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">22</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">PLAC ZDANOWSKIEGO - DW. PKP</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">10:40, 13:35, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">26</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">PLAC ZDANOWSKIEGO - DW. PKP</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">08:56o, 11:25, 13:15, 17:30, 20:30o, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">27</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">PLAC ZDANOWSKIEGO - DW. PKP</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">09:44K, 16:10K, </td>
+  </tr>
+
+<tr><td colspan="3" align="left">E - nie kursuje w okresie letnich wakacji szkolnych <br>H - kursuje w okresie letnich wakacji szkolnych <br>G - kursuje przez Grabianów Wieś <br>g - kursuje przez Golice-Pętle <br>ż - kursuje w dni nauki szkolnej z dw. PKP do Sokołowska Pętla <br>w - kursuje w dni nauki szkolnej <br>o - kursuje przez Osiny <br>z - kursuje w dni nauki szkolnej przez ul.Praga w Stoku Lackim <br>b - kursuje do Bzowa przez Czuryły, Rzążew w okresie roku szkolnego <br>K - kursuje do(z) Dworca PKP <br>Autobusy MPK kursują z tolerancją +2min. W autobusach obowiązują wyłącznie bilety MPK Siedlce <br>W dn.5.06.2015r. autobusy kursują wg. sobotniego rozkladu jazdy <br></td></tr>
+</table>
+<p>&nbsp;</p>
+</div>
+</body>
+</html>

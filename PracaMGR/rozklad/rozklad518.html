@@ -1,0 +1,132 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<style type="text/css">
+
+.nagl_przystanek
+{
+	font-size:14px;
+	font-weight:bold;
+}
+.nagl_opis
+{
+	font-size:12px;
+	font-weight:bold;
+}
+.linia
+{
+	font-size:14px;
+	font-weight:bold;
+	background-color:#B0D8FF;
+}
+
+.typ
+{
+	font-size:12px;
+	font-weight:bold;
+	background-color:#CCCCCC;
+}
+.podkresl
+{
+border: 1px #CCCCCC solid;
+}
+.odjazdy
+{
+font-weight:bold;
+font-size:1.2em;
+}
+</style>
+<script type="text/javascript">
+
+    function PrintElem(elem)
+    {
+        Popup(document.getElementById(elem).innerHTML);
+    }
+
+    function Popup(data) 
+    {
+        var mywindow = window.open('', 'rozklad', 'height=400,width=600');
+        mywindow.document.write('<html><head><title>Rozkład</title>');
+        /*optional stylesheet*/ //mywindow.document.write('<link rel="stylesheet" href="main.css" type="text/css" />');
+        mywindow.document.write('</head><body >');
+        mywindow.document.write(data);
+        mywindow.document.write('</body></html>');
+        mywindow.document.close();
+        mywindow.print();
+        return true;
+    }
+
+</script>
+
+</head>
+
+<body>
+<div style="position: relative; top:40px; left:40px;"><a href="" onclick="PrintElem('printarea');return false;" style="text-decoration:none;"><img src="/Content/printButton.png" border="0" align="middle"/> Drukuj</a></div>
+<div id="printarea">
+  
+
+<table width="100%" border="0">
+  <tr>
+    <td colspan="3" align="right"> </td>
+  </tr>
+  <tr>
+    <td colspan="3" align="center">
+	<span  class="nagl_przystanek">(04)Żabokliki-Kwiatowa (1)</span><br />
+	<span class="nagl_opis">Rozkład jazdy autobusów MPK Siedlce<br />
+	ważny od 29.06.2015&nbsp;&nbsp;&nbsp;Strefa: II</span></td>
+  </tr>
+  <tr>
+    <th colspan="2">Linia</th>
+    <th width="167">Godziny odjazdów </th>
+  </tr>
+  	 <tr>
+    <td colspan="3" style="font-size:12px;font-weight:bold;	background-color:#CCCCCC;">Dni robocze</td>
+  </tr>
+	
+  	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">5</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">ŻABOKLIKI - GOLICE</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">06:01E, 06:56E, 07:51HP, 07:51E, 08:59E, 11:14E, 12:44E, 14:32, 16:14E, 17:44E, 19:34E, 20:24H, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">15</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">ŻABOKLIKI - Golice - Błogoszcz - PRUSZYNEK - PRUSZYN</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">04:24, 05:34, 06:49, 07:59E, 09:44, 12:19gH, 12:19E, 14:39E, 15:44g, 17:04g, 18:29g, 20:24E, 22:33g, </td>
+  </tr>
+	 <tr>
+    <td colspan="3" style="font-size:12px;font-weight:bold;	background-color:#CCCCCC;">Soboty</td>
+  </tr>
+	
+  	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">5</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">ŻABOKLIKI - GOLICE</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">07:14, 10:24, 12:54, 14:49, 17:54, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">15</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">ŻABOKLIKI - Golice - Błogoszcz - PRUSZYNEK - PRUSZYN</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">05:34, 08:44, 11:24, 15:44g, 19:34, </td>
+  </tr>
+	 <tr>
+    <td colspan="3" style="font-size:12px;font-weight:bold;	background-color:#CCCCCC;">Dni świąteczne</td>
+  </tr>
+	
+  	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">5</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">ŻABOKLIKI - GOLICE</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">08:09, 10:09, 13:14, 17:09, 18:14, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">15</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">ŻABOKLIKI - Golice - Błogoszcz - PRUSZYNEK - PRUSZYN</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">06:04, 08:39, 14:39, 19:44g, </td>
+  </tr>
+
+<tr><td colspan="3" align="left">E - nie kursuje w okresie letnich wakacji szkolnych <br>H - kursuje w okresie letnich wakacji szkolnych <br>P - w okresie letnich wakacji kursuje z PKP <br>g - kursuje przez Golice-Pętle <br>Autobusy MPK kursują z tolerancją +2min. W autobusach obowiązują wyłącznie bilety MPK Siedlce <br>W dn.5.06.2015r. autobusy kursują wg. sobotniego rozkladu jazdy <br></td></tr>
+</table>
+<p>&nbsp;</p>
+</div>
+</body>
+</html>

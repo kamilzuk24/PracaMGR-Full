@@ -1,0 +1,117 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<style type="text/css">
+
+.nagl_przystanek
+{
+	font-size:14px;
+	font-weight:bold;
+}
+.nagl_opis
+{
+	font-size:12px;
+	font-weight:bold;
+}
+.linia
+{
+	font-size:14px;
+	font-weight:bold;
+	background-color:#B0D8FF;
+}
+
+.typ
+{
+	font-size:12px;
+	font-weight:bold;
+	background-color:#CCCCCC;
+}
+.podkresl
+{
+border: 1px #CCCCCC solid;
+}
+.odjazdy
+{
+font-weight:bold;
+font-size:1.2em;
+}
+</style>
+<script type="text/javascript">
+
+    function PrintElem(elem)
+    {
+        Popup(document.getElementById(elem).innerHTML);
+    }
+
+    function Popup(data) 
+    {
+        var mywindow = window.open('', 'rozklad', 'height=400,width=600');
+        mywindow.document.write('<html><head><title>Rozkład</title>');
+        /*optional stylesheet*/ //mywindow.document.write('<link rel="stylesheet" href="main.css" type="text/css" />');
+        mywindow.document.write('</head><body >');
+        mywindow.document.write(data);
+        mywindow.document.write('</body></html>');
+        mywindow.document.close();
+        mywindow.print();
+        return true;
+    }
+
+</script>
+
+</head>
+
+<body>
+<div style="position: relative; top:40px; left:40px;"><a href="" onclick="PrintElem('printarea');return false;" style="text-decoration:none;"><img src="/Content/printButton.png" border="0" align="middle"/> Drukuj</a></div>
+<div id="printarea">
+  
+
+<table width="100%" border="0">
+  <tr>
+    <td colspan="3" align="right"> </td>
+  </tr>
+  <tr>
+    <td colspan="3" align="center">
+	<span  class="nagl_przystanek">(04)Siedlce Park Wodny (1)</span><br />
+	<span class="nagl_opis">Rozkład jazdy autobusów MPK Siedlce<br />
+	ważny od 29.06.2015&nbsp;&nbsp;&nbsp;Strefa: I</span></td>
+  </tr>
+  <tr>
+    <th colspan="2">Linia</th>
+    <th width="167">Godziny odjazdów </th>
+  </tr>
+  	 <tr>
+    <td colspan="3" style="font-size:12px;font-weight:bold;	background-color:#CCCCCC;">Dni robocze</td>
+  </tr>
+	
+  	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">4</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">DĄBROWSKIEGO - Mireckiego - Chrobrego - Sokołowska - Wojskowa - Piłsudskiego - Warszawska - Monte Cassino - KURPIOWSKA</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">04:58, 05:53, 06:18, 06:43, 07:03, 07:25, 07:45, 08:05, 08:25, 08:45, 09:05, 09:25, 09:45, 10:05, 10:25, 10:45, 11:05, 11:25, 11:45, 12:05, 12:25, 12:45, 13:05, 13:25, 13:45, 14:05, 14:25, 14:45, 15:05, 15:25, 15:45, 16:05, 16:25, 16:45, 17:05, 17:25, 17:45, 18:05, 18:25, 18:45, 19:05, 19:25, 19:53, 20:23, 21:23, 22:22, 23:02, </td>
+  </tr>
+	 <tr>
+    <td colspan="3" style="font-size:12px;font-weight:bold;	background-color:#CCCCCC;">Soboty</td>
+  </tr>
+	
+  	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">4</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">DĄBROWSKIEGO - Mireckiego - Chrobrego - Sokołowska - Wojskowa - Piłsudskiego - Warszawska - Monte Cassino - KURPIOWSKA</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">06:13, 07:03, 07:55, 08:45, 09:25, 09:55, 10:25, 10:55, 11:25, 11:55, 12:25, 12:55, 13:25, 13:55, 14:25, 14:55, 15:25, 15:55, 16:25, 16:55, 17:25, 17:55, 18:25, 18:55, 19:25, 20:23, 21:32, 22:12, </td>
+  </tr>
+	 <tr>
+    <td colspan="3" style="font-size:12px;font-weight:bold;	background-color:#CCCCCC;">Dni świąteczne</td>
+  </tr>
+	
+  	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">4</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">DĄBROWSKIEGO - Mireckiego - Chrobrego - Sokołowska - Wojskowa - Piłsudskiego - Warszawska - Monte Cassino - KURPIOWSKA</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">06:13, 07:03, 07:55, 08:45, 09:25, 09:55, 10:25, 10:55, 11:25, 11:55, 12:25, 12:55, 13:25, 13:55, 14:25, 14:55, 15:25, 15:55, 16:25, 16:55, 17:25, 17:55, 18:25, 18:55, 19:25, 20:23, 21:32, 22:12, </td>
+  </tr>
+
+<tr><td colspan="3" align="left"></td></tr>
+</table>
+<p>&nbsp;</p>
+</div>
+</body>
+</html>

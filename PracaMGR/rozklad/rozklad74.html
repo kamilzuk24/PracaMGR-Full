@@ -1,0 +1,347 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<style type="text/css">
+
+.nagl_przystanek
+{
+	font-size:14px;
+	font-weight:bold;
+}
+.nagl_opis
+{
+	font-size:12px;
+	font-weight:bold;
+}
+.linia
+{
+	font-size:14px;
+	font-weight:bold;
+	background-color:#B0D8FF;
+}
+
+.typ
+{
+	font-size:12px;
+	font-weight:bold;
+	background-color:#CCCCCC;
+}
+.podkresl
+{
+border: 1px #CCCCCC solid;
+}
+.odjazdy
+{
+font-weight:bold;
+font-size:1.2em;
+}
+</style>
+<script type="text/javascript">
+
+    function PrintElem(elem)
+    {
+        Popup(document.getElementById(elem).innerHTML);
+    }
+
+    function Popup(data) 
+    {
+        var mywindow = window.open('', 'rozklad', 'height=400,width=600');
+        mywindow.document.write('<html><head><title>Rozkład</title>');
+        /*optional stylesheet*/ //mywindow.document.write('<link rel="stylesheet" href="main.css" type="text/css" />');
+        mywindow.document.write('</head><body >');
+        mywindow.document.write(data);
+        mywindow.document.write('</body></html>');
+        mywindow.document.close();
+        mywindow.print();
+        return true;
+    }
+
+</script>
+
+</head>
+
+<body>
+<div style="position: relative; top:40px; left:40px;"><a href="" onclick="PrintElem('printarea');return false;" style="text-decoration:none;"><img src="/Content/printButton.png" border="0" align="middle"/> Drukuj</a></div>
+<div id="printarea">
+  
+
+<table width="100%" border="0">
+  <tr>
+    <td colspan="3" align="right"> </td>
+  </tr>
+  <tr>
+    <td colspan="3" align="center">
+	<span  class="nagl_przystanek">(02)Siedlce - Dworzec PKP (1)</span><br />
+	<span class="nagl_opis">Rozkład jazdy autobusów MPK Siedlce<br />
+	ważny od 29.06.2015&nbsp;&nbsp;&nbsp;Strefa: I</span></td>
+  </tr>
+  <tr>
+    <th colspan="2">Linia</th>
+    <th width="167">Godziny odjazdów </th>
+  </tr>
+  	 <tr>
+    <td colspan="3" style="font-size:12px;font-weight:bold;	background-color:#CCCCCC;">Dni robocze</td>
+  </tr>
+	
+  	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">1</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">ARMII KRAJOWEJ - Piłsudskiego - WARSZAWSKA</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">06:50Z, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">2</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">ŚWIĘTOJAŃSKA - Partyzantów - Garwolińska - Żelków Kolonia - Żelków - Żelków Kolonia - ŻELKÓW</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">04:40, 07:33E, 09:45, 12:25, 16:30, 18:25, 20:35E, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">5</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">ARMII KRAJOWEJ - Piłsudskiego - KAZIMIERZOWSKA - Żabokliki - GOLICE</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">07:37HP, 08:45E, 11:00E, 12:30E, 14:18, 16:00E, 17:30E, 19:20E, 20:10H, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">7</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">ARMII KRAJOWEJ - Piłsudskiego - Floriańska - Torowa - ŁUKOWSKA - Grabianów - Białki - ZACHOJNIAK</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">04:30, 05:18^, 06:20^, 07:25E, 09:15, 10:30E, 12:20G, 14:25^HG, 14:25^E, 15:30HG, 15:30E, 16:30^, 18:25^G, 20:40, 22:20G, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">8</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">ŚWIĘTOJAŃSKA - Partyzantów - Artyleryjska - Domanicka - Rakowiec - WOŁYŃCE</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">04:35, 05:37, 06:45, 07:40E, 08:43, 09:55a, 10:40, 12:20, 13:00a, 14:35, 15:30, 16:15, 17:10E, 18:30, 20:40, 22:20, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">9</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">ŚWIĘTOJAŃSKA - Zbrojna - Składowa - Grabianowska - Południowa - Łukowska - Torowa - Floriańska - Piłsudskiego - Konarskiego - Prusa - Kazimierzowska - Bema - Poniatowskiego - Dąbrowskiego - MIRECKIEGO - Chrobrego - Sokołowska - Wojskowa - Armii Krajowej - PLAC ZDANOWSKIEGO - DW. PKP</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">05:00, 06:00, 07:20, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">11</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">ARMII KRAJOWEJ - Piłsudskiego - Floriańska - Brzeska - Ujrzanowska - Terespolska - Ujrzanów - Borki Wyrki - ŚWIERCZE</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">04:36, 07:55, 12:28, 14:10EŁ, 17:00EŁ, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">13</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">ARMII KRAJOWEJ - Piłsudskiego - Warszawska - Nowe Iganie - Nowe Opole - Ostrówek - Wyłazy - NIWISKI</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">04:20, 05:25, 06:30, 07:45Ee, 09:24, 12:12, 14:30, 15:42, 17:45E, 19:25, 22:17e, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">14</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">ARMII KRAJOWEJ - Piłsudskiego - Starowiejska - Kasztanowa - Janowska - Stok Lacki - Pruszyn Pieńki - WYCZÓŁKI</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">04:20, 05:20L, 06:23L, 08:05LE, 09:30, 12:12L, 14:21L, 15:45L, 17:05L, 18:30L, 20:15, 22:20L, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">15</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">ARMII KRAJOWEJ - Piłsudskiego - Kazimierzowska - Żabokliki - Golice - Błogoszcz - Pruszynek - PRUSZYN</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">04:10, 05:20, 06:35, 07:45E, 09:30, 12:05gH, 12:05E, 14:25E, 15:30g, 16:50g, 18:15g, 20:10E, 22:20g, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">16</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">ARMII KRAJOWEJ - Piłsudskiego - Starowiejska - TERESPOLSKA</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">05:30k, 13:25k, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">17</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">ARMII KRAJOWEJ - Wojskowa - SOKOŁOWSKA</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">07:35ż, 08:35ż, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">19</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">ARMII KRAJOWEJ - Piłsudskiego - Warszawska - Nowe Iganie - Nowe Opole - Stare Opole - GRĘZÓW</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">05:35, 07:33, 08:30, 10:30, 12:25, 16:25, 18:25, 20:35, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">21</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">ARMII KRAJOWEJ - Piłsudskiego - Floriańska - Brzeska - Ujrzanowska - TERESPOLSKA - Ujrzanów - Borki Wyrki - Świercze - Chromna - Zdany - ZBUCZYN</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">05:25, 06:32, 10:10, 14:20, 15:35, 18:13, 20:20, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">22</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">ARMII KRAJOWEJ - Piłsudskiego - Floriańska - Torowa - Łukowska - Południowa - Grabianowska - SKŁADOWA - Zbrojna - Partyzantów - Garwolińska - Niepodległości - UNITÓW PODLASKICH</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">08:20, 10:05, 12:05, 13:15, 15:20, 17:25, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">23</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">ARMII KRAJOWEJ - Piłsudskiego - Starowiejska - Kasztanowa - Janowska - Stok Lacki - STOK LACKI-FOLWARK</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">07:00w, 13:40w, 15:25w, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">26</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">ARMII KRAJOWEJ - Piłsudskiego - Starowiejska - Janowska - Stok Lacki - Stok Lacki-Folwark - Stok Lacki - Pustki - Grubale - Tarcze - Cielemęc - CZURYŁY</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">04:20, 05:22, 06:32, 07:50b, 09:50, 12:10o, 14:20o, 15:35o, 16:50o, 19:15o, 22:18o, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">27</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">ARMII KRAJOWEJ - Piłsudskiego - 10 Lutego - Popiełuszki - Rynkowa - Prusa - Poniatowskiego - Bema - Kazimierzowska - STAROWIEJSKA - Janowska - Kasztanowa - STAROWIEJSKA</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">10:30#K, 18:15K, </td>
+  </tr>
+	 <tr>
+    <td colspan="3" style="font-size:12px;font-weight:bold;	background-color:#CCCCCC;">Soboty</td>
+  </tr>
+	
+  	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">1</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">ARMII KRAJOWEJ - Piłsudskiego - WARSZAWSKA</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">08:10, 17:10, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">2</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">ŚWIĘTOJAŃSKA - Partyzantów - Garwolińska - Żelków Kolonia - Żelków - Żelków Kolonia - ŻELKÓW</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">05:50, 08:05, 10:05, 12:15, 14:30, 15:30, 17:00, 19:25, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">5</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">ARMII KRAJOWEJ - Piłsudskiego - KAZIMIERZOWSKA - Żabokliki - GOLICE</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">07:00, 10:10, 12:40, 14:35, 17:40, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">6</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">ARMII KRAJOWEJ - Piłsudskiego - Starowiejska - Janowska - Stok Lacki - Stok Lacki-Folwark - Stok Lacki - Pustki - Grubale - OSINY</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">06:40, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">7</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">ARMII KRAJOWEJ - Piłsudskiego - Floriańska - Torowa - ŁUKOWSKA - Grabianów - Białki - ZACHOJNIAK</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">05:40, 07:00, 09:05, 11:20, 13:10G, 15:30G, 18:15, 20:25G, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">8</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">ŚWIĘTOJAŃSKA - Partyzantów - Artyleryjska - Domanicka - Rakowiec - WOŁYŃCE</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">05:50, 07:05, 08:40, 11:10, 13:50, 15:25, 17:10, 19:30, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">9</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">ŚWIĘTOJAŃSKA - Zbrojna - Składowa - Grabianowska - Południowa - Łukowska - Torowa - Floriańska - Piłsudskiego - Konarskiego - Prusa - Kazimierzowska - Bema - Poniatowskiego - Dąbrowskiego - MIRECKIEGO - Chrobrego - Sokołowska - Wojskowa - Armii Krajowej - PLAC ZDANOWSKIEGO - DW. PKP</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">07:00, 11:05, 14:20, 18:15, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">11</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">ARMII KRAJOWEJ - Piłsudskiego - Floriańska - Brzeska - Ujrzanowska - Terespolska - Ujrzanów - Borki Wyrki - ŚWIERCZE</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">05:45, 08:15, 12:05, 14:25, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">13</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">ARMII KRAJOWEJ - Piłsudskiego - Warszawska - Nowe Iganie - Nowe Opole - Ostrówek - Wyłazy - NIWISKI</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">05:30e, 10:00, 13:35e, 15:45, 18:45, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">14</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">ARMII KRAJOWEJ - Piłsudskiego - Starowiejska - Kasztanowa - Janowska - Stok Lacki - Pruszyn Pieńki - WYCZÓŁKI</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">05:20L, 08:00, 10:05L, 14:25, 15:45L, 17:10, 19:05L, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">15</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">ARMII KRAJOWEJ - Piłsudskiego - Kazimierzowska - Żabokliki - Golice - Błogoszcz - Pruszynek - PRUSZYN</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">05:20, 08:30, 11:10, 15:30g, 19:20, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">19</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">ARMII KRAJOWEJ - Piłsudskiego - Warszawska - Nowe Iganie - Nowe Opole - Stare Opole - GRĘZÓW</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">05:40, 06:50, 08:40, 11:30, 15:25, 18:10, 20:05, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">21</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">ARMII KRAJOWEJ - Piłsudskiego - Floriańska - Brzeska - Ujrzanowska - TERESPOLSKA - Ujrzanów - Borki Wyrki - Świercze - Chromna - Zdany - ZBUCZYN</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">06:40, 10:00, 15:25, 18:15, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">26</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">ARMII KRAJOWEJ - Piłsudskiego - Starowiejska - Janowska - Stok Lacki - Stok Lacki-Folwark - Stok Lacki - Pustki - Grubale - Tarcze - Cielemęc - CZURYŁY</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">05:25, 09:20, 12:20, 15:25o, 18:30, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">27</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">ARMII KRAJOWEJ - Piłsudskiego - 10 Lutego - Popiełuszki - Rynkowa - Prusa - Poniatowskiego - Bema - Kazimierzowska - STAROWIEJSKA - Janowska - Kasztanowa - STAROWIEJSKA</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">07:37K, 09:40K, 11:10K, 14:15K, 16:20K, 19:50K, </td>
+  </tr>
+	 <tr>
+    <td colspan="3" style="font-size:12px;font-weight:bold;	background-color:#CCCCCC;">Dni świąteczne</td>
+  </tr>
+	
+  	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">1</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">ARMII KRAJOWEJ - Piłsudskiego - WARSZAWSKA</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">08:10, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">2</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">ŚWIĘTOJAŃSKA - Partyzantów - Garwolińska - Żelków Kolonia - Żelków - Żelków Kolonia - ŻELKÓW</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">06:10, 08:05, 10:05, 12:15, 15:10, 17:00, 19:25, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">5</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">ARMII KRAJOWEJ - Piłsudskiego - KAZIMIERZOWSKA - Żabokliki - GOLICE</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">07:55, 09:55, 13:00, 16:55, 18:00, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">6</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">ARMII KRAJOWEJ - Piłsudskiego - Starowiejska - Janowska - Stok Lacki - Stok Lacki-Folwark - Stok Lacki - Pustki - Grubale - OSINY</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">06:00, 13:35, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">7</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">ARMII KRAJOWEJ - Piłsudskiego - Floriańska - Torowa - ŁUKOWSKA - Grabianów - Białki - ZACHOJNIAK</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">06:00, 07:57, 09:05, 09:55, 11:25G, 14:15, 15:40, 17:40G, 19:30, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">8</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">ŚWIĘTOJAŃSKA - Partyzantów - Artyleryjska - Domanicka - Rakowiec - WOŁYŃCE</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">07:10, 08:07, 10:06, 11:15, 13:05, 15:00, 16:40, 18:40, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">9</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">ŚWIĘTOJAŃSKA - Zbrojna - Składowa - Grabianowska - Południowa - Łukowska - Torowa - Floriańska - Piłsudskiego - Konarskiego - Prusa - Kazimierzowska - Bema - Poniatowskiego - Dąbrowskiego - MIRECKIEGO - Chrobrego - Sokołowska - Wojskowa - Armii Krajowej - PLAC ZDANOWSKIEGO - DW. PKP</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">07:05, 11:45, 14:20, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">11</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">ARMII KRAJOWEJ - Piłsudskiego - Floriańska - Brzeska - Ujrzanowska - Terespolska - Ujrzanów - Borki Wyrki - ŚWIERCZE</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">08:00, 19:05, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">13</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">ARMII KRAJOWEJ - Piłsudskiego - Warszawska - Nowe Iganie - Nowe Opole - Ostrówek - Wyłazy - NIWISKI</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">05:40e, 10:05, 13:40e, 18:20, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">14</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">ARMII KRAJOWEJ - Piłsudskiego - Starowiejska - Kasztanowa - Janowska - Stok Lacki - Pruszyn Pieńki - WYCZÓŁKI</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">05:53, 09:00, 11:20L, 15:00L, 18:00L, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">15</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">ARMII KRAJOWEJ - Piłsudskiego - Kazimierzowska - Żabokliki - Golice - Błogoszcz - Pruszynek - PRUSZYN</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">05:50, 08:25, 14:25, 19:30g, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">19</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">ARMII KRAJOWEJ - Piłsudskiego - Warszawska - Nowe Iganie - Nowe Opole - Stare Opole - GRĘZÓW</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">06:00, 06:54, 09:00, 11:07, 15:00, 17:10, 20:05, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">21</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">ARMII KRAJOWEJ - Piłsudskiego - Floriańska - Brzeska - Ujrzanowska - TERESPOLSKA - Ujrzanów - Borki Wyrki - Świercze - Chromna - Zdany - ZBUCZYN</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">05:55, 09:50, 12:50, 16:00, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">22</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">ARMII KRAJOWEJ - Piłsudskiego - Floriańska - Torowa - Łukowska - Południowa - Grabianowska - SKŁADOWA - Zbrojna - Partyzantów - Garwolińska - Niepodległości - UNITÓW PODLASKICH</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">08:20, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">26</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">ARMII KRAJOWEJ - Piłsudskiego - Starowiejska - Janowska - Stok Lacki - Stok Lacki-Folwark - Stok Lacki - Pustki - Grubale - Tarcze - Cielemęc - CZURYŁY</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">07:50, 10:10o, 12:05o, 16:20o, 19:20, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">27</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">ARMII KRAJOWEJ - Piłsudskiego - 10 Lutego - Popiełuszki - Rynkowa - Prusa - Poniatowskiego - Bema - Kazimierzowska - STAROWIEJSKA - Janowska - Kasztanowa - STAROWIEJSKA</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">08:50K, 15:15K, </td>
+  </tr>
+
+<tr><td colspan="3" align="left">Z - kursuje do Zalewu <br>E - nie kursuje w okresie letnich wakacji szkolnych <br>H - kursuje w okresie letnich wakacji szkolnych <br>P - w okresie letnich wakacji kursuje z PKP <br>^ - kursuje do Wólki Wiśniewskiej <br>G - kursuje przez Grabianów Wieś <br>a - kursuje w dni nauki szkolnej do pętli przy ul. Domanickiej <br>Ł - kursuje do m. Rzążew, Bzów p. Ługi W. Tarcze <br>e - kursuje do Ostrówka <br>L - kursuje przez Leśniczówkę i Krzymosze <br>g - kursuje przez Golice-Pętle <br>k - kursuje przez dw PKP <br>ż - kursuje w dni nauki szkolnej z dw. PKP do Sokołowska Pętla <br>w - kursuje w dni nauki szkolnej <br>b - kursuje do Bzowa przez Czuryły, Rzążew w okresie roku szkolnego <br>o - kursuje przez Osiny <br># - kursuje przez Plac Wolności <br>K - kursuje do(z) Dworca PKP <br>Autobusy MPK kursują z tolerancją +2min. W autobusach obowiązują wyłącznie bilety MPK Siedlce <br>W dn.5.06.2015r. autobusy kursują wg. sobotniego rozkladu jazdy <br></td></tr>
+</table>
+<p>&nbsp;</p>
+</div>
+</body>
+</html>

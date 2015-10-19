@@ -1,0 +1,41 @@
+﻿@using PagedList
+@using PagedList.Mvc
+
+@model IPagedList<PracaMGR.ViewModels.LiniaViewModel>
+
+@{
+    ViewBag.Title = "Linie";
+}
+
+<h2>Linie autobusowe</h2>
+<br />
+<table class="table table-responsive">
+    <tr>
+        <th>
+            Symbol linii
+        </th>
+        <th>
+            Średnia ocen
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Record.Symbol)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ocena)
+        </td>
+        <td>
+            @Html.ActionLink("Dodaj Ocenę", "Ocena", new { id = item.Record.Symbol }, new { @class = "btn btn-default" })
+        </td>
+    </tr>
+}
+
+</table>
+
+<div class="pagedList">
+    @Html.PagedListPager(Model, page => Url.Action("Linie", new { Model, page }), PagedListRenderOptions.OnlyShowFivePagesAtATime)
+</div>

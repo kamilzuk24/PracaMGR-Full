@@ -1,0 +1,162 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<style type="text/css">
+
+.nagl_przystanek
+{
+	font-size:14px;
+	font-weight:bold;
+}
+.nagl_opis
+{
+	font-size:12px;
+	font-weight:bold;
+}
+.linia
+{
+	font-size:14px;
+	font-weight:bold;
+	background-color:#B0D8FF;
+}
+
+.typ
+{
+	font-size:12px;
+	font-weight:bold;
+	background-color:#CCCCCC;
+}
+.podkresl
+{
+border: 1px #CCCCCC solid;
+}
+.odjazdy
+{
+font-weight:bold;
+font-size:1.2em;
+}
+</style>
+<script type="text/javascript">
+
+    function PrintElem(elem)
+    {
+        Popup(document.getElementById(elem).innerHTML);
+    }
+
+    function Popup(data) 
+    {
+        var mywindow = window.open('', 'rozklad', 'height=400,width=600');
+        mywindow.document.write('<html><head><title>Rozkład</title>');
+        /*optional stylesheet*/ //mywindow.document.write('<link rel="stylesheet" href="main.css" type="text/css" />');
+        mywindow.document.write('</head><body >');
+        mywindow.document.write(data);
+        mywindow.document.write('</body></html>');
+        mywindow.document.close();
+        mywindow.print();
+        return true;
+    }
+
+</script>
+
+</head>
+
+<body>
+<div style="position: relative; top:40px; left:40px;"><a href="" onclick="PrintElem('printarea');return false;" style="text-decoration:none;"><img src="/Content/printButton.png" border="0" align="middle"/> Drukuj</a></div>
+<div id="printarea">
+  
+
+<table width="100%" border="0">
+  <tr>
+    <td colspan="3" align="right"> </td>
+  </tr>
+  <tr>
+    <td colspan="3" align="center">
+	<span  class="nagl_przystanek">(02)Siedlce Kazimierzowska Starowiejska (1)</span><br />
+	<span class="nagl_opis">Rozkład jazdy autobusów MPK Siedlce<br />
+	ważny od 29.06.2015&nbsp;&nbsp;&nbsp;Strefa: I</span></td>
+  </tr>
+  <tr>
+    <th colspan="2">Linia</th>
+    <th width="167">Godziny odjazdów </th>
+  </tr>
+  	 <tr>
+    <td colspan="3" style="font-size:12px;font-weight:bold;	background-color:#CCCCCC;">Dni robocze</td>
+  </tr>
+	
+  	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">4</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">PRUSA - Poniatowskiego - Jana Pawła II - Dąbrowskiego - Mireckiego - Chrobrego - Sokołowska - Wojskowa - PIŁSUDSKIEGO - Warszawska - Monte Cassino - KURPIOWSKA</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">04:52, 05:47, 06:12, 06:37, 06:57, 07:18, 07:38, 07:58, 08:18, 08:38, 08:58, 09:18, 09:38, 09:58, 10:18, 10:38, 10:58, 11:18, 11:38, 11:58, 12:18, 12:38, 12:58, 13:18, 13:38, 13:58, 14:18, 14:38, 14:58, 15:18, 15:38, 15:58, 16:18, 16:38, 16:58, 17:18, 17:38, 17:58, 18:18, 18:38, 18:58, 19:18, 19:47, 20:17, 21:17, 22:17, 22:57, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">5</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">KAZIMIERZOWSKA - Żabokliki - GOLICE</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">05:55E, 06:50E, 07:45HP, 07:45E, 08:53E, 11:08E, 12:38E, 14:26, 16:08E, 17:38E, 19:28E, 20:18H, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">15</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">KAZIMIERZOWSKA - Żabokliki - Golice - Błogoszcz - Pruszynek - PRUSZYN</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">04:18, 05:28, 06:43, 07:53E, 09:38, 12:13gH, 12:13E, 14:33E, 15:38g, 16:58g, 18:23g, 20:18E, 22:27g, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">27</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">KAZIMIERZOWSKA - Bema - Poniatowskiego - Prusa - Rynkowa - Popiełuszki - 10 Lutego - Piłsudskiego - WARSZAWSKA - Daszyńskiego - PRZYMIARKI</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">06:27, 07:32, 08:44, 09:58K, 11:14#, 12:34#, 13:44#, 15:04#, 16:39, 17:54K, 19:09, 20:39, </td>
+  </tr>
+	 <tr>
+    <td colspan="3" style="font-size:12px;font-weight:bold;	background-color:#CCCCCC;">Soboty</td>
+  </tr>
+	
+  	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">4</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">PRUSA - Poniatowskiego - Jana Pawła II - Dąbrowskiego - Mireckiego - Chrobrego - Sokołowska - Wojskowa - PIŁSUDSKIEGO - Warszawska - Monte Cassino - KURPIOWSKA</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">06:07, 06:57, 07:48, 08:38, 09:18, 09:48, 10:18, 10:48, 11:18, 11:48, 12:18, 12:48, 13:18, 13:48, 14:18, 14:48, 15:18, 15:48, 16:18, 16:48, 17:18, 17:48, 18:18, 18:48, 19:18, 20:17, 21:27, 22:07, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">5</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">KAZIMIERZOWSKA - Żabokliki - GOLICE</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">07:08, 10:18, 12:48, 14:43, 17:48, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">15</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">KAZIMIERZOWSKA - Żabokliki - Golice - Błogoszcz - Pruszynek - PRUSZYN</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">05:28, 08:38, 11:18, 15:38g, 19:28, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">27</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">KAZIMIERZOWSKA - Bema - Poniatowskiego - Prusa - Rynkowa - Popiełuszki - 10 Lutego - Piłsudskiego - WARSZAWSKA - Daszyńskiego - PRZYMIARKI</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">08:19K, 10:19K, 12:09K, 15:04K, 17:04K, 20:34K, </td>
+  </tr>
+	 <tr>
+    <td colspan="3" style="font-size:12px;font-weight:bold;	background-color:#CCCCCC;">Dni świąteczne</td>
+  </tr>
+	
+  	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">4</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">PRUSA - Poniatowskiego - Jana Pawła II - Dąbrowskiego - Mireckiego - Chrobrego - Sokołowska - Wojskowa - PIŁSUDSKIEGO - Warszawska - Monte Cassino - KURPIOWSKA</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">06:07, 06:57, 07:48, 08:38, 09:18, 09:48, 10:18, 10:48, 11:18, 11:48, 12:18, 12:48, 13:18, 13:48, 14:18, 14:48, 15:18, 15:48, 16:18, 16:48, 17:18, 17:48, 18:18, 18:48, 19:18, 20:17, 21:27, 22:07, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">5</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">KAZIMIERZOWSKA - Żabokliki - GOLICE</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">08:03, 10:03, 13:08, 17:03, 18:08, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">15</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">KAZIMIERZOWSKA - Żabokliki - Golice - Błogoszcz - Pruszynek - PRUSZYN</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">05:58, 08:33, 14:33, 19:38g, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">27</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">KAZIMIERZOWSKA - Bema - Poniatowskiego - Prusa - Rynkowa - Popiełuszki - 10 Lutego - Piłsudskiego - WARSZAWSKA - Daszyńskiego - PRZYMIARKI</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">09:28K, 15:54K, </td>
+  </tr>
+
+<tr><td colspan="3" align="left">E - nie kursuje w okresie letnich wakacji szkolnych <br>H - kursuje w okresie letnich wakacji szkolnych <br>P - w okresie letnich wakacji kursuje z PKP <br>g - kursuje przez Golice-Pętle <br>K - kursuje do(z) Dworca PKP <br># - kursuje przez Plac Wolności <br>Autobusy MPK kursują z tolerancją +2min. W autobusach obowiązują wyłącznie bilety MPK Siedlce <br>W dn.5.06.2015r. autobusy kursują wg. sobotniego rozkladu jazdy <br></td></tr>
+</table>
+<p>&nbsp;</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<style type="text/css">
+
+.nagl_przystanek
+{
+	font-size:14px;
+	font-weight:bold;
+}
+.nagl_opis
+{
+	font-size:12px;
+	font-weight:bold;
+}
+.linia
+{
+	font-size:14px;
+	font-weight:bold;
+	background-color:#B0D8FF;
+}
+
+.typ
+{
+	font-size:12px;
+	font-weight:bold;
+	background-color:#CCCCCC;
+}
+.podkresl
+{
+border: 1px #CCCCCC solid;
+}
+.odjazdy
+{
+font-weight:bold;
+font-size:1.2em;
+}
+</style>
+<script type="text/javascript">
+
+    function PrintElem(elem)
+    {
+        Popup(document.getElementById(elem).innerHTML);
+    }
+
+    function Popup(data) 
+    {
+        var mywindow = window.open('', 'rozklad', 'height=400,width=600');
+        mywindow.document.write('<html><head><title>Rozkład</title>');
+        /*optional stylesheet*/ //mywindow.document.write('<link rel="stylesheet" href="main.css" type="text/css" />');
+        mywindow.document.write('</head><body >');
+        mywindow.document.write(data);
+        mywindow.document.write('</body></html>');
+        mywindow.document.close();
+        mywindow.print();
+        return true;
+    }
+
+</script>
+
+</head>
+
+<body>
+<div style="position: relative; top:40px; left:40px;"><a href="" onclick="PrintElem('printarea');return false;" style="text-decoration:none;"><img src="/Content/printButton.png" border="0" align="middle"/> Drukuj</a></div>
+<div id="printarea">
+  
+
+<table width="100%" border="0">
+  <tr>
+    <td colspan="3" align="right"> </td>
+  </tr>
+  <tr>
+    <td colspan="3" align="center">
+	<span  class="nagl_przystanek">(01)Siedlce Wojskowa Cmentarna (1)</span><br />
+	<span class="nagl_opis">Rozkład jazdy autobusów MPK Siedlce<br />
+	ważny od 29.06.2015&nbsp;&nbsp;&nbsp;Strefa: I</span></td>
+  </tr>
+  <tr>
+    <th colspan="2">Linia</th>
+    <th width="167">Godziny odjazdów </th>
+  </tr>
+  	 <tr>
+    <td colspan="3" style="font-size:12px;font-weight:bold;	background-color:#CCCCCC;">Dni robocze</td>
+  </tr>
+	
+  	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">4</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">PIŁSUDSKIEGO - Warszawska - MONTE CASSINO - KURPIOWSKA</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">05:08, 06:03, 06:28, 06:53, 07:13, 07:35, 07:56, 08:16, 08:36, 08:56, 09:16, 09:36, 09:56, 10:16, 10:36, 10:56, 11:16, 11:36, 11:56, 12:16, 12:36, 12:56, 13:16, 13:36, 13:56, 14:16, 14:36, 14:56, 15:16, 15:36, 15:56, 16:16, 16:36, 16:56, 17:16, 17:36, 17:55, 18:15, 18:35, 18:55, 19:15, 19:35, 20:03, 20:33, 21:33, 22:31, 23:11, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">9</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">ARMII KRAJOWEJ - PLAC ZDANOWSKIEGO - DW. PKP</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">05:34, 06:34, 07:54, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">10</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">ARMII KRAJOWEJ - Świętojańska - Partyzantów - KURPIOWSKA</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">05:20, 06:25, 07:22, 08:35E, 09:40, 12:20, 13:22, 15:00, 16:04, 17:05, 18:55, 21:10, 22:45, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">17</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">ARMII KRAJOWEJ - Świętojańska - Partyzantów - KURPIOWSKA</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">06:13, 07:19, 07:56ż, 08:37, 08:56ż, 11:22, 13:04, 14:13ć, 15:20, 16:17, 17:42, 19:32, 20:47E, 22:06C, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">32</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">PIŁSUDSKIEGO - Floriańska - Brzeska - Ujrzanowska - TERESPOLSKA</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">06:36, 07:36, 13:11T, 14:36, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">38</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">PIŁSUDSKIEGO - Floriańska - Brzeska - Ujrzanowska - TERESPOLSKA</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">05:22, 22:40M, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">42</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">ARMII KRAJOWEJ - Świętojańska - Partyzantów - Garwolińska - Żelków Kolonia - Żelków - Żelków Kolonia - ŻELKÓW</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">05:41, 06:41, 14:16, 15:26, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">43</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">PIŁSUDSKIEGO - Warszawska - Nowe Iganie - Nowe Opole - Stare Opole - GRĘZÓW</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">06:38, 14:16, 15:21, </td>
+  </tr>
+	 <tr>
+    <td colspan="3" style="font-size:12px;font-weight:bold;	background-color:#CCCCCC;">Soboty</td>
+  </tr>
+	
+  	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">4</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">PIŁSUDSKIEGO - Warszawska - MONTE CASSINO - KURPIOWSKA</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">06:23, 07:13, 08:06, 08:56, 09:36, 10:06, 10:36, 11:06, 11:36, 12:06, 12:36, 13:06, 13:36, 14:06, 14:36, 15:06, 15:36, 16:06, 16:36, 17:06, 17:36, 18:05, 18:35, 19:05, 19:35, 20:33, 21:41, 22:21, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">9</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">ARMII KRAJOWEJ - PLAC ZDANOWSKIEGO - DW. PKP</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">07:34, 11:39, 14:54, 18:49, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">10</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">ARMII KRAJOWEJ - Świętojańska - Partyzantów - KURPIOWSKA</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">06:25, 08:40, 11:55, 15:08, 16:10, 17:55, 20:35, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">17</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">ARMII KRAJOWEJ - Świętojańska - Partyzantów - KURPIOWSKA</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">06:04, 07:32, 10:42, 13:09, 16:32, 19:42, </td>
+  </tr>
+	 <tr>
+    <td colspan="3" style="font-size:12px;font-weight:bold;	background-color:#CCCCCC;">Dni świąteczne</td>
+  </tr>
+	
+  	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">4</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">PIŁSUDSKIEGO - Warszawska - MONTE CASSINO - KURPIOWSKA</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">06:23, 07:13, 08:06, 08:56, 09:36, 10:06, 10:36, 11:06, 11:36, 12:06, 12:36, 13:06, 13:36, 14:06, 14:36, 15:06, 15:36, 16:06, 16:36, 17:06, 17:36, 18:05, 18:35, 19:05, 19:35, 20:33, 21:41, 22:21, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">9</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">ARMII KRAJOWEJ - PLAC ZDANOWSKIEGO - DW. PKP</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">07:39, 12:19, 14:54, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">10</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">ARMII KRAJOWEJ - Świętojańska - Partyzantów - KURPIOWSKA</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">08:27, 10:00, 11:50, 15:25, 18:00, 20:15, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">17</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">ARMII KRAJOWEJ - Świętojańska - Partyzantów - KURPIOWSKA</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">08:27, 10:00, 11:39, 14:17, 19:12, </td>
+  </tr>
+
+<tr><td colspan="3" align="left">E - nie kursuje w okresie letnich wakacji szkolnych <br>ż - kursuje w dni nauki szkolnej z dw. PKP do Sokołowska Pętla <br>ć - kursuje do /z/Sokołowska Pętla okresie letnich wakacji szkolnych <br>C - kursuje do /z/ Sokołowska Pętla <br>T - kursuje przez Ujrzanów (Brzeska/Terespolska) <br>M - kursuje do ul. Starzyńskiego <br>Autobusy MPK kursują z tolerancją +2min. W autobusach obowiązują wyłącznie bilety MPK Siedlce <br>W dn.5.06.2015r. autobusy kursują wg. sobotniego rozkladu jazdy <br></td></tr>
+</table>
+<p>&nbsp;</p>
+</div>
+</body>
+</html>

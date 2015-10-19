@@ -1,0 +1,117 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<style type="text/css">
+
+.nagl_przystanek
+{
+	font-size:14px;
+	font-weight:bold;
+}
+.nagl_opis
+{
+	font-size:12px;
+	font-weight:bold;
+}
+.linia
+{
+	font-size:14px;
+	font-weight:bold;
+	background-color:#B0D8FF;
+}
+
+.typ
+{
+	font-size:12px;
+	font-weight:bold;
+	background-color:#CCCCCC;
+}
+.podkresl
+{
+border: 1px #CCCCCC solid;
+}
+.odjazdy
+{
+font-weight:bold;
+font-size:1.2em;
+}
+</style>
+<script type="text/javascript">
+
+    function PrintElem(elem)
+    {
+        Popup(document.getElementById(elem).innerHTML);
+    }
+
+    function Popup(data) 
+    {
+        var mywindow = window.open('', 'rozklad', 'height=400,width=600');
+        mywindow.document.write('<html><head><title>Rozkład</title>');
+        /*optional stylesheet*/ //mywindow.document.write('<link rel="stylesheet" href="main.css" type="text/css" />');
+        mywindow.document.write('</head><body >');
+        mywindow.document.write(data);
+        mywindow.document.write('</body></html>');
+        mywindow.document.close();
+        mywindow.print();
+        return true;
+    }
+
+</script>
+
+</head>
+
+<body>
+<div style="position: relative; top:40px; left:40px;"><a href="" onclick="PrintElem('printarea');return false;" style="text-decoration:none;"><img src="/Content/printButton.png" border="0" align="middle"/> Drukuj</a></div>
+<div id="printarea">
+  
+
+<table width="100%" border="0">
+  <tr>
+    <td colspan="3" align="right"> </td>
+  </tr>
+  <tr>
+    <td colspan="3" align="center">
+	<span  class="nagl_przystanek">(01)Siedlce Monte Cassino Mazurska (1)</span><br />
+	<span class="nagl_opis">Rozkład jazdy autobusów MPK Siedlce<br />
+	ważny od 29.06.2015&nbsp;&nbsp;&nbsp;Strefa: I</span></td>
+  </tr>
+  <tr>
+    <th colspan="2">Linia</th>
+    <th width="167">Godziny odjazdów </th>
+  </tr>
+  	 <tr>
+    <td colspan="3" style="font-size:12px;font-weight:bold;	background-color:#CCCCCC;">Dni robocze</td>
+  </tr>
+	
+  	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">4</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">WARSZAWSKA - Piłsudskiego - Floriańska - Brzeska - Wyszyńskiego - Kazimierzowska - Prusa - Poniatowskiego - Jana Pawła II - Dąbrowskiego - Mireckiego - Chrobrego - SOKOŁOWSKA - Wojskowa - Piłsudskiego - Warszawska - Monte Cassino - KURPIOWSKA</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">04:38, 05:33, 05:58, 06:23, 06:43, 07:04, 07:24, 07:44, 08:04, 08:24, 08:44, 09:04, 09:24, 09:44, 10:04, 10:24, 10:44, 11:04, 11:24, 11:44, 12:04, 12:24, 12:44, 13:04, 13:24, 13:44, 14:04, 14:24, 14:44, 15:04, 15:24, 15:44, 16:04, 16:24, 16:44, 17:04, 17:24, 17:44, 18:04, 18:24, 18:44, 19:04, 19:33, 20:03, 21:03, 22:03, 22:43, 23:23m, </td>
+  </tr>
+	 <tr>
+    <td colspan="3" style="font-size:12px;font-weight:bold;	background-color:#CCCCCC;">Soboty</td>
+  </tr>
+	
+  	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">4</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">WARSZAWSKA - Piłsudskiego - Floriańska - Brzeska - Wyszyńskiego - Kazimierzowska - Prusa - Poniatowskiego - Jana Pawła II - Dąbrowskiego - Mireckiego - Chrobrego - SOKOŁOWSKA - Wojskowa - Piłsudskiego - Warszawska - Monte Cassino - KURPIOWSKA</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">05:53, 06:43, 07:34, 08:24, 09:04, 09:34, 10:04, 10:34, 11:04, 11:34, 12:04, 12:34, 13:04, 13:34, 14:04, 14:34, 15:04, 15:34, 16:04, 16:34, 17:04, 17:34, 18:04, 18:34, 19:04, 20:03, 21:13, 21:53, 22:33m, </td>
+  </tr>
+	 <tr>
+    <td colspan="3" style="font-size:12px;font-weight:bold;	background-color:#CCCCCC;">Dni świąteczne</td>
+  </tr>
+	
+  	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">4</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">WARSZAWSKA - Piłsudskiego - Floriańska - Brzeska - Wyszyńskiego - Kazimierzowska - Prusa - Poniatowskiego - Jana Pawła II - Dąbrowskiego - Mireckiego - Chrobrego - SOKOŁOWSKA - Wojskowa - Piłsudskiego - Warszawska - Monte Cassino - KURPIOWSKA</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">05:53, 06:43, 07:34, 08:24, 09:04, 09:34, 10:04, 10:34, 11:04, 11:34, 12:04, 12:34, 13:04, 13:34, 14:04, 14:34, 15:04, 15:34, 16:04, 16:34, 17:04, 17:34, 18:04, 18:34, 19:04, 20:03, 21:13, 21:53, 22:33m, </td>
+  </tr>
+
+<tr><td colspan="3" align="left">m - zjazd do MPK przez ul.Piłsudskiego <br>Autobusy MPK kursują z tolerancją +2min. W autobusach obowiązują wyłącznie bilety MPK Siedlce <br>W dn.5.06.2015r. autobusy kursują wg. sobotniego rozkladu jazdy <br></td></tr>
+</table>
+<p>&nbsp;</p>
+</div>
+</body>
+</html>

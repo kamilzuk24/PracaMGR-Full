@@ -1,0 +1,162 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<style type="text/css">
+
+.nagl_przystanek
+{
+	font-size:14px;
+	font-weight:bold;
+}
+.nagl_opis
+{
+	font-size:12px;
+	font-weight:bold;
+}
+.linia
+{
+	font-size:14px;
+	font-weight:bold;
+	background-color:#B0D8FF;
+}
+
+.typ
+{
+	font-size:12px;
+	font-weight:bold;
+	background-color:#CCCCCC;
+}
+.podkresl
+{
+border: 1px #CCCCCC solid;
+}
+.odjazdy
+{
+font-weight:bold;
+font-size:1.2em;
+}
+</style>
+<script type="text/javascript">
+
+    function PrintElem(elem)
+    {
+        Popup(document.getElementById(elem).innerHTML);
+    }
+
+    function Popup(data) 
+    {
+        var mywindow = window.open('', 'rozklad', 'height=400,width=600');
+        mywindow.document.write('<html><head><title>Rozkład</title>');
+        /*optional stylesheet*/ //mywindow.document.write('<link rel="stylesheet" href="main.css" type="text/css" />');
+        mywindow.document.write('</head><body >');
+        mywindow.document.write(data);
+        mywindow.document.write('</body></html>');
+        mywindow.document.close();
+        mywindow.print();
+        return true;
+    }
+
+</script>
+
+</head>
+
+<body>
+<div style="position: relative; top:40px; left:40px;"><a href="" onclick="PrintElem('printarea');return false;" style="text-decoration:none;"><img src="/Content/printButton.png" border="0" align="middle"/> Drukuj</a></div>
+<div id="printarea">
+  
+
+<table width="100%" border="0">
+  <tr>
+    <td colspan="3" align="right"> </td>
+  </tr>
+  <tr>
+    <td colspan="3" align="center">
+	<span  class="nagl_przystanek">(09)Siedlce Centrum Handlowe (2)</span><br />
+	<span class="nagl_opis">Rozkład jazdy autobusów MPK Siedlce<br />
+	ważny od 28.01.2014&nbsp;&nbsp;&nbsp;Strefa: I</span></td>
+  </tr>
+  <tr>
+    <th colspan="2">Linia</th>
+    <th width="167">Godziny odjazdów </th>
+  </tr>
+  	 <tr>
+    <td colspan="3" style="font-size:12px;font-weight:bold;	background-color:#CCCCCC;">Dni robocze</td>
+  </tr>
+	
+  	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">11</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">BRZESKA - FLORIAŃSKA - Piłsudskiego - Armii Krajowej - PLAC ZDANOWSKIEGO - DW. PKP</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">05:13, 07:19E, 08:38, 13:10, 15:29E, 18:24E, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">21</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">BRZESKA - FLORIAŃSKA - Piłsudskiego - Armii Krajowej - PLAC ZDANOWSKIEGO - DW. PKP</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">06:20, 07:29, 11:08, 15:18, 16:33, 19:12, 21:18, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">30</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">BRZESKA - Floriańska - Piłsudskiego - Warszawska - Nowe Iganie - Nowe Opole - Stare Opole - Seminaryjna - NOWE OPOLE</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">06:45E, 12:30, 14:05W, 15:08, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">31</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">BRZESKA - Floriańska - Piłsudskiego - Armii Krajowej - Świętojańska - PARTYZANTÓW - Kurpiowska - Garwolińska - Niepodległości - UNITÓW PODLASKICH</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">06:05d, 07:00, 08:05, 14:05d, 15:08d, 16:05, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">32</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">BRZESKA - FLORIAŃSKA - Piłsudskiego - Wojskowa - SOKOŁOWSKA</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">06:07, 07:03, 12:45, 14:11T, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">33</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">BRZESKA - Floriańska - PIŁSUDSKIEGO - Warszawska - Daszyńskiego - PIASKI ZAMIEJSKIE</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">05:53, 06:53, 14:13, 15:18, 22:05, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">38</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">BRZESKA - Floriańska - Piłsudskiego - Wojskowa - Sokołowska - Strzała - Purzec - Borki Siedleckie - Przygody - SUCHOŻEBRY</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">15:15, 22:06TB, </td>
+  </tr>
+	 <tr>
+    <td colspan="3" style="font-size:12px;font-weight:bold;	background-color:#CCCCCC;">Soboty</td>
+  </tr>
+	
+  	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">11</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">BRZESKA - FLORIAŃSKA - Piłsudskiego - Armii Krajowej - PLAC ZDANOWSKIEGO - DW. PKP</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">06:26, 08:53, 12:48, 15:08, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">21</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">BRZESKA - FLORIAŃSKA - Piłsudskiego - Armii Krajowej - PLAC ZDANOWSKIEGO - DW. PKP</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">07:38, 10:58, 16:23, 19:13, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">33</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">BRZESKA - Floriańska - PIŁSUDSKIEGO - Warszawska - Daszyńskiego - PIASKI ZAMIEJSKIE</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">07:05, 14:05, 15:05, </td>
+  </tr>
+	 <tr>
+    <td colspan="3" style="font-size:12px;font-weight:bold;	background-color:#CCCCCC;">Dni świąteczne</td>
+  </tr>
+	
+  	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">11</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">BRZESKA - FLORIAŃSKA - Piłsudskiego - Armii Krajowej - PLAC ZDANOWSKIEGO - DW. PKP</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">08:37, 19:43, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">21</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">BRZESKA - FLORIAŃSKA - Piłsudskiego - Armii Krajowej - PLAC ZDANOWSKIEGO - DW. PKP</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">06:53, 11:31, 13:48, 16:58, </td>
+  </tr>
+
+<tr><td colspan="3" align="left">E - nie kursuje w okresie letnich wakacji szkolnych <br>W - kursuje do Opola wiadukt <br>d - kursuje ul.Brzeska-3-go Maja <br>T - kursuje przez Ujrzanów (Brzeska/Terespolska) <br>B - kursuje do m.Borki Siedleckie <br>Autobusy MPK kursują z tolerancją +2min. <br>W autobusach obowiązują wyłącznie bilety MPK Siedlce <br></td></tr>
+</table>
+<p>&nbsp;</p>
+</div>
+</body>
+</html>

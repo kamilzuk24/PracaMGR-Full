@@ -1,0 +1,147 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<style type="text/css">
+
+.nagl_przystanek
+{
+	font-size:14px;
+	font-weight:bold;
+}
+.nagl_opis
+{
+	font-size:12px;
+	font-weight:bold;
+}
+.linia
+{
+	font-size:14px;
+	font-weight:bold;
+	background-color:#B0D8FF;
+}
+
+.typ
+{
+	font-size:12px;
+	font-weight:bold;
+	background-color:#CCCCCC;
+}
+.podkresl
+{
+border: 1px #CCCCCC solid;
+}
+.odjazdy
+{
+font-weight:bold;
+font-size:1.2em;
+}
+</style>
+<script type="text/javascript">
+
+    function PrintElem(elem)
+    {
+        Popup(document.getElementById(elem).innerHTML);
+    }
+
+    function Popup(data) 
+    {
+        var mywindow = window.open('', 'rozklad', 'height=400,width=600');
+        mywindow.document.write('<html><head><title>Rozkład</title>');
+        /*optional stylesheet*/ //mywindow.document.write('<link rel="stylesheet" href="main.css" type="text/css" />');
+        mywindow.document.write('</head><body >');
+        mywindow.document.write(data);
+        mywindow.document.write('</body></html>');
+        mywindow.document.close();
+        mywindow.print();
+        return true;
+    }
+
+</script>
+
+</head>
+
+<body>
+<div style="position: relative; top:40px; left:40px;"><a href="" onclick="PrintElem('printarea');return false;" style="text-decoration:none;"><img src="/Content/printButton.png" border="0" align="middle"/> Drukuj</a></div>
+<div id="printarea">
+  
+
+<table width="100%" border="0">
+  <tr>
+    <td colspan="3" align="right"> </td>
+  </tr>
+  <tr>
+    <td colspan="3" align="center">
+	<span  class="nagl_przystanek">(02)Siedlce Kasztanowa Modrzewiowa (1)</span><br />
+	<span class="nagl_opis">Rozkład jazdy autobusów MPK Siedlce<br />
+	ważny od 01.02.2015&nbsp;&nbsp;&nbsp;Strefa: I</span></td>
+  </tr>
+  <tr>
+    <th colspan="2">Linia</th>
+    <th width="167">Godziny odjazdów </th>
+  </tr>
+  	 <tr>
+    <td colspan="3" style="font-size:12px;font-weight:bold;	background-color:#CCCCCC;">Dni robocze</td>
+  </tr>
+	
+  	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">14</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">KASZTANOWA - Janowska - Stok Lacki - Pruszyn Pieńki - WYCZÓŁKI</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">04:34, 05:34L, 06:37L, 08:19EL, 09:44, 12:26L, 14:35L, 15:59L, 17:19L, 18:44L, 20:29, 22:34L, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">16</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">KASZTANOWA - Janowska - Starowiejska - Piłsudskiego - Armii Krajowej - Świętojańska - PARTYZANTÓW - Kurpiowska - Garwolińska - Niepodległości - UNITÓW PODLASKICH</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">09:44J, 11:34J, 19:24J, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">23</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">KASZTANOWA - Janowska - Stok Lacki - STOK LACKI-FOLWARK</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">07:14w, 13:54w, 15:39w, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">27</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">KASZTANOWA - Janowska - Starowiejska - Kazimierzowska - Bema - Poniatowskiego - Prusa - Rynkowa - Popiełuszki - 10 Lutego - Piłsudskiego - Warszawska - Daszyńskiego - PRZYMIARKI</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">06:19, 07:24, 08:36, 09:51K, 11:06#, 12:26#, 13:36#, 14:56#, 16:31, 17:46K, 19:01, 20:31, </td>
+  </tr>
+	 <tr>
+    <td colspan="3" style="font-size:12px;font-weight:bold;	background-color:#CCCCCC;">Soboty</td>
+  </tr>
+	
+  	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">14</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">KASZTANOWA - Janowska - Stok Lacki - Pruszyn Pieńki - WYCZÓŁKI</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">05:34L, 08:14, 10:19L, 14:39, 15:59L, 17:24, 19:19L, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">27</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">KASZTANOWA - Janowska - Starowiejska - Kazimierzowska - Bema - Poniatowskiego - Prusa - Rynkowa - Popiełuszki - 10 Lutego - Piłsudskiego - Warszawska - Daszyńskiego - PRZYMIARKI</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">08:11K, 10:11K, 12:01K, 14:56K, 16:56K, 20:26K, </td>
+  </tr>
+	 <tr>
+    <td colspan="3" style="font-size:12px;font-weight:bold;	background-color:#CCCCCC;">Dni świąteczne</td>
+  </tr>
+	
+  	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">14</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">KASZTANOWA - Janowska - Stok Lacki - Pruszyn Pieńki - WYCZÓŁKI</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">06:07, 09:14, 11:34L, 15:14L, 18:14L, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">16</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">KASZTANOWA - Janowska - Starowiejska - Piłsudskiego - Armii Krajowej - Świętojańska - PARTYZANTÓW - Kurpiowska - Garwolińska - Niepodległości - UNITÓW PODLASKICH</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">07:34J, 10:54J, 12:49J, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">27</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">KASZTANOWA - Janowska - Starowiejska - Kazimierzowska - Bema - Poniatowskiego - Prusa - Rynkowa - Popiełuszki - 10 Lutego - Piłsudskiego - Warszawska - Daszyńskiego - PRZYMIARKI</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">09:21K, 15:46K, </td>
+  </tr>
+
+<tr><td colspan="3" align="left">L - kursuje przez Leśniczówkę i Krzymosze <br>E - nie kursuje w okresie letnich wakacji szkolnych <br>J - kursuje ul.Janowską i Kasztanową <br>w - kursuje w dni nauki szkolnej <br>K - kursuje do(z) Dworca PKP <br># - kursuje przez Plac Wolnosci <br>Autobusy MPK kursują z tolerancją +2min. W autobusach obowiązują wyłącznie bilety MPK Siedlce <br>W dn.5.06.2015r. autobusy kursują wg. sobotniego rozkladu jazdy <br></td></tr>
+</table>
+<p>&nbsp;</p>
+</div>
+</body>
+</html>

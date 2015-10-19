@@ -1,0 +1,426 @@
+﻿<div style="height: 600px;">   
+    <div style="min-width:340px;max-width:340px;" class="col-xs-6 col-sm-4 col-md-4">
+        <div class="row">
+            <div id="parametry">
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <h3>Wyszukiwanie</h3>
+                    </li>
+                    <li class="list-group-item">                     
+                        <div class="btn-group" data-toggle="buttons">
+                            <label class="btn btn-primary active">
+                                <input type="radio" id="radio1" name="radio" value="1" autocomplete="off" onclick="SetRadio(this.value)" checked>Domyślnie
+                            </label>
+                            <label class="btn btn-primary">
+                                <input type="radio" id="radio2" name="radio" value="2" autocomplete="off" onclick="SetRadio(this.value)">Wg ocen
+                            </label>
+                            <label class="btn btn-primary">
+                                <input type="radio" id="radio3" name="radio" value="3" autocomplete="off" onclick="SetRadio(this.value)">Wg popularności
+                            </label>
+                        </div>
+                    </li>
+                    @*<li class="list-group-item">
+                        <label style="margin-bottom: 0;">
+                            <input type="radio" name="group1" value="1" onclick="SetRadio(this.value)" checked="checked">
+                            Domyślne
+                        </label>
+                    </li>
+                    <li class="list-group-item">
+                        <label style="margin-bottom: 0;">
+                            <input type="radio" name="group1" value="2" onclick="SetRadio(this.value)">
+                            Wg oceny linii
+                        </label>
+                    </li>
+                    <li class="list-group-item">
+                        <label style="margin-bottom: 0;">
+                            <input type="radio" name="group1" value="3" onclick="SetRadio(this.value)">
+                            Wg popularności linii
+                        </label>
+                    </li>*@
+                    <li class="list-group-item">
+                        <div class="input-group">
+                            <span class="input-group-addon" id="basic-addon1">Wybierz Datę:</span>
+                            <input class="form-control" aria-describedby="basic-addon1" id="data_start" style="width:140px;" type="datetime" value="@DateTime.Now.ToString("dd-MM-yyyy HH:mm")" />
+                        </div>                                                                                                                        
+                    </li>
+                </ul>              
+            </div>
+         </div>
+        <div class="row">
+            <div id="wynik">
+                <div id="ww"></div>
+            </div>
+        </div>
+            <div class="row">
+                <div>
+                    <button type="button" class="btn btn-default" id="clear" onclick="Wyczysc()">Wyczyść</button>
+                    <button type="button" class="btn btn-default" id="search" onclick="Liczyc();">Szukaj</button>
+                </div>
+            </div>
+        </div>
+
+    <div class="col-xs-6 col-sm-8 col-md-8">
+
+        <input id="pac-input" class="controls" type="text" placeholder="Pozycja Startowa">
+        <input id="pac-input2" class="controls" type="text" placeholder="Koniec Trasy">
+        <input type="hidden" name="start" class="start" id="start" />
+        <input type="hidden" name="stop" class="stop" id="stop" />
+
+        <div id="map" style="background-color: white;"></div>
+        <div id="dialog" title="Rozkład"></div>
+
+        <div class="modal fade" id="dialogs">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+                        <h4 class="modal-title">Rozkład</h4>
+                    </div>
+                    <div class="modal-body" id="dialog_body">a</div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Zamknij</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+</div>
+
+
+
+
+@*<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD9L7NKuzvHHQGs0whqAXocbOBCZUxz68I&sensor=false&libraries=places"></script>*@
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCEx-vn9ITLCMmCwBoWt3sgPGM5VA8dQIs&sensor=false&libraries=places"></script>
+<script type="text/javascript" src="~/Scripts/markermanager.js"></script>
+
+
+<script type="text/javascript">
+    
+    //#region deklaracja
+    var markerImage = Array();
+    var markerImageM = Array();
+    markerImage[0] = new google.maps.MarkerImage('/Content/bus/busstopI.png', new google.maps.Size(32, 37), new google.maps.Point(0, 0), new google.maps.Point(16, 37));
+    markerImage[1] = new google.maps.MarkerImage('/Content/bus/busstopII.png', new google.maps.Size(32, 37), new google.maps.Point(0, 0), new google.maps.Point(16, 37));
+    markerImage[2] = new google.maps.MarkerImage('/Content/bus/busstopIII.png', new google.maps.Size(32, 37), new google.maps.Point(0, 0), new google.maps.Point(16, 37));
+    markerImageM[0] = new google.maps.MarkerImage('/Content/bus/busmI.png', new google.maps.Size(10, 10), new google.maps.Point(0, 0), new google.maps.Point(5, 5), new google.maps.Size(10, 10));
+    markerImageM[1] = new google.maps.MarkerImage('/Content/bus/busmII.png', new google.maps.Size(10, 10), new google.maps.Point(0, 0), new google.maps.Point(5, 5), new google.maps.Size(10, 10));
+    markerImageM[2] = new google.maps.MarkerImage('/Content/bus/busmIII.png', new google.maps.Size(10, 10), new google.maps.Point(0, 0), new google.maps.Point(5, 5), new google.maps.Size(10, 10));
+    var linie = Array();
+    var typLinii = Array();
+    var przystanki = Array();
+    var przystankiS = Array();
+    var przystankiM = Array();
+
+    var directionsDisplay;
+    var directionsService = new google.maps.DirectionsService();
+
+    var map;
+    var infowindow = new google.maps.InfoWindow({ maxWidth: 300 });
+    var markers = [];
+    var markersi = [];
+    var licz = 0;
+    var poczatek, koniec;
+    var start_im = '/Content/start.png';
+    var stop_im = '/Content/stop.png';
+    var bound = new google.maps.LatLngBounds();
+    var aktywna = 1, obj, path;
+    var RodzajWyszukiwania = 1;
+    //#endregion
+
+    function initialize() {
+
+        directionsDisplay = new google.maps.DirectionsRenderer();
+
+        var mapOptions = { center: new window.google.maps.LatLng(52.168198, 22.277508), zoom: 13, mapTypeId: window.google.maps.MapTypeId.ROADMAP };
+        map = new window.google.maps.Map(document.getElementById("map"), mapOptions);
+
+        directionsDisplay.setMap(map);
+
+        //rysujLinie();
+        rysujPrzystanki();
+        StartStop();
+
+        window.google.maps.event.addListener(map, 'click', function (event) {
+            addMarker(event.latLng);
+        });      
+    }
+
+    function SetRadio(item)
+    {
+        RodzajWyszukiwania = parseInt(item);
+    }
+
+    function Wyczysc() {
+        clearMarkers();
+        markersi = [];
+        markers = [];
+        licz = 0;
+        aktywna = 1;
+        bound = new google.maps.LatLngBounds();
+    }
+
+    function clearMarkers() {
+        try{
+        setAllMap(null);
+        path.setMap(null);
+        }catch (err){}
+    }
+
+    function showMarkers() {
+        setAllMap(map);
+    }
+
+    function setAllMap(map) {
+        for (var i = 0; i < markersi.length; i++) {
+            markersi[i].setMap(map);
+        }
+    }
+
+    function Liczyc() {
+
+        if (poczatek == null) {
+            alert("Wybierz punkt startowy i końcowy");
+            return;
+        }
+
+        var positions = {
+            startX: poczatek.lat(),
+            startY: poczatek.lng(),
+            stopX: koniec.lat(),
+            stopY: koniec.lng(),
+            rodzaj: RodzajWyszukiwania,
+            czas: $("#data_start").val()
+        };
+        //poczatek = null;
+        //koniec = null;
+        try{path.setMap(null);}catch (err){}
+        
+        $("#wynik").empty();
+        $("#wait").show();
+
+        $.ajax({
+            type: 'POST',
+            url: '/home/Trasa',
+            cache: false,
+            contentType: 'application/json; charset=utf-8',
+            data: JSON.stringify(positions),
+            success: function (data) {
+
+                obj = JSON.parse(data);
+
+           if (obj.length == 0)
+           {
+               $("#wait").hide();
+               alert("Nie znaleziono trasy");
+           }
+           else  
+           {                  
+                document.getElementById("wynik").innerHTML = '<div id="ww"></div>';
+                var ul = document.getElementById("ww");
+                var tekst = "";
+                for (var i = 0; i < obj.length; i++)
+                {                   
+                    var przy = "";
+                    for (var j = 0; j < obj[i].przystanki.length - 1; j++) { przy += "<li class='list-group-item'><b>" + (j+1) + "</b>. " + obj[i].przystanki[j] + "</li>"; }
+                    
+                    tekst += "<h3>" + obj[i].linia1 + "&nbsp;" + "<img src='/Content/images/logo_bus.png'/>" + "&nbsp;Do odjazdu: " + obj[i].do_odjazdu + " min" + "</h3>";
+                    tekst += "<div>";                                                  
+                    tekst += "<ul class='list-group'>" + obj[i].tekst + "</ul>" +
+                        '<div class="www">' +
+                        "<h3>Przystanki</h3>" +
+                        "<div>" +
+                        "<p>" +
+                        "<ul class='list-group'>" +
+                        przy +
+                        "</ul>" +
+                        "</p>" + "</div>" + "</div>" + "</p>"+
+                        "</div>";
+                        
+                }
+                ul.innerHTML = tekst;                
+                //cal(poczatek,koniec);
+
+                var cords = [];
+                cords.push(poczatek);
+                for (var i = 0; i < obj[0].przystanki.length-1; i++) {
+                    cords.push(new google.maps.LatLng(obj[0].pozycje[i].X, obj[0].pozycje[i].Y));
+                }
+                cords.push(koniec);
+
+                path = new google.maps.Polyline({
+                    path: cords,
+                    geodesic: true,
+                    strokeColor: '#FF0000',
+                    strokeOpacity: 1.0,
+                    strokeWeight: 4
+                });
+                path.setMap(map);
+
+                $(function() {
+                    var icons = {
+                        header: "ui-icon-circle-arrow-e",
+                        activeHeader: "ui-icon-circle-arrow-s"                       
+                    };
+                    $( "#ww" ).accordion({
+                        icons: icons,
+                        //collapsible: true,
+                        heightStyle: "content",                     
+                        activate: function (event, ui) {
+                            try
+                            {
+                                //var ind = Math.ceil(parseInt((ui.newPanel[0].id).substring(6)) / 2) - 1;
+                                var ind = parseInt($("#ww h3").index($("#ww h3.ui-state-active"))/2);
+                                path.setMap(null);
+
+                                var cords = [];
+                                cords.push(poczatek);
+                                for (var i = 0; i < obj[ind].przystanki.length - 1; i++) {
+                                    cords.push(new google.maps.LatLng(obj[ind].pozycje[i].X, obj[ind].pozycje[i].Y));
+                                }
+                                cords.push(koniec);
+                                path = new google.maps.Polyline({
+                                    path: cords,
+                                    geodesic: true,
+                                    strokeColor: '#FF0000',
+                                    strokeOpacity: 1.0,
+                                    strokeWeight: 4
+                                });                           
+                                path.setMap(map);
+
+                                console.log( ind );
+                            }
+                            catch(err) {}
+                        }
+                        
+                    });                    
+                });
+
+                $(function () {
+                    var icons = {
+                        header: "ui-icon-circle-arrow-e",
+                        activeHeader: "ui-icon-circle-arrow-s"
+                    };
+                    $(".www").accordion({
+                        icons: icons,
+                        collapsible: true,
+                        heightStyle: "content",
+                        active: false
+                    });
+                });              
+
+                $("#wait").hide();
+            }
+            }
+        });    
+    }
+
+    function cal(s1, s2) {
+
+        var start = s1;
+        var end = s2;
+
+        var request = {
+            origin: start,
+            destination: end,
+            travelMode: google.maps.TravelMode.DRIVING
+        };
+        directionsService.route(request, function (result, status) {
+            if (status == google.maps.DirectionsStatus.OK) {
+                directionsDisplay.setDirections(result);
+            }
+        });
+    }
+
+    function addMarker(location) {
+
+        if (licz < 2) {
+            if (licz == 0) {
+                poczatek = location;
+                var marker = new google.maps.Marker({
+                    position: location,
+                    map: map,
+                    icon: start_im
+                });
+                markersi.push(marker);
+                bound.extend(marker.getPosition());
+            }
+            if (licz == 1) {
+                koniec = location;
+                var marker = new google.maps.Marker({
+                    position: location,
+                    map: map,
+                    icon: stop_im
+                });
+                markersi.push(marker);
+                bound.extend(marker.getPosition());
+                map.fitBounds(bound);
+            }
+        }
+        licz++;
+
+    }
+
+    google.maps.event.addDomListener(window, 'load', initialize);
+
+    window.onload = function () {
+
+        $(function () {
+            $('.mm').click(function () {
+                $(this).children('ul').slideToggle();
+            });
+        });
+    }
+
+</script>
+<script type="text/javascript" src="~/Scripts/rysujprzystanki.js"></script>
+<script type="text/javascript">
+
+    function StartStop() {
+
+        var input = (document.getElementById('pac-input'));
+        map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
+        var searchBox = new google.maps.places.SearchBox((input));
+        var input2 = (document.getElementById('pac-input2'));
+        map.controls[google.maps.ControlPosition.TOP_LEFT].push(input2);
+        var searchBox2 = new google.maps.places.SearchBox((input2));
+
+        google.maps.event.addListener(searchBox, 'places_changed', function () {
+            var places = searchBox.getPlaces();
+            var bounds = new google.maps.LatLngBounds();
+            for (var i = 0, place; place = places[i]; i++) {
+                var image = { url: place.icon, size: new google.maps.Size(72, 72), origin: new google.maps.Point(0, 0), anchor: new google.maps.Point(17, 34), scaledSize: new google.maps.Size(25, 25) };
+                var marker = new google.maps.Marker({ map: map, icon: start_im, title: place.name, position: place.geometry.location });
+
+                poczatek = marker.getPosition();
+                markersi.push(marker);
+                bounds.extend(place.geometry.location);
+            }
+            var bounds = new google.maps.LatLngBounds();
+            for (i = 0; i < markersi.length; i++) {
+                bounds.extend(markersi[i].getPosition());
+            }
+            map.fitBounds(bounds); licz++;
+        });
+        google.maps.event.addListener(searchBox2, 'places_changed', function () {
+            var places = searchBox2.getPlaces();
+            var bounds = new google.maps.LatLngBounds();
+            for (var i = 0, place; place = places[i]; i++) {
+                var image = { url: place.icon, size: new google.maps.Size(72, 72), origin: new google.maps.Point(0, 0), anchor: new google.maps.Point(17, 34), scaledSize: new google.maps.Size(25, 25) };
+                var marker = new google.maps.Marker({ map: map, icon: stop_im, title: place.name, position: place.geometry.location });
+
+                koniec = marker.getPosition();
+                markersi.push(marker);
+                bounds.extend(place.geometry.location);
+            }
+            var bounds = new google.maps.LatLngBounds();
+            for (i = 0; i < markersi.length; i++) {
+                bounds.extend(markersi[i].getPosition());
+            }
+            map.fitBounds(bounds); licz++;
+        });
+
+        google.maps.event.addListener(map, 'bounds_changed', function () { var bounds = map.getBounds(); searchBox.setBounds(bounds); });
+        google.maps.event.addListener(map, 'bounds_changed', function () { var bounds = map.getBounds(); searchBox2.setBounds(bounds); });
+    }
+</script>
+

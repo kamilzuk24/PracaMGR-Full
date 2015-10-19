@@ -1,0 +1,1082 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DFDED67F-70DB-4D61-9942-7B9DED00B69E}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PracaMGR</RootNamespace>
+    <AssemblyName>PracaMGR</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="PagedList">
+      <HintPath>..\packages\PagedList.1.17.0.0\lib\net40\PagedList.dll</HintPath>
+    </Reference>
+    <Reference Include="PagedList.Mvc">
+      <HintPath>..\packages\PagedList.Mvc.4.5.0.0\lib\net40\PagedList.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.0.0\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.1\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.0.0\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <Private>True</Private>
+      <HintPath>..\packages\Newtonsoft.Json.5.0.6\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.AspNet.Identity.Core">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.1.0.0\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.1.0.0\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.1.0.0\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin">
+      <HintPath>..\packages\Microsoft.Owin.2.0.0\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.2.0.0\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security">
+      <HintPath>..\packages\Microsoft.Owin.Security.2.0.0\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Facebook">
+      <HintPath>..\packages\Microsoft.Owin.Security.Facebook.2.0.0\lib\net45\Microsoft.Owin.Security.Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.2.0.0\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.2.0.0\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Google">
+      <HintPath>..\packages\Microsoft.Owin.Security.Google.2.0.0\lib\net45\Microsoft.Owin.Security.Google.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Twitter">
+      <HintPath>..\packages\Microsoft.Owin.Security.Twitter.2.0.0\lib\net45\Microsoft.Owin.Security.Twitter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.MicrosoftAccount">
+      <HintPath>..\packages\Microsoft.Owin.Security.MicrosoftAccount.2.0.0\lib\net45\Microsoft.Owin.Security.MicrosoftAccount.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\ForumController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\PostyController.cs" />
+    <Compile Include="Controllers\RaportyController.cs" />
+    <Compile Include="Controllers\UserManagerController.cs" />
+    <Compile Include="DniSwiateczne.cs">
+      <DependentUpon>JakTrafic.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="JakTrafic.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>JakTrafic.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="JakTrafic.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>JakTrafic.tt</DependentUpon>
+    </Compile>
+    <Compile Include="JakTrafic.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>JakTrafic.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Kategorie.cs">
+      <DependentUpon>JakTrafic.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Linie.cs">
+      <DependentUpon>JakTrafic.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LinieRaport.cs">
+      <DependentUpon>JakTrafic.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201505311110147_Initial.cs" />
+    <Compile Include="Migrations\201505311110147_Initial.Designer.cs">
+      <DependentUpon>201505311110147_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201505311427460_nowa.cs" />
+    <Compile Include="Migrations\201505311427460_nowa.Designer.cs">
+      <DependentUpon>201505311427460_nowa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\AdminRegisterModel.cs" />
+    <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\LinieRaportViewModel.cs" />
+    <Compile Include="Models\Odleglosc.cs" />
+    <Compile Include="Models\Post.cs" />
+    <Compile Include="Models\Pozycja.cs" />
+    <Compile Include="Models\Propozycja.cs" />
+    <Compile Include="Models\StartStop.cs" />
+    <Compile Include="Oceny.cs">
+      <DependentUpon>JakTrafic.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Odjazdy.cs">
+      <DependentUpon>JakTrafic.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Odpowiedzi.cs">
+      <DependentUpon>JakTrafic.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Posty.cs">
+      <DependentUpon>JakTrafic.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Przystanki.cs">
+      <DependentUpon>JakTrafic.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PrzystankiRaport.cs">
+      <DependentUpon>JakTrafic.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Startup.cs" />
+    <Compile Include="Trasy.cs">
+      <DependentUpon>JakTrafic.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TrasyRaport.cs">
+      <DependentUpon>JakTrafic.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModels\LiniaViewModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\JakTrafic.mdf" />
+    <Content Include="App_Data\JakTrafic_log.ldf">
+      <DependentUpon>JakTrafic.mdf</DependentUpon>
+    </Content>
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\bus\busmI.png" />
+    <Content Include="Content\bus\busmII.png" />
+    <Content Include="Content\bus\busmIII.png" />
+    <Content Include="Content\bus\busstopI.png" />
+    <Content Include="Content\bus\busstopII.png" />
+    <Content Include="Content\bus\busstopIII.png" />
+    <Content Include="Content\clear.jpg" />
+    <Content Include="Content\images\background.jpg" />
+    <Content Include="Content\images\logo_bus.png" />
+    <Content Include="Content\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\images\ui-bg_flat_55_fbec88_40x100.png" />
+    <Content Include="Content\images\ui-bg_glass_75_d0e5f5_1x400.png" />
+    <Content Include="Content\images\ui-bg_glass_85_dfeffc_1x400.png" />
+    <Content Include="Content\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\images\ui-bg_gloss-wave_55_5c9ccc_500x100.png" />
+    <Content Include="Content\images\ui-bg_inset-hard_100_f5f8f9_1x100.png" />
+    <Content Include="Content\images\ui-bg_inset-hard_100_fcfdfd_1x100.png" />
+    <Content Include="Content\images\ui-icons_217bc0_256x240.png" />
+    <Content Include="Content\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\images\ui-icons_469bdd_256x240.png" />
+    <Content Include="Content\images\ui-icons_6da8d5_256x240.png" />
+    <Content Include="Content\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\images\ui-icons_d8e7f3_256x240.png" />
+    <Content Include="Content\images\ui-icons_f9bd01_256x240.png" />
+    <Content Include="Content\jquery-ui.css" />
+    <Content Include="Content\jquery-ui.min.css" />
+    <Content Include="Content\jquery-ui.structure.css" />
+    <Content Include="Content\jquery-ui.structure.min.css" />
+    <Content Include="Content\jquery-ui.theme.css" />
+    <Content Include="Content\jquery-ui.theme.min.css" />
+    <Content Include="Content\jquery.datetimepicker.css" />
+    <Content Include="Scripts\jquery.datetimepicker.js" />
+    <Content Include="Content\logo.png" />
+    <Content Include="Content\naglowek.jpg" />
+    <Content Include="Content\PagedList.css" />
+    <Content Include="Content\printButton.png" />
+    <Content Include="Content\search.jpg" />
+    <Content Include="Content\spod.jpg" />
+    <Content Include="Content\start.png" />
+    <Content Include="Content\stop.png" />
+    <Content Include="Content\themes\base\accordion.css" />
+    <Content Include="Content\themes\base\all.css" />
+    <Content Include="Content\themes\base\autocomplete.css" />
+    <Content Include="Content\themes\base\base.css" />
+    <Content Include="Content\themes\base\button.css" />
+    <Content Include="Content\themes\base\core.css" />
+    <Content Include="Content\themes\base\datepicker.css" />
+    <Content Include="Content\themes\base\dialog.css" />
+    <Content Include="Content\themes\base\draggable.css" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\menu.css" />
+    <Content Include="Content\themes\base\progressbar.css" />
+    <Content Include="Content\themes\base\resizable.css" />
+    <Content Include="Content\themes\base\selectable.css" />
+    <Content Include="Content\themes\base\selectmenu.css" />
+    <Content Include="Content\themes\base\slider.css" />
+    <Content Include="Content\themes\base\sortable.css" />
+    <Content Include="Content\themes\base\spinner.css" />
+    <Content Include="Content\themes\base\tabs.css" />
+    <Content Include="Content\themes\base\theme.css" />
+    <Content Include="Content\themes\base\tooltip.css" />
+    <Content Include="Content\wait.gif" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Content\images\Thumbs.db" />
+    <Content Include="JakTrafic.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>JakTrafic.edmx</DependentUpon>
+      <LastGenOutput>JakTrafic.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="JakTrafic.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>JakTrafic.edmx</DependentUpon>
+      <LastGenOutput>JakTrafic.cs</LastGenOutput>
+    </Content>
+    <Content Include="rozklad\rozklad0.html" />
+    <Content Include="rozklad\rozklad1.html" />
+    <Content Include="rozklad\rozklad10.html" />
+    <Content Include="rozklad\rozklad100.html" />
+    <Content Include="rozklad\rozklad101.html" />
+    <Content Include="rozklad\rozklad102.html" />
+    <Content Include="rozklad\rozklad103.html" />
+    <Content Include="rozklad\rozklad104.html" />
+    <Content Include="rozklad\rozklad105.html" />
+    <Content Include="rozklad\rozklad106.html" />
+    <Content Include="rozklad\rozklad107.html" />
+    <Content Include="rozklad\rozklad108.html" />
+    <Content Include="rozklad\rozklad109.html" />
+    <Content Include="rozklad\rozklad11.html" />
+    <Content Include="rozklad\rozklad110.html" />
+    <Content Include="rozklad\rozklad111.html" />
+    <Content Include="rozklad\rozklad112.html" />
+    <Content Include="rozklad\rozklad113.html" />
+    <Content Include="rozklad\rozklad114.html" />
+    <Content Include="rozklad\rozklad115.html" />
+    <Content Include="rozklad\rozklad116.html" />
+    <Content Include="rozklad\rozklad117.html" />
+    <Content Include="rozklad\rozklad118.html" />
+    <Content Include="rozklad\rozklad119.html" />
+    <Content Include="rozklad\rozklad12.html" />
+    <Content Include="rozklad\rozklad120.html" />
+    <Content Include="rozklad\rozklad121.html" />
+    <Content Include="rozklad\rozklad122.html" />
+    <Content Include="rozklad\rozklad123.html" />
+    <Content Include="rozklad\rozklad124.html" />
+    <Content Include="rozklad\rozklad125.html" />
+    <Content Include="rozklad\rozklad126.html" />
+    <Content Include="rozklad\rozklad127.html" />
+    <Content Include="rozklad\rozklad128.html" />
+    <Content Include="rozklad\rozklad129.html" />
+    <Content Include="rozklad\rozklad13.html" />
+    <Content Include="rozklad\rozklad130.html" />
+    <Content Include="rozklad\rozklad131.html" />
+    <Content Include="rozklad\rozklad132.html" />
+    <Content Include="rozklad\rozklad133.html" />
+    <Content Include="rozklad\rozklad134.html" />
+    <Content Include="rozklad\rozklad135.html" />
+    <Content Include="rozklad\rozklad136.html" />
+    <Content Include="rozklad\rozklad137.html" />
+    <Content Include="rozklad\rozklad138.html" />
+    <Content Include="rozklad\rozklad139.html" />
+    <Content Include="rozklad\rozklad14.html" />
+    <Content Include="rozklad\rozklad140.html" />
+    <Content Include="rozklad\rozklad141.html" />
+    <Content Include="rozklad\rozklad142.html" />
+    <Content Include="rozklad\rozklad143.html" />
+    <Content Include="rozklad\rozklad144.html" />
+    <Content Include="rozklad\rozklad145.html" />
+    <Content Include="rozklad\rozklad146.html" />
+    <Content Include="rozklad\rozklad147.html" />
+    <Content Include="rozklad\rozklad148.html" />
+    <Content Include="rozklad\rozklad149.html" />
+    <Content Include="rozklad\rozklad15.html" />
+    <Content Include="rozklad\rozklad150.html" />
+    <Content Include="rozklad\rozklad151.html" />
+    <Content Include="rozklad\rozklad152.html" />
+    <Content Include="rozklad\rozklad153.html" />
+    <Content Include="rozklad\rozklad154.html" />
+    <Content Include="rozklad\rozklad155.html" />
+    <Content Include="rozklad\rozklad156.html" />
+    <Content Include="rozklad\rozklad157.html" />
+    <Content Include="rozklad\rozklad158.html" />
+    <Content Include="rozklad\rozklad159.html" />
+    <Content Include="rozklad\rozklad16.html" />
+    <Content Include="rozklad\rozklad160.html" />
+    <Content Include="rozklad\rozklad161.html" />
+    <Content Include="rozklad\rozklad162.html" />
+    <Content Include="rozklad\rozklad163.html" />
+    <Content Include="rozklad\rozklad164.html" />
+    <Content Include="rozklad\rozklad165.html" />
+    <Content Include="rozklad\rozklad166.html" />
+    <Content Include="rozklad\rozklad167.html" />
+    <Content Include="rozklad\rozklad168.html" />
+    <Content Include="rozklad\rozklad169.html" />
+    <Content Include="rozklad\rozklad17.html" />
+    <Content Include="rozklad\rozklad170.html" />
+    <Content Include="rozklad\rozklad171.html" />
+    <Content Include="rozklad\rozklad172.html" />
+    <Content Include="rozklad\rozklad173.html" />
+    <Content Include="rozklad\rozklad174.html" />
+    <Content Include="rozklad\rozklad175.html" />
+    <Content Include="rozklad\rozklad176.html" />
+    <Content Include="rozklad\rozklad177.html" />
+    <Content Include="rozklad\rozklad178.html" />
+    <Content Include="rozklad\rozklad179.html" />
+    <Content Include="rozklad\rozklad18.html" />
+    <Content Include="rozklad\rozklad180.html" />
+    <Content Include="rozklad\rozklad181.html" />
+    <Content Include="rozklad\rozklad182.html" />
+    <Content Include="rozklad\rozklad183.html" />
+    <Content Include="rozklad\rozklad184.html" />
+    <Content Include="rozklad\rozklad185.html" />
+    <Content Include="rozklad\rozklad186.html" />
+    <Content Include="rozklad\rozklad187.html" />
+    <Content Include="rozklad\rozklad188.html" />
+    <Content Include="rozklad\rozklad189.html" />
+    <Content Include="rozklad\rozklad19.html" />
+    <Content Include="rozklad\rozklad190.html" />
+    <Content Include="rozklad\rozklad191.html" />
+    <Content Include="rozklad\rozklad192.html" />
+    <Content Include="rozklad\rozklad193.html" />
+    <Content Include="rozklad\rozklad194.html" />
+    <Content Include="rozklad\rozklad195.html" />
+    <Content Include="rozklad\rozklad196.html" />
+    <Content Include="rozklad\rozklad197.html" />
+    <Content Include="rozklad\rozklad198.html" />
+    <Content Include="rozklad\rozklad199.html" />
+    <Content Include="rozklad\rozklad2.html" />
+    <Content Include="rozklad\rozklad20.html" />
+    <Content Include="rozklad\rozklad200.html" />
+    <Content Include="rozklad\rozklad201.html" />
+    <Content Include="rozklad\rozklad202.html" />
+    <Content Include="rozklad\rozklad203.html" />
+    <Content Include="rozklad\rozklad204.html" />
+    <Content Include="rozklad\rozklad205.html" />
+    <Content Include="rozklad\rozklad206.html" />
+    <Content Include="rozklad\rozklad207.html" />
+    <Content Include="rozklad\rozklad208.html" />
+    <Content Include="rozklad\rozklad209.html" />
+    <Content Include="rozklad\rozklad21.html" />
+    <Content Include="rozklad\rozklad210.html" />
+    <Content Include="rozklad\rozklad211.html" />
+    <Content Include="rozklad\rozklad212.html" />
+    <Content Include="rozklad\rozklad213.html" />
+    <Content Include="rozklad\rozklad214.html" />
+    <Content Include="rozklad\rozklad215.html" />
+    <Content Include="rozklad\rozklad216.html" />
+    <Content Include="rozklad\rozklad217.html" />
+    <Content Include="rozklad\rozklad218.html" />
+    <Content Include="rozklad\rozklad219.html" />
+    <Content Include="rozklad\rozklad22.html" />
+    <Content Include="rozklad\rozklad220.html" />
+    <Content Include="rozklad\rozklad221.html" />
+    <Content Include="rozklad\rozklad222.html" />
+    <Content Include="rozklad\rozklad223.html" />
+    <Content Include="rozklad\rozklad224.html" />
+    <Content Include="rozklad\rozklad225.html" />
+    <Content Include="rozklad\rozklad226.html" />
+    <Content Include="rozklad\rozklad227.html" />
+    <Content Include="rozklad\rozklad228.html" />
+    <Content Include="rozklad\rozklad229.html" />
+    <Content Include="rozklad\rozklad23.html" />
+    <Content Include="rozklad\rozklad230.html" />
+    <Content Include="rozklad\rozklad231.html" />
+    <Content Include="rozklad\rozklad232.html" />
+    <Content Include="rozklad\rozklad233.html" />
+    <Content Include="rozklad\rozklad234.html" />
+    <Content Include="rozklad\rozklad235.html" />
+    <Content Include="rozklad\rozklad236.html" />
+    <Content Include="rozklad\rozklad237.html" />
+    <Content Include="rozklad\rozklad238.html" />
+    <Content Include="rozklad\rozklad239.html" />
+    <Content Include="rozklad\rozklad24.html" />
+    <Content Include="rozklad\rozklad240.html" />
+    <Content Include="rozklad\rozklad241.html" />
+    <Content Include="rozklad\rozklad242.html" />
+    <Content Include="rozklad\rozklad243.html" />
+    <Content Include="rozklad\rozklad244.html" />
+    <Content Include="rozklad\rozklad245.html" />
+    <Content Include="rozklad\rozklad246.html" />
+    <Content Include="rozklad\rozklad247.html" />
+    <Content Include="rozklad\rozklad248.html" />
+    <Content Include="rozklad\rozklad249.html" />
+    <Content Include="rozklad\rozklad25.html" />
+    <Content Include="rozklad\rozklad250.html" />
+    <Content Include="rozklad\rozklad251.html" />
+    <Content Include="rozklad\rozklad252.html" />
+    <Content Include="rozklad\rozklad253.html" />
+    <Content Include="rozklad\rozklad254.html" />
+    <Content Include="rozklad\rozklad255.html" />
+    <Content Include="rozklad\rozklad256.html" />
+    <Content Include="rozklad\rozklad257.html" />
+    <Content Include="rozklad\rozklad258.html" />
+    <Content Include="rozklad\rozklad259.html" />
+    <Content Include="rozklad\rozklad26.html" />
+    <Content Include="rozklad\rozklad260.html" />
+    <Content Include="rozklad\rozklad261.html" />
+    <Content Include="rozklad\rozklad262.html" />
+    <Content Include="rozklad\rozklad263.html" />
+    <Content Include="rozklad\rozklad264.html" />
+    <Content Include="rozklad\rozklad265.html" />
+    <Content Include="rozklad\rozklad266.html" />
+    <Content Include="rozklad\rozklad267.html" />
+    <Content Include="rozklad\rozklad268.html" />
+    <Content Include="rozklad\rozklad269.html" />
+    <Content Include="rozklad\rozklad27.html" />
+    <Content Include="rozklad\rozklad270.html" />
+    <Content Include="rozklad\rozklad271.html" />
+    <Content Include="rozklad\rozklad272.html" />
+    <Content Include="rozklad\rozklad273.html" />
+    <Content Include="rozklad\rozklad274.html" />
+    <Content Include="rozklad\rozklad275.html" />
+    <Content Include="rozklad\rozklad276.html" />
+    <Content Include="rozklad\rozklad277.html" />
+    <Content Include="rozklad\rozklad278.html" />
+    <Content Include="rozklad\rozklad279.html" />
+    <Content Include="rozklad\rozklad28.html" />
+    <Content Include="rozklad\rozklad280.html" />
+    <Content Include="rozklad\rozklad281.html" />
+    <Content Include="rozklad\rozklad282.html" />
+    <Content Include="rozklad\rozklad283.html" />
+    <Content Include="rozklad\rozklad284.html" />
+    <Content Include="rozklad\rozklad285.html" />
+    <Content Include="rozklad\rozklad286.html" />
+    <Content Include="rozklad\rozklad287.html" />
+    <Content Include="rozklad\rozklad288.html" />
+    <Content Include="rozklad\rozklad289.html" />
+    <Content Include="rozklad\rozklad29.html" />
+    <Content Include="rozklad\rozklad290.html" />
+    <Content Include="rozklad\rozklad291.html" />
+    <Content Include="rozklad\rozklad292.html" />
+    <Content Include="rozklad\rozklad293.html" />
+    <Content Include="rozklad\rozklad294.html" />
+    <Content Include="rozklad\rozklad295.html" />
+    <Content Include="rozklad\rozklad296.html" />
+    <Content Include="rozklad\rozklad297.html" />
+    <Content Include="rozklad\rozklad298.html" />
+    <Content Include="rozklad\rozklad299.html" />
+    <Content Include="rozklad\rozklad3.html" />
+    <Content Include="rozklad\rozklad30.html" />
+    <Content Include="rozklad\rozklad300.html" />
+    <Content Include="rozklad\rozklad301.html" />
+    <Content Include="rozklad\rozklad302.html" />
+    <Content Include="rozklad\rozklad303.html" />
+    <Content Include="rozklad\rozklad304.html" />
+    <Content Include="rozklad\rozklad305.html" />
+    <Content Include="rozklad\rozklad306.html" />
+    <Content Include="rozklad\rozklad307.html" />
+    <Content Include="rozklad\rozklad308.html" />
+    <Content Include="rozklad\rozklad309.html" />
+    <Content Include="rozklad\rozklad31.html" />
+    <Content Include="rozklad\rozklad310.html" />
+    <Content Include="rozklad\rozklad311.html" />
+    <Content Include="rozklad\rozklad312.html" />
+    <Content Include="rozklad\rozklad313.html" />
+    <Content Include="rozklad\rozklad314.html" />
+    <Content Include="rozklad\rozklad315.html" />
+    <Content Include="rozklad\rozklad316.html" />
+    <Content Include="rozklad\rozklad317.html" />
+    <Content Include="rozklad\rozklad318.html" />
+    <Content Include="rozklad\rozklad319.html" />
+    <Content Include="rozklad\rozklad32.html" />
+    <Content Include="rozklad\rozklad320.html" />
+    <Content Include="rozklad\rozklad321.html" />
+    <Content Include="rozklad\rozklad322.html" />
+    <Content Include="rozklad\rozklad323.html" />
+    <Content Include="rozklad\rozklad324.html" />
+    <Content Include="rozklad\rozklad325.html" />
+    <Content Include="rozklad\rozklad326.html" />
+    <Content Include="rozklad\rozklad327.html" />
+    <Content Include="rozklad\rozklad328.html" />
+    <Content Include="rozklad\rozklad329.html" />
+    <Content Include="rozklad\rozklad33.html" />
+    <Content Include="rozklad\rozklad330.html" />
+    <Content Include="rozklad\rozklad331.html" />
+    <Content Include="rozklad\rozklad332.html" />
+    <Content Include="rozklad\rozklad333.html" />
+    <Content Include="rozklad\rozklad334.html" />
+    <Content Include="rozklad\rozklad335.html" />
+    <Content Include="rozklad\rozklad336.html" />
+    <Content Include="rozklad\rozklad337.html" />
+    <Content Include="rozklad\rozklad338.html" />
+    <Content Include="rozklad\rozklad339.html" />
+    <Content Include="rozklad\rozklad34.html" />
+    <Content Include="rozklad\rozklad340.html" />
+    <Content Include="rozklad\rozklad341.html" />
+    <Content Include="rozklad\rozklad342.html" />
+    <Content Include="rozklad\rozklad343.html" />
+    <Content Include="rozklad\rozklad344.html" />
+    <Content Include="rozklad\rozklad345.html" />
+    <Content Include="rozklad\rozklad346.html" />
+    <Content Include="rozklad\rozklad347.html" />
+    <Content Include="rozklad\rozklad348.html" />
+    <Content Include="rozklad\rozklad349.html" />
+    <Content Include="rozklad\rozklad35.html" />
+    <Content Include="rozklad\rozklad350.html" />
+    <Content Include="rozklad\rozklad351.html" />
+    <Content Include="rozklad\rozklad352.html" />
+    <Content Include="rozklad\rozklad353.html" />
+    <Content Include="rozklad\rozklad354.html" />
+    <Content Include="rozklad\rozklad355.html" />
+    <Content Include="rozklad\rozklad356.html" />
+    <Content Include="rozklad\rozklad357.html" />
+    <Content Include="rozklad\rozklad358.html" />
+    <Content Include="rozklad\rozklad359.html" />
+    <Content Include="rozklad\rozklad36.html" />
+    <Content Include="rozklad\rozklad360.html" />
+    <Content Include="rozklad\rozklad361.html" />
+    <Content Include="rozklad\rozklad362.html" />
+    <Content Include="rozklad\rozklad363.html" />
+    <Content Include="rozklad\rozklad364.html" />
+    <Content Include="rozklad\rozklad365.html" />
+    <Content Include="rozklad\rozklad366.html" />
+    <Content Include="rozklad\rozklad367.html" />
+    <Content Include="rozklad\rozklad368.html" />
+    <Content Include="rozklad\rozklad369.html" />
+    <Content Include="rozklad\rozklad37.html" />
+    <Content Include="rozklad\rozklad370.html" />
+    <Content Include="rozklad\rozklad371.html" />
+    <Content Include="rozklad\rozklad372.html" />
+    <Content Include="rozklad\rozklad373.html" />
+    <Content Include="rozklad\rozklad374.html" />
+    <Content Include="rozklad\rozklad375.html" />
+    <Content Include="rozklad\rozklad376.html" />
+    <Content Include="rozklad\rozklad377.html" />
+    <Content Include="rozklad\rozklad378.html" />
+    <Content Include="rozklad\rozklad379.html" />
+    <Content Include="rozklad\rozklad38.html" />
+    <Content Include="rozklad\rozklad380.html" />
+    <Content Include="rozklad\rozklad381.html" />
+    <Content Include="rozklad\rozklad382.html" />
+    <Content Include="rozklad\rozklad383.html" />
+    <Content Include="rozklad\rozklad384.html" />
+    <Content Include="rozklad\rozklad385.html" />
+    <Content Include="rozklad\rozklad386.html" />
+    <Content Include="rozklad\rozklad387.html" />
+    <Content Include="rozklad\rozklad388.html" />
+    <Content Include="rozklad\rozklad389.html" />
+    <Content Include="rozklad\rozklad39.html" />
+    <Content Include="rozklad\rozklad390.html" />
+    <Content Include="rozklad\rozklad391.html" />
+    <Content Include="rozklad\rozklad392.html" />
+    <Content Include="rozklad\rozklad393.html" />
+    <Content Include="rozklad\rozklad394.html" />
+    <Content Include="rozklad\rozklad395.html" />
+    <Content Include="rozklad\rozklad396.html" />
+    <Content Include="rozklad\rozklad397.html" />
+    <Content Include="rozklad\rozklad398.html" />
+    <Content Include="rozklad\rozklad399.html" />
+    <Content Include="rozklad\rozklad4.html" />
+    <Content Include="rozklad\rozklad40.html" />
+    <Content Include="rozklad\rozklad400.html" />
+    <Content Include="rozklad\rozklad401.html" />
+    <Content Include="rozklad\rozklad402.html" />
+    <Content Include="rozklad\rozklad403.html" />
+    <Content Include="rozklad\rozklad404.html" />
+    <Content Include="rozklad\rozklad405.html" />
+    <Content Include="rozklad\rozklad406.html" />
+    <Content Include="rozklad\rozklad407.html" />
+    <Content Include="rozklad\rozklad408.html" />
+    <Content Include="rozklad\rozklad409.html" />
+    <Content Include="rozklad\rozklad41.html" />
+    <Content Include="rozklad\rozklad410.html" />
+    <Content Include="rozklad\rozklad411.html" />
+    <Content Include="rozklad\rozklad412.html" />
+    <Content Include="rozklad\rozklad413.html" />
+    <Content Include="rozklad\rozklad414.html" />
+    <Content Include="rozklad\rozklad415.html" />
+    <Content Include="rozklad\rozklad416.html" />
+    <Content Include="rozklad\rozklad417.html" />
+    <Content Include="rozklad\rozklad418.html" />
+    <Content Include="rozklad\rozklad419.html" />
+    <Content Include="rozklad\rozklad42.html" />
+    <Content Include="rozklad\rozklad420.html" />
+    <Content Include="rozklad\rozklad421.html" />
+    <Content Include="rozklad\rozklad422.html" />
+    <Content Include="rozklad\rozklad423.html" />
+    <Content Include="rozklad\rozklad424.html" />
+    <Content Include="rozklad\rozklad425.html" />
+    <Content Include="rozklad\rozklad426.html" />
+    <Content Include="rozklad\rozklad427.html" />
+    <Content Include="rozklad\rozklad428.html" />
+    <Content Include="rozklad\rozklad429.html" />
+    <Content Include="rozklad\rozklad43.html" />
+    <Content Include="rozklad\rozklad430.html" />
+    <Content Include="rozklad\rozklad431.html" />
+    <Content Include="rozklad\rozklad432.html" />
+    <Content Include="rozklad\rozklad433.html" />
+    <Content Include="rozklad\rozklad434.html" />
+    <Content Include="rozklad\rozklad435.html" />
+    <Content Include="rozklad\rozklad436.html" />
+    <Content Include="rozklad\rozklad437.html" />
+    <Content Include="rozklad\rozklad438.html" />
+    <Content Include="rozklad\rozklad439.html" />
+    <Content Include="rozklad\rozklad44.html" />
+    <Content Include="rozklad\rozklad440.html" />
+    <Content Include="rozklad\rozklad441.html" />
+    <Content Include="rozklad\rozklad442.html" />
+    <Content Include="rozklad\rozklad443.html" />
+    <Content Include="rozklad\rozklad444.html" />
+    <Content Include="rozklad\rozklad445.html" />
+    <Content Include="rozklad\rozklad446.html" />
+    <Content Include="rozklad\rozklad447.html" />
+    <Content Include="rozklad\rozklad448.html" />
+    <Content Include="rozklad\rozklad449.html" />
+    <Content Include="rozklad\rozklad45.html" />
+    <Content Include="rozklad\rozklad450.html" />
+    <Content Include="rozklad\rozklad451.html" />
+    <Content Include="rozklad\rozklad452.html" />
+    <Content Include="rozklad\rozklad453.html" />
+    <Content Include="rozklad\rozklad454.html" />
+    <Content Include="rozklad\rozklad455.html" />
+    <Content Include="rozklad\rozklad456.html" />
+    <Content Include="rozklad\rozklad457.html" />
+    <Content Include="rozklad\rozklad458.html" />
+    <Content Include="rozklad\rozklad459.html" />
+    <Content Include="rozklad\rozklad46.html" />
+    <Content Include="rozklad\rozklad460.html" />
+    <Content Include="rozklad\rozklad461.html" />
+    <Content Include="rozklad\rozklad462.html" />
+    <Content Include="rozklad\rozklad463.html" />
+    <Content Include="rozklad\rozklad464.html" />
+    <Content Include="rozklad\rozklad465.html" />
+    <Content Include="rozklad\rozklad466.html" />
+    <Content Include="rozklad\rozklad467.html" />
+    <Content Include="rozklad\rozklad468.html" />
+    <Content Include="rozklad\rozklad469.html" />
+    <Content Include="rozklad\rozklad47.html" />
+    <Content Include="rozklad\rozklad470.html" />
+    <Content Include="rozklad\rozklad471.html" />
+    <Content Include="rozklad\rozklad472.html" />
+    <Content Include="rozklad\rozklad473.html" />
+    <Content Include="rozklad\rozklad474.html" />
+    <Content Include="rozklad\rozklad475.html" />
+    <Content Include="rozklad\rozklad476.html" />
+    <Content Include="rozklad\rozklad477.html" />
+    <Content Include="rozklad\rozklad478.html" />
+    <Content Include="rozklad\rozklad479.html" />
+    <Content Include="rozklad\rozklad48.html" />
+    <Content Include="rozklad\rozklad480.html" />
+    <Content Include="rozklad\rozklad481.html" />
+    <Content Include="rozklad\rozklad482.html" />
+    <Content Include="rozklad\rozklad483.html" />
+    <Content Include="rozklad\rozklad484.html" />
+    <Content Include="rozklad\rozklad485.html" />
+    <Content Include="rozklad\rozklad486.html" />
+    <Content Include="rozklad\rozklad487.html" />
+    <Content Include="rozklad\rozklad488.html" />
+    <Content Include="rozklad\rozklad489.html" />
+    <Content Include="rozklad\rozklad49.html" />
+    <Content Include="rozklad\rozklad490.html" />
+    <Content Include="rozklad\rozklad491.html" />
+    <Content Include="rozklad\rozklad492.html" />
+    <Content Include="rozklad\rozklad493.html" />
+    <Content Include="rozklad\rozklad494.html" />
+    <Content Include="rozklad\rozklad495.html" />
+    <Content Include="rozklad\rozklad496.html" />
+    <Content Include="rozklad\rozklad497.html" />
+    <Content Include="rozklad\rozklad498.html" />
+    <Content Include="rozklad\rozklad499.html" />
+    <Content Include="rozklad\rozklad5.html" />
+    <Content Include="rozklad\rozklad50.html" />
+    <Content Include="rozklad\rozklad500.html" />
+    <Content Include="rozklad\rozklad501.html" />
+    <Content Include="rozklad\rozklad502.html" />
+    <Content Include="rozklad\rozklad503.html" />
+    <Content Include="rozklad\rozklad504.html" />
+    <Content Include="rozklad\rozklad505.html" />
+    <Content Include="rozklad\rozklad506.html" />
+    <Content Include="rozklad\rozklad507.html" />
+    <Content Include="rozklad\rozklad508.html" />
+    <Content Include="rozklad\rozklad509.html" />
+    <Content Include="rozklad\rozklad51.html" />
+    <Content Include="rozklad\rozklad510.html" />
+    <Content Include="rozklad\rozklad511.html" />
+    <Content Include="rozklad\rozklad512.html" />
+    <Content Include="rozklad\rozklad513.html" />
+    <Content Include="rozklad\rozklad514.html" />
+    <Content Include="rozklad\rozklad515.html" />
+    <Content Include="rozklad\rozklad516.html" />
+    <Content Include="rozklad\rozklad517.html" />
+    <Content Include="rozklad\rozklad518.html" />
+    <Content Include="rozklad\rozklad519.html" />
+    <Content Include="rozklad\rozklad52.html" />
+    <Content Include="rozklad\rozklad520.html" />
+    <Content Include="rozklad\rozklad521.html" />
+    <Content Include="rozklad\rozklad522.html" />
+    <Content Include="rozklad\rozklad523.html" />
+    <Content Include="rozklad\rozklad524.html" />
+    <Content Include="rozklad\rozklad525.html" />
+    <Content Include="rozklad\rozklad526.html" />
+    <Content Include="rozklad\rozklad527.html" />
+    <Content Include="rozklad\rozklad528.html" />
+    <Content Include="rozklad\rozklad529.html" />
+    <Content Include="rozklad\rozklad53.html" />
+    <Content Include="rozklad\rozklad530.html" />
+    <Content Include="rozklad\rozklad531.html" />
+    <Content Include="rozklad\rozklad532.html" />
+    <Content Include="rozklad\rozklad533.html" />
+    <Content Include="rozklad\rozklad534.html" />
+    <Content Include="rozklad\rozklad535.html" />
+    <Content Include="rozklad\rozklad536.html" />
+    <Content Include="rozklad\rozklad537.html" />
+    <Content Include="rozklad\rozklad538.html" />
+    <Content Include="rozklad\rozklad539.html" />
+    <Content Include="rozklad\rozklad54.html" />
+    <Content Include="rozklad\rozklad540.html" />
+    <Content Include="rozklad\rozklad541.html" />
+    <Content Include="rozklad\rozklad542.html" />
+    <Content Include="rozklad\rozklad543.html" />
+    <Content Include="rozklad\rozklad544.html" />
+    <Content Include="rozklad\rozklad545.html" />
+    <Content Include="rozklad\rozklad546.html" />
+    <Content Include="rozklad\rozklad547.html" />
+    <Content Include="rozklad\rozklad548.html" />
+    <Content Include="rozklad\rozklad549.html" />
+    <Content Include="rozklad\rozklad55.html" />
+    <Content Include="rozklad\rozklad550.html" />
+    <Content Include="rozklad\rozklad551.html" />
+    <Content Include="rozklad\rozklad552.html" />
+    <Content Include="rozklad\rozklad553.html" />
+    <Content Include="rozklad\rozklad554.html" />
+    <Content Include="rozklad\rozklad555.html" />
+    <Content Include="rozklad\rozklad556.html" />
+    <Content Include="rozklad\rozklad557.html" />
+    <Content Include="rozklad\rozklad558.html" />
+    <Content Include="rozklad\rozklad559.html" />
+    <Content Include="rozklad\rozklad56.html" />
+    <Content Include="rozklad\rozklad560.html" />
+    <Content Include="rozklad\rozklad561.html" />
+    <Content Include="rozklad\rozklad562.html" />
+    <Content Include="rozklad\rozklad563.html" />
+    <Content Include="rozklad\rozklad564.html" />
+    <Content Include="rozklad\rozklad565.html" />
+    <Content Include="rozklad\rozklad566.html" />
+    <Content Include="rozklad\rozklad567.html" />
+    <Content Include="rozklad\rozklad568.html" />
+    <Content Include="rozklad\rozklad569.html" />
+    <Content Include="rozklad\rozklad57.html" />
+    <Content Include="rozklad\rozklad570.html" />
+    <Content Include="rozklad\rozklad571.html" />
+    <Content Include="rozklad\rozklad572.html" />
+    <Content Include="rozklad\rozklad573.html" />
+    <Content Include="rozklad\rozklad574.html" />
+    <Content Include="rozklad\rozklad575.html" />
+    <Content Include="rozklad\rozklad576.html" />
+    <Content Include="rozklad\rozklad577.html" />
+    <Content Include="rozklad\rozklad578.html" />
+    <Content Include="rozklad\rozklad579.html" />
+    <Content Include="rozklad\rozklad58.html" />
+    <Content Include="rozklad\rozklad580.html" />
+    <Content Include="rozklad\rozklad581.html" />
+    <Content Include="rozklad\rozklad582.html" />
+    <Content Include="rozklad\rozklad583.html" />
+    <Content Include="rozklad\rozklad584.html" />
+    <Content Include="rozklad\rozklad585.html" />
+    <Content Include="rozklad\rozklad586.html" />
+    <Content Include="rozklad\rozklad587.html" />
+    <Content Include="rozklad\rozklad588.html" />
+    <Content Include="rozklad\rozklad589.html" />
+    <Content Include="rozklad\rozklad59.html" />
+    <Content Include="rozklad\rozklad590.html" />
+    <Content Include="rozklad\rozklad591.html" />
+    <Content Include="rozklad\rozklad592.html" />
+    <Content Include="rozklad\rozklad593.html" />
+    <Content Include="rozklad\rozklad594.html" />
+    <Content Include="rozklad\rozklad595.html" />
+    <Content Include="rozklad\rozklad596.html" />
+    <Content Include="rozklad\rozklad597.html" />
+    <Content Include="rozklad\rozklad598.html" />
+    <Content Include="rozklad\rozklad599.html" />
+    <Content Include="rozklad\rozklad6.html" />
+    <Content Include="rozklad\rozklad60.html" />
+    <Content Include="rozklad\rozklad600.html" />
+    <Content Include="rozklad\rozklad61.html" />
+    <Content Include="rozklad\rozklad62.html" />
+    <Content Include="rozklad\rozklad63.html" />
+    <Content Include="rozklad\rozklad64.html" />
+    <Content Include="rozklad\rozklad65.html" />
+    <Content Include="rozklad\rozklad66.html" />
+    <Content Include="rozklad\rozklad67.html" />
+    <Content Include="rozklad\rozklad68.html" />
+    <Content Include="rozklad\rozklad69.html" />
+    <Content Include="rozklad\rozklad7.html" />
+    <Content Include="rozklad\rozklad70.html" />
+    <Content Include="rozklad\rozklad71.html" />
+    <Content Include="rozklad\rozklad72.html" />
+    <Content Include="rozklad\rozklad73.html" />
+    <Content Include="rozklad\rozklad74.html" />
+    <Content Include="rozklad\rozklad75.html" />
+    <Content Include="rozklad\rozklad76.html" />
+    <Content Include="rozklad\rozklad77.html" />
+    <Content Include="rozklad\rozklad78.html" />
+    <Content Include="rozklad\rozklad79.html" />
+    <Content Include="rozklad\rozklad8.html" />
+    <Content Include="rozklad\rozklad80.html" />
+    <Content Include="rozklad\rozklad81.html" />
+    <Content Include="rozklad\rozklad82.html" />
+    <Content Include="rozklad\rozklad83.html" />
+    <Content Include="rozklad\rozklad84.html" />
+    <Content Include="rozklad\rozklad85.html" />
+    <Content Include="rozklad\rozklad86.html" />
+    <Content Include="rozklad\rozklad87.html" />
+    <Content Include="rozklad\rozklad88.html" />
+    <Content Include="rozklad\rozklad89.html" />
+    <Content Include="rozklad\rozklad9.html" />
+    <Content Include="rozklad\rozklad90.html" />
+    <Content Include="rozklad\rozklad91.html" />
+    <Content Include="rozklad\rozklad92.html" />
+    <Content Include="rozklad\rozklad93.html" />
+    <Content Include="rozklad\rozklad94.html" />
+    <Content Include="rozklad\rozklad95.html" />
+    <Content Include="rozklad\rozklad96.html" />
+    <Content Include="rozklad\rozklad97.html" />
+    <Content Include="rozklad\rozklad98.html" />
+    <Content Include="rozklad\rozklad99.html" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\Chart.js" />
+    <Content Include="Scripts\Chart.min.js" />
+    <EntityDeploy Include="JakTrafic.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>JakTrafic.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="JakTrafic.edmx.diagram">
+      <DependentUpon>JakTrafic.edmx</DependentUpon>
+    </Content>
+    <None Include="Properties\PublishProfiles\normal.pubxml" />
+    <None Include="Scripts\jquery-2.1.1.intellisense.js" />
+    <Content Include="Scripts\jquery-2.1.1.js" />
+    <Content Include="Scripts\jquery-2.1.1.min.js" />
+    <Content Include="Scripts\jquery-ui-1.11.2.js" />
+    <Content Include="Scripts\jquery-ui-1.11.2.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\markermanager.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\rysujprzystanki.js" />
+    <None Include="Scripts\_references.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Account\_ChangePasswordPartial.cshtml" />
+    <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
+    <Content Include="Views\Account\_RemoveAccountPartial.cshtml" />
+    <Content Include="Views\Account\_SetPasswordPartial.cshtml" />
+    <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
+    <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Account\Manage.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Posty\Create.cshtml" />
+    <Content Include="Views\Posty\Delete.cshtml" />
+    <Content Include="Views\Posty\Index.cshtml" />
+    <Content Include="Views\Posty\Odpowiedzi.cshtml" />
+    <Content Include="Views\Raporty\Index.cshtml" />
+    <Content Include="Views\Raporty\LinieRaport.cshtml" />
+    <Content Include="Views\Raporty\PrzystankiRaport.cshtml" />
+    <Content Include="Views\Forum\Create.cshtml" />
+    <Content Include="Views\Forum\Delete.cshtml" />
+    <Content Include="Views\Forum\Edit.cshtml" />
+    <Content Include="Views\Forum\Index.cshtml" />
+    <Content Include="Views\Forum\Linie.cshtml" />
+    <Content Include="Views\Forum\Ocena.cshtml" />
+    <Content Include="Views\UserManager\Index.cshtml" />
+    <Content Include="Views\UserManager\SimpleUsers.cshtml" />
+    <Content Include="Views\UserManager\Edit.cshtml" />
+    <Content Include="Views\UserManager\Admins.cshtml" />
+    <Content Include="Views\UserManager\Error.cshtml" />
+    <Content Include="Views\UserManager\AddAdminAccount.cshtml" />
+    <Content Include="Views\Posty\Error.cshtml" />
+    <Content Include="Views\Posty\Edit.cshtml" />
+    <Content Include="Views\Posty\EditAnswer.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="packages.config" />
+    <None Include="Project_Readme.html" />
+    <Content Include="Scripts\jquery-2.1.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201505311110147_Initial.resx">
+      <DependentUpon>201505311110147_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201505311427460_nowa.resx">
+      <DependentUpon>201505311427460_nowa.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>27882</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:4780/</IISUrl>
+          <OverrideIISAppRootUrl>True</OverrideIISAppRootUrl>
+          <IISAppRootUrl>http://localhost:4780/</IISAppRootUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

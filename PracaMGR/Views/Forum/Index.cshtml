@@ -1,0 +1,59 @@
+﻿@using PagedList
+@using PagedList.Mvc
+
+@model IPagedList<PracaMGR.Kategorie>
+
+
+
+    @{
+        ViewBag.Title = "Kategorie";
+    }
+
+    <h2>Wybierz Kategorie...</h2>
+
+    @if (User.IsInRole("Admin"))
+    {
+        <p>
+            @Html.ActionLink("Utwórz nową kategorię", "Create", null, new { @class = "btn btn-default" })
+        </p>
+    }
+
+    <table class="table">
+        <tr>
+            <th>
+                Nazwa
+            </th>
+            <th></th>
+        </tr>
+        <tr>
+            <td>
+                Ocena Linii Autobusowych
+            </td>
+            <td>
+                @Html.ActionLink("Oceniaj...", "Linie", null, new { @class = "btn btn-default" })
+            </td>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nazwa)
+                </td>
+                <td>
+                    @if (User.IsInRole("Admin"))
+                    {
+                        @Html.ActionLink("Edytuj", "Edit", new { id = item.Id }, new { @class = "btn btn-default" })
+                        @Html.ActionLink("Usuń", "Delete", new { id = item.Id }, new { @class = "btn btn-default" })
+                    }
+                    @Html.ActionLink("Przeglądaj", "Index","Posty", new { id = item.Id }, new { @class = "btn btn-default" })                  
+
+                </td>
+            </tr>
+        }
+
+    </table>
+
+    <div class="pagedList">
+        @Html.PagedListPager(Model, page => Url.Action("Index", new { Model, page }), PagedListRenderOptions.OnlyShowFivePagesAtATime)
+    </div>

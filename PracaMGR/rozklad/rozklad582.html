@@ -1,0 +1,327 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<style type="text/css">
+
+.nagl_przystanek
+{
+	font-size:14px;
+	font-weight:bold;
+}
+.nagl_opis
+{
+	font-size:12px;
+	font-weight:bold;
+}
+.linia
+{
+	font-size:14px;
+	font-weight:bold;
+	background-color:#B0D8FF;
+}
+
+.typ
+{
+	font-size:12px;
+	font-weight:bold;
+	background-color:#CCCCCC;
+}
+.podkresl
+{
+border: 1px #CCCCCC solid;
+}
+.odjazdy
+{
+font-weight:bold;
+font-size:1.2em;
+}
+</style>
+<script type="text/javascript">
+
+    function PrintElem(elem)
+    {
+        Popup(document.getElementById(elem).innerHTML);
+    }
+
+    function Popup(data) 
+    {
+        var mywindow = window.open('', 'rozklad', 'height=400,width=600');
+        mywindow.document.write('<html><head><title>Rozkład</title>');
+        /*optional stylesheet*/ //mywindow.document.write('<link rel="stylesheet" href="main.css" type="text/css" />');
+        mywindow.document.write('</head><body >');
+        mywindow.document.write(data);
+        mywindow.document.write('</body></html>');
+        mywindow.document.close();
+        mywindow.print();
+        return true;
+    }
+
+</script>
+
+</head>
+
+<body>
+<div style="position: relative; top:40px; left:40px;"><a href="" onclick="PrintElem('printarea');return false;" style="text-decoration:none;"><img src="/Content/printButton.png" border="0" align="middle"/> Drukuj</a></div>
+<div id="printarea">
+  
+
+<table width="100%" border="0">
+  <tr>
+    <td colspan="3" align="right"> </td>
+  </tr>
+  <tr>
+    <td colspan="3" align="center">
+	<span  class="nagl_przystanek">(03)Siedlce Starostwo Powiatowe (1)</span><br />
+	<span class="nagl_opis">Rozkład jazdy autobusów MPK Siedlce<br />
+	ważny od 29.06.2015&nbsp;&nbsp;&nbsp;Strefa: I</span></td>
+  </tr>
+  <tr>
+    <th colspan="2">Linia</th>
+    <th width="167">Godziny odjazdów </th>
+  </tr>
+  	 <tr>
+    <td colspan="3" style="font-size:12px;font-weight:bold;	background-color:#CCCCCC;">Dni robocze</td>
+  </tr>
+	
+  	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">4</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">FLORIAŃSKA - Brzeska - Wyszyńskiego - Kazimierzowska - Prusa - Poniatowskiego - Jana Pawła II - Dąbrowskiego - Mireckiego - Chrobrego - Sokołowska - Wojskowa - PIŁSUDSKIEGO - Warszawska - Monte Cassino - KURPIOWSKA</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">04:46, 05:41, 06:06, 06:31, 06:51, 07:12, 07:32, 07:52, 08:12, 08:32, 08:52, 09:12, 09:32, 09:52, 10:12, 10:32, 10:52, 11:12, 11:32, 11:52, 12:12, 12:32, 12:52, 13:12, 13:32, 13:52, 14:12, 14:32, 14:52, 15:12, 15:32, 15:52, 16:12, 16:32, 16:52, 17:12, 17:32, 17:52, 18:12, 18:32, 18:52, 19:12, 19:41, 20:11, 21:11, 22:11, 22:51, 23:31m, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">5</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">PIŁSUDSKIEGO - Kazimierzowska - Żabokliki - GOLICE</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">05:52E, 06:47E, 07:42HP, 07:42E, 08:50E, 11:05E, 12:35E, 14:23, 16:05E, 17:35E, 19:25E, 20:15H, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">7</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">FLORIAŃSKA - Torowa - Łukowska - Grabianów - Białki - ZACHOJNIAK</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">04:35, 05:23^, 06:25^, 07:30E, 09:20, 10:35E, 12:25G, 14:30^HG, 14:30^E, 15:35HG, 15:35E, 16:35^, 18:30^G, 20:45, 22:25G, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">11</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">FLORIAŃSKA - Brzeska - Ujrzanowska - Terespolska - Ujrzanów - Borki Wyrki - ŚWIERCZE</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">04:41, 08:00, 12:33, 14:15EŁ, 17:05EŁ, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">12</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">FLORIAŃSKA - Brzeska - STARZYŃSKIEGO</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">07:35, 08:39D, 09:26, 10:59D, 11:59D, 16:01, 17:36, 19:06, 20:34D, 22:44, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">14</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">PIŁSUDSKIEGO - Starowiejska - KASZTANOWA - Janowska - Stok Lacki - Pruszyn Pieńki - WYCZÓŁKI</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">04:25, 05:25L, 06:28L, 08:10LE, 09:35, 12:17L, 14:26L, 15:50L, 17:10L, 18:35L, 20:20, 22:25L, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">15</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">PIŁSUDSKIEGO - Kazimierzowska - Żabokliki - Golice - Błogoszcz - Pruszynek - PRUSZYN</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">04:15, 05:25, 06:40, 07:50E, 09:35, 12:10gH, 12:10E, 14:30E, 15:35g, 16:55g, 18:20g, 20:15E, 22:25g, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">16</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">PIŁSUDSKIEGO - Starowiejska - TERESPOLSKA</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">05:35k, 06:40, 07:35, 09:20J, 11:05J, 12:30, 13:30k, 14:45, 15:50, 16:15J, 19:00J, 21:25, 22:45M, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">18</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">PIŁSUDSKIEGO - Starowiejska - STARZYŃSKIEGO</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">05:46, 06:45, 07:31Ep, 07:45, 08:45, 09:15E, 09:45, 10:15E, 10:45, 11:15E, 11:45, 12:15E, 12:45, 13:16E, 13:45, 14:15E, 14:45, 15:15E, 15:45, 16:15E, 16:45, 17:15E, 17:45e, 18:45, 19:45, 21:08, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">21</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">FLORIAŃSKA - Brzeska - Ujrzanowska - Terespolska - UJRZANÓW - Borki Wyrki - Świercze - Chromna - Zdany - ZBUCZYN</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">05:30, 06:37, 10:15, 14:25, 15:40, 18:18, 20:25, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">22</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">FLORIAŃSKA - Torowa - Łukowska - Południowa - Grabianowska - Składowa - ZBROJNA - Partyzantów - Garwolińska - Niepodległości - UNITÓW PODLASKICH</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">08:25, 10:10, 12:10, 13:20, 15:25, 17:30, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">23</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">PIŁSUDSKIEGO - Starowiejska - Kasztanowa - Janowska - Stok Lacki - STOK LACKI-FOLWARK</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">07:05w, 13:45w, 15:30w, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">24</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">FLORIAŃSKA - Brzeska - STARZYŃSKIEGO</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">09:14E, 16:44E, 18:15E, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">25</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">PIŁSUDSKIEGO - Konarskiego - Prusa - Kazimierzowska - Bema - Poniatowskiego - Dąbrowskiego - MIRECKIEGO - BRONIEWSKIEGO</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">06:22E, 07:42E, 15:12E, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">26</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">PIŁSUDSKIEGO - Starowiejska - Janowska - Stok Lacki - STOK LACKI-FOLWARK - Stok Lacki - Pustki - Grubale - Tarcze - Cielemęc - CZURYŁY</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">04:25, 05:27, 06:37, 07:55b, 09:55, 12:15o, 14:25o, 15:40o, 16:55o, 19:20o, 22:23o, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">30</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">FLORIAŃSKA - Brzeska - Ujrzanowska - TERESPOLSKA</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">06:26, 07:36E, 13:26, 14:49, 16:01B, 17:53EPB, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">31</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">FLORIAŃSKA - Brzeska - Ujrzanowska - TERESPOLSKA</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">07:39, 08:50, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">32</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">FLORIAŃSKA - Brzeska - Ujrzanowska - TERESPOLSKA</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">06:40, 07:40, 13:15T, 14:40, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">33</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">FLORIAŃSKA - Brzeska - Ujrzanowska - TERESPOLSKA</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">05:23, 06:34, 13:16, 14:56, 21:37, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">38</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">FLORIAŃSKA - Brzeska - Ujrzanowska - TERESPOLSKA</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">05:26, 22:44M, </td>
+  </tr>
+	 <tr>
+    <td colspan="3" style="font-size:12px;font-weight:bold;	background-color:#CCCCCC;">Soboty</td>
+  </tr>
+	
+  	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">4</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">FLORIAŃSKA - Brzeska - Wyszyńskiego - Kazimierzowska - Prusa - Poniatowskiego - Jana Pawła II - Dąbrowskiego - Mireckiego - Chrobrego - Sokołowska - Wojskowa - PIŁSUDSKIEGO - Warszawska - Monte Cassino - KURPIOWSKA</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">06:01, 06:51, 07:42, 08:32, 09:12, 09:42, 10:12, 10:42, 11:12, 11:42, 12:12, 12:42, 13:12, 13:42, 14:12, 14:42, 15:12, 15:42, 16:12, 16:42, 17:12, 17:42, 18:12, 18:42, 19:12, 20:11, 21:21, 22:01, 22:41m, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">5</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">PIŁSUDSKIEGO - Kazimierzowska - Żabokliki - GOLICE</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">07:05, 10:15, 12:45, 14:40, 17:45, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">6</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">PIŁSUDSKIEGO - Starowiejska - Janowska - Stok Lacki - Stok Lacki-Folwark - Stok Lacki - Pustki - Grubale - OSINY</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">06:45, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">7</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">FLORIAŃSKA - Torowa - Łukowska - Grabianów - Białki - ZACHOJNIAK</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">05:45, 07:05, 09:10, 11:25, 13:15G, 15:35G, 18:20, 20:30G, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">11</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">FLORIAŃSKA - Brzeska - Ujrzanowska - Terespolska - Ujrzanów - Borki Wyrki - ŚWIERCZE</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">05:50, 08:20, 12:10, 14:30, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">12</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">FLORIAŃSKA - Brzeska - STARZYŃSKIEGO</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">07:49, 09:51, 10:56, 12:56, 15:51, 18:21, 19:51, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">14</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">PIŁSUDSKIEGO - Starowiejska - KASZTANOWA - Janowska - Stok Lacki - Pruszyn Pieńki - WYCZÓŁKI</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">05:25L, 08:05, 10:10L, 14:30, 15:50L, 17:15, 19:10L, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">15</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">PIŁSUDSKIEGO - Kazimierzowska - Żabokliki - Golice - Błogoszcz - Pruszynek - PRUSZYN</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">05:25, 08:35, 11:15, 15:35g, 19:25, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">16</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">PIŁSUDSKIEGO - Starowiejska - TERESPOLSKA</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">05:35, 06:45, 08:55, 11:30, 13:35, 14:45, 17:30, 20:30, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">18</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">PIŁSUDSKIEGO - Starowiejska - STARZYŃSKIEGO</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">10:21, 12:36, 13:51, 17:21, 21:28, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">21</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">FLORIAŃSKA - Brzeska - Ujrzanowska - Terespolska - UJRZANÓW - Borki Wyrki - Świercze - Chromna - Zdany - ZBUCZYN</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">06:45, 10:05, 15:30, 18:20, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">26</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">PIŁSUDSKIEGO - Starowiejska - Janowska - Stok Lacki - STOK LACKI-FOLWARK - Stok Lacki - Pustki - Grubale - Tarcze - Cielemęc - CZURYŁY</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">05:30, 09:25, 12:25, 15:30o, 18:35, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">33</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">FLORIAŃSKA - Brzeska - Ujrzanowska - TERESPOLSKA</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">06:44, 14:46, </td>
+  </tr>
+	 <tr>
+    <td colspan="3" style="font-size:12px;font-weight:bold;	background-color:#CCCCCC;">Dni świąteczne</td>
+  </tr>
+	
+  	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">4</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">FLORIAŃSKA - Brzeska - Wyszyńskiego - Kazimierzowska - Prusa - Poniatowskiego - Jana Pawła II - Dąbrowskiego - Mireckiego - Chrobrego - Sokołowska - Wojskowa - PIŁSUDSKIEGO - Warszawska - Monte Cassino - KURPIOWSKA</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">06:01, 06:51, 07:42, 08:32, 09:12, 09:42, 10:12, 10:42, 11:12, 11:42, 12:12, 12:42, 13:12, 13:42, 14:12, 14:42, 15:12, 15:42, 16:12, 16:42, 17:12, 17:42, 18:12, 18:42, 19:12, 20:11, 21:21, 22:01, 22:41m, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">5</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">PIŁSUDSKIEGO - Kazimierzowska - Żabokliki - GOLICE</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">08:00, 10:00, 13:05, 17:00, 18:05, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">6</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">PIŁSUDSKIEGO - Starowiejska - Janowska - Stok Lacki - Stok Lacki-Folwark - Stok Lacki - Pustki - Grubale - OSINY</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">06:05, 13:40, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">7</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">FLORIAŃSKA - Torowa - Łukowska - Grabianów - Białki - ZACHOJNIAK</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">06:05, 08:02, 09:10, 10:00, 11:30G, 14:20, 15:45, 17:45G, 19:35, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">11</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">FLORIAŃSKA - Brzeska - Ujrzanowska - Terespolska - Ujrzanów - Borki Wyrki - ŚWIERCZE</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">08:05, 19:10, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">12</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">FLORIAŃSKA - Brzeska - STARZYŃSKIEGO</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">07:31, 09:51, 11:04, 12:01, 13:24, 14:36, 15:46, 16:41, 17:46, 20:01, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">14</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">PIŁSUDSKIEGO - Starowiejska - KASZTANOWA - Janowska - Stok Lacki - Pruszyn Pieńki - WYCZÓŁKI</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">05:58, 09:05, 11:25L, 15:05L, 18:05L, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">15</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">PIŁSUDSKIEGO - Kazimierzowska - Żabokliki - Golice - Błogoszcz - Pruszynek - PRUSZYN</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">05:55, 08:30, 14:30, 19:35g, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">16</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">PIŁSUDSKIEGO - Starowiejska - TERESPOLSKA</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">07:10J, 10:30J, 12:25J, 14:20, 16:25, 18:30, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">21</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">FLORIAŃSKA - Brzeska - Ujrzanowska - Terespolska - UJRZANÓW - Borki Wyrki - Świercze - Chromna - Zdany - ZBUCZYN</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">06:00, 09:55, 12:55, 16:05, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">22</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">FLORIAŃSKA - Torowa - Łukowska - Południowa - Grabianowska - Składowa - ZBROJNA - Partyzantów - Garwolińska - Niepodległości - UNITÓW PODLASKICH</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">08:25, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">26</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">PIŁSUDSKIEGO - Starowiejska - Janowska - Stok Lacki - STOK LACKI-FOLWARK - Stok Lacki - Pustki - Grubale - Tarcze - Cielemęc - CZURYŁY</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">07:55, 10:15o, 12:10o, 16:25o, 19:25, </td>
+  </tr>
+
+<tr><td colspan="3" align="left">m - zjazd do MPK przez ul.Piłsudskiego <br>E - nie kursuje w okresie letnich wakacji szkolnych <br>H - kursuje w okresie letnich wakacji szkolnych <br>P - w okresie letnich wakacji kursuje z PKP <br>^ - kursuje do Wólki Wiśniewskiej <br>G - kursuje przez Grabianów Wieś <br>Ł - kursuje do m. Rzążew, Bzów p. Ługi W. Tarcze <br>D - w okresie letnich wakacji szkolnych kursuje do /z/ działek <br>L - kursuje przez Leśniczówkę i Krzymosze <br>g - kursuje przez Golice-Pętle <br>k - kursuje przez dw PKP <br>J - kursuje ul.Janowską i Kasztanową <br>M - kursuje do ul.Starzyńskiego <br>p - w dni nauki szkolnej kursuje ul. Prusa <br>e - kursuje w okresie letnich wakacji szkolnych <br>w - kursuje w dni nauki szkolnej <br>b - kursuje do Bzowa przez Czuryły, Rzążew w okresie roku szkolnego <br>o - kursuje przez Osiny <br>B - z ul.Brzeskiej do MPK ul.Starzyńskiego <br>T - kursuje przez Ujrzanów (Brzeska/Terespolska) <br>Autobusy MPK kursują z tolerancją +2min. W autobusach obowiązują wyłącznie bilety MPK Siedlce <br>W dn.5.06.2015r. autobusy kursują wg. sobotniego rozkladu jazdy <br></td></tr>
+</table>
+<p>&nbsp;</p>
+</div>
+</body>
+</html>

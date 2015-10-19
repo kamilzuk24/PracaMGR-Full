@@ -1,0 +1,222 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<style type="text/css">
+
+.nagl_przystanek
+{
+	font-size:14px;
+	font-weight:bold;
+}
+.nagl_opis
+{
+	font-size:12px;
+	font-weight:bold;
+}
+.linia
+{
+	font-size:14px;
+	font-weight:bold;
+	background-color:#B0D8FF;
+}
+
+.typ
+{
+	font-size:12px;
+	font-weight:bold;
+	background-color:#CCCCCC;
+}
+.podkresl
+{
+border: 1px #CCCCCC solid;
+}
+.odjazdy
+{
+font-weight:bold;
+font-size:1.2em;
+}
+</style>
+<script type="text/javascript">
+
+    function PrintElem(elem)
+    {
+        Popup(document.getElementById(elem).innerHTML);
+    }
+
+    function Popup(data) 
+    {
+        var mywindow = window.open('', 'rozklad', 'height=400,width=600');
+        mywindow.document.write('<html><head><title>Rozkład</title>');
+        /*optional stylesheet*/ //mywindow.document.write('<link rel="stylesheet" href="main.css" type="text/css" />');
+        mywindow.document.write('</head><body >');
+        mywindow.document.write(data);
+        mywindow.document.write('</body></html>');
+        mywindow.document.close();
+        mywindow.print();
+        return true;
+    }
+
+</script>
+
+</head>
+
+<body>
+<div style="position: relative; top:40px; left:40px;"><a href="" onclick="PrintElem('printarea');return false;" style="text-decoration:none;"><img src="/Content/printButton.png" border="0" align="middle"/> Drukuj</a></div>
+<div id="printarea">
+  
+
+<table width="100%" border="0">
+  <tr>
+    <td colspan="3" align="right"> </td>
+  </tr>
+  <tr>
+    <td colspan="3" align="center">
+	<span  class="nagl_przystanek">(01)Siedlce Partyzantów Zbrojna (2)</span><br />
+	<span class="nagl_opis">Rozkład jazdy autobusów MPK Siedlce<br />
+	ważny od 29.06.2015&nbsp;&nbsp;&nbsp;Strefa: I</span></td>
+  </tr>
+  <tr>
+    <th colspan="2">Linia</th>
+    <th width="167">Godziny odjazdów </th>
+  </tr>
+  	 <tr>
+    <td colspan="3" style="font-size:12px;font-weight:bold;	background-color:#CCCCCC;">Dni robocze</td>
+  </tr>
+	
+  	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">2</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">PLAC ZDANOWSKIEGO - DW. PKP</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">07:21, 08:10E, 10:26, 16:06, 17:08, 19:06, 21:14E, 22:48, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">3</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">ARMII KRAJOWEJ - Wojskowa - Sokołowska - Rynkowa - Jagiełły - Chrobrego - Mireckiego - Dąbrowskiego - Poniatowskiego - Bema - Kazimierzowska - Wyszyńskiego - Brzeska - Floriańska - Piłsudskiego - ARMII KRAJOWEJ - Świętojańska - Partyzantów - Garwolińska - Romanówka - Unitów Podlaskich - LEŚNA</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">05:03k, 05:38, 06:08, 06:38, 06:58, 07:23, 07:48, 08:08, 08:28, 08:48, 09:08, 09:28, 09:48, 10:08, 10:28, 10:48, 11:08, 11:28, 11:48, 12:08, 12:28, 12:48, 13:08, 13:28, 13:48, 14:08, 14:28, 14:48, 15:08, 15:28, 15:48, 16:08, 16:28, 16:48, 17:08, 17:28, 17:48, 18:08, 18:28, 18:48, 19:08, 19:37, 20:22, 21:47, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">5</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">ARMII KRAJOWEJ - Piłsudskiego - KAZIMIERZOWSKA - Żabokliki - GOLICE</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">05:46E, 06:41E, 07:36E, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">8</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">PLAC ZDANOWSKIEGO - DW. PKP</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">05:09, 06:09, 07:19, 08:19E, 09:19, 10:17a, 11:16, 12:52, 13:22a, 15:09, 16:02, 16:49, 17:49E, 19:04, 21:14, 22:48, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">10</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">ARMII KRAJOWEJ - Wojskowa - Sokołowska - Strzała - CHODÓW</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">04:37, 05:40, 06:39, 07:41E, 08:54, 11:39, 12:39, 14:17, 15:23, 16:24, 18:14, 20:19, 22:11, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">16</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">ARMII KRAJOWEJ - Piłsudskiego - Starowiejska - TERESPOLSKA</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">05:29k, 06:34, 07:29, 09:14J, 10:59J, 12:24, 13:24k, 14:39, 15:44, 16:09J, 18:54J, 21:19, 22:39M, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">17</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">ARMII KRAJOWEJ - Wojskowa - Sokołowska - Strzała - Purzec - Borki Siedleckie - Przygody - SUCHOŻEBRY</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">05:22, 06:29, 07:36, 10:29, 12:14B, 13:24ć, 14:29, 16:49, 18:39, 19:54E, 21:24C, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">22</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">ZBROJNA - Składowa - Grabianowska - Południowa - Łukowska - Torowa - Floriańska - Piłsudskiego - Armii Krajowej - PLAC ZDANOWSKIEGO - DW. PKP</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">08:58, 10:46, 12:51, 13:51, 16:06, 18:56, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">31</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">ARMII KRAJOWEJ - Piłsudskiego - Floriańska - Brzeska - Ujrzanowska - TERESPOLSKA</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">05:14d, 06:36d, 07:33, 08:44, 13:14d, 14:39d, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">35</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">ZBROJNA - Składowa - Torowa - Floriańska - Piłsudskiego - KONARSKIEGO - Poniatowskiego - Dąbrowskiego - Mireckiego - Mieszka I - SOKOŁOWSKA</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">05:14E, 06:24E, 07:29E, 13:14E, 14:47E, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">42</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">ARMII KRAJOWEJ - Wojskowa - SOKOŁOWSKA</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">05:19, 06:19, 13:14, 15:04, </td>
+  </tr>
+	 <tr>
+    <td colspan="3" style="font-size:12px;font-weight:bold;	background-color:#CCCCCC;">Soboty</td>
+  </tr>
+	
+  	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">2</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">PLAC ZDANOWSKIEGO - DW. PKP</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">06:26, 08:46, 10:43, 12:56, 15:16, 16:06, 17:41, 20:06, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">3</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">ARMII KRAJOWEJ - Wojskowa - Sokołowska - Rynkowa - Jagiełły - Chrobrego - Mireckiego - Dąbrowskiego - Poniatowskiego - Bema - Kazimierzowska - Wyszyńskiego - Brzeska - Floriańska - Piłsudskiego - ARMII KRAJOWEJ - Świętojańska - Partyzantów - Garwolińska - Romanówka - Unitów Podlaskich - LEŚNA</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">06:23, 07:23, 08:18, 08:58, 09:28, 09:58, 10:28, 10:58, 11:28, 11:58, 12:28, 12:58, 13:28, 13:58, 14:28, 14:58, 15:28, 15:58, 16:28, 16:58, 17:28, 17:58, 18:28, 19:37, 20:47, 21:47, 22:37B, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">8</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">PLAC ZDANOWSKIEGO - DW. PKP</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">06:24, 07:39, 09:19, 11:44, 13:44, 15:59, 17:44, 20:04, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">10</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">ARMII KRAJOWEJ - Wojskowa - Sokołowska - Strzała - CHODÓW</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">05:34, 07:54, 11:09, 14:19, 15:24, 17:09, 19:49, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">16</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">ARMII KRAJOWEJ - Piłsudskiego - Starowiejska - TERESPOLSKA</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">05:29, 06:39, 08:49, 11:24, 13:29, 14:39, 17:24, 20:24, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">17</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">ARMII KRAJOWEJ - Wojskowa - Sokołowska - Strzała - Purzec - Borki Siedleckie - Przygody - SUCHOŻEBRY</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">05:29B, 06:39, 09:49, 12:29B, 15:39, 18:49, </td>
+  </tr>
+	 <tr>
+    <td colspan="3" style="font-size:12px;font-weight:bold;	background-color:#CCCCCC;">Dni świąteczne</td>
+  </tr>
+	
+  	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">2</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">PLAC ZDANOWSKIEGO - DW. PKP</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">06:46, 08:49, 10:43, 12:56, 15:46, 17:51, 20:06, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">3</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">ARMII KRAJOWEJ - Wojskowa - Sokołowska - Rynkowa - Jagiełły - Chrobrego - Mireckiego - Dąbrowskiego - Poniatowskiego - Bema - Kazimierzowska - Wyszyńskiego - Brzeska - Floriańska - Piłsudskiego - ARMII KRAJOWEJ - Świętojańska - Partyzantów - Garwolińska - Romanówka - Unitów Podlaskich - LEŚNA</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">06:23, 07:23, 08:18, 09:28, 10:28, 11:28, 12:28, 13:28, 14:28, 15:28, 16:28, 17:28, 18:28, 19:37, 20:47, 21:47, 22:37B, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">8</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">PLAC ZDANOWSKIEGO - DW. PKP</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">07:45, 08:44, 10:39, 11:51, 13:39, 15:34, 17:19, 19:14, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">10</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">ARMII KRAJOWEJ - Wojskowa - Sokołowska - Strzała - CHODÓW</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">07:39, 09:20, 11:09, 14:34, 17:14, 19:29, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">16</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">ARMII KRAJOWEJ - Piłsudskiego - Starowiejska - TERESPOLSKA</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">07:04J, 10:24J, 12:19J, 14:14, 16:19, 18:24, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">17</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">ARMII KRAJOWEJ - Wojskowa - Sokołowska - Strzała - Purzec - Borki Siedleckie - Przygody - SUCHOŻEBRY</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">07:34, 09:09, 11:04B, 13:24, 18:19, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">22</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">ZBROJNA - Składowa - Grabianowska - Południowa - Łukowska - Torowa - Floriańska - Piłsudskiego - Armii Krajowej - PLAC ZDANOWSKIEGO - DW. PKP</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">10:21, 13:16, </td>
+  </tr>
+
+<tr><td colspan="3" align="left">E - nie kursuje w okresie letnich wakacji szkolnych <br>k - kursuje przez dworzec PKP <br>a - kursuje w dni nauki szkolnej do pętli przy ul. Domanickiej <br>J - kursuje ul.Janowską i Kasztanową <br>M - kursuje do ul.Starzyńskiego <br>B - kursuje do Borków Siedleckich <br>ć - kursuje do /z/Sokołowska Pętla okresie letnich wakacji szkolnych <br>C - kursuje do /z/ Sokołowska Pętla <br>d - kursuje ul.Brzeska-3-go Maja <br>Autobusy MPK kursują z tolerancją +2min. W autobusach obowiązują wyłącznie bilety MPK Siedlce <br>W dn.5.06.2015r. autobusy kursują wg. sobotniego rozkladu jazdy <br></td></tr>
+</table>
+<p>&nbsp;</p>
+</div>
+</body>
+</html>

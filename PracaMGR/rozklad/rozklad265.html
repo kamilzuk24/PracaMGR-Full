@@ -1,0 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<style type="text/css">
+
+.nagl_przystanek
+{
+	font-size:14px;
+	font-weight:bold;
+}
+.nagl_opis
+{
+	font-size:12px;
+	font-weight:bold;
+}
+.linia
+{
+	font-size:14px;
+	font-weight:bold;
+	background-color:#B0D8FF;
+}
+
+.typ
+{
+	font-size:12px;
+	font-weight:bold;
+	background-color:#CCCCCC;
+}
+.podkresl
+{
+border: 1px #CCCCCC solid;
+}
+.odjazdy
+{
+font-weight:bold;
+font-size:1.2em;
+}
+</style>
+<script type="text/javascript">
+
+    function PrintElem(elem)
+    {
+        Popup(document.getElementById(elem).innerHTML);
+    }
+
+    function Popup(data) 
+    {
+        var mywindow = window.open('', 'rozklad', 'height=400,width=600');
+        mywindow.document.write('<html><head><title>Rozkład</title>');
+        /*optional stylesheet*/ //mywindow.document.write('<link rel="stylesheet" href="main.css" type="text/css" />');
+        mywindow.document.write('</head><body >');
+        mywindow.document.write(data);
+        mywindow.document.write('</body></html>');
+        mywindow.document.close();
+        mywindow.print();
+        return true;
+    }
+
+</script>
+
+</head>
+
+<body>
+<div style="position: relative; top:40px; left:40px;"><a href="" onclick="PrintElem('printarea');return false;" style="text-decoration:none;"><img src="/Content/printButton.png" border="0" align="middle"/> Drukuj</a></div>
+<div id="printarea">
+  
+
+<table width="100%" border="0">
+  <tr>
+    <td colspan="3" align="right"> </td>
+  </tr>
+  <tr>
+    <td colspan="3" align="center">
+	<span  class="nagl_przystanek">(03)Siedlce J.Poniatowskiego Szpital (1)</span><br />
+	<span class="nagl_opis">Rozkład jazdy autobusów MPK Siedlce<br />
+	ważny od 29.06.2015&nbsp;&nbsp;&nbsp;Strefa: I</span></td>
+  </tr>
+  <tr>
+    <th colspan="2">Linia</th>
+    <th width="167">Godziny odjazdów </th>
+  </tr>
+  	 <tr>
+    <td colspan="3" style="font-size:12px;font-weight:bold;	background-color:#CCCCCC;">Dni robocze</td>
+  </tr>
+	
+  	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">3</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">BEMA - Kazimierzowska - Wyszyńskiego - Brzeska - Floriańska - Piłsudskiego - Armii Krajowej - Świętojańska - Partyzantów - GARWOLIŃSKA - Romanówka - Unitów Podlaskich - LEŚNA</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">05:21k, 05:56, 06:26, 06:56, 07:16, 07:41, 08:06, 08:26, 08:46, 09:06, 09:26, 09:46, 10:06, 10:26, 10:46, 11:06, 11:26, 11:46, 12:06, 12:26, 12:46, 13:06, 13:26, 13:46, 14:06, 14:26, 14:46, 15:06, 15:26, 15:46, 16:06, 16:26, 16:46, 17:06, 17:26, 17:46, 18:06, 18:26, 18:46, 19:06, 19:26, 19:55, 20:40, 22:05, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">25</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">BEMA - Kazimierzowska - Prusa - Konarskiego - Piłsudskiego - Armii Krajowej - Świętojańska - Zbrojna - Składowa - Grabianowska - POŁUDNIOWA - Łukowska - GRABIANÓW</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">06:50E, 08:05E, 15:35E, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">35</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">PONIATOWSKIEGO - Konarskiego - Floriańska - Torowa - Składowa - ZBROJNA - Partyzantów - Kurpiowska - Pescantina - Unitów Podlaskich - LEŚNA</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">05:49E, 06:54E, 08:09E, 11:09p, 14:14E, 15:19E, </td>
+  </tr>
+	 <tr>
+    <td colspan="3" style="font-size:12px;font-weight:bold;	background-color:#CCCCCC;">Soboty</td>
+  </tr>
+	
+  	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">3</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">BEMA - Kazimierzowska - Wyszyńskiego - Brzeska - Floriańska - Piłsudskiego - Armii Krajowej - Świętojańska - Partyzantów - GARWOLIŃSKA - Romanówka - Unitów Podlaskich - LEŚNA</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">06:41, 07:41, 08:36, 09:16, 09:46, 10:16, 10:46, 11:16, 11:46, 12:16, 12:46, 13:16, 13:46, 14:16, 14:46, 15:16, 15:46, 16:16, 16:46, 17:16, 17:46, 18:16, 18:46, 19:55, 21:05, 22:05, 22:55B, </td>
+  </tr>
+	 <tr>
+    <td colspan="3" style="font-size:12px;font-weight:bold;	background-color:#CCCCCC;">Dni świąteczne</td>
+  </tr>
+	
+  	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">3</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">BEMA - Kazimierzowska - Wyszyńskiego - Brzeska - Floriańska - Piłsudskiego - Armii Krajowej - Świętojańska - Partyzantów - GARWOLIŃSKA - Romanówka - Unitów Podlaskich - LEŚNA</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">06:41, 07:41, 08:36, 09:46, 10:46, 11:46, 12:46, 13:46, 14:46, 15:46, 16:46, 17:46, 18:46, 19:55, 21:05, 22:05, 22:55B, </td>
+  </tr>
+
+<tr><td colspan="3" align="left">k - kursuje przez dworzec PKP <br>E - nie kursuje w okresie letnich wakacji szkolnych <br>p - kursuje w dni nauki szkolnej z ul.Prusa/Amfiteatr na ul.Sokołowska pętla i z powrotem <br>B - z ul.Wyszyńskiego do MPK ul.Starzyńskiego <br>Autobusy MPK kursują z tolerancją +2min. W autobusach obowiązują wyłącznie bilety MPK Siedlce <br>W dn.5.06.2015r. autobusy kursują wg. sobotniego rozkladu jazdy <br></td></tr>
+</table>
+<p>&nbsp;</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,37 @@
+﻿@model List<PracaMGR.Models.ApplicationUser>
+
+<br>
+<table class="table">
+    <tr>
+        <th>
+            Login
+        </th>
+        <th>
+            Imię i nazwisko
+        </th>
+        <th>
+            Status
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.UserName)
+            </td>
+            <td>
+                @item.Name @item.LastName
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Status)
+            </td>
+            <td>
+                @Html.ActionLink("Edytuj", "Edit", new { id = item.Id }, new { @class = "btn btn-default" })
+                @Html.ActionLink("Usuń", "Delete", new { id = item.Id }, new { @class = "btn btn-default", onclick = "return confirm('Napewno chcesz usunąć Uzytkownika?')" })
+            </td>
+        </tr>
+    }
+
+</table>

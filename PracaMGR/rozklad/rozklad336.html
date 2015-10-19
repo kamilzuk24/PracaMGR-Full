@@ -1,0 +1,152 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<style type="text/css">
+
+.nagl_przystanek
+{
+	font-size:14px;
+	font-weight:bold;
+}
+.nagl_opis
+{
+	font-size:12px;
+	font-weight:bold;
+}
+.linia
+{
+	font-size:14px;
+	font-weight:bold;
+	background-color:#B0D8FF;
+}
+
+.typ
+{
+	font-size:12px;
+	font-weight:bold;
+	background-color:#CCCCCC;
+}
+.podkresl
+{
+border: 1px #CCCCCC solid;
+}
+.odjazdy
+{
+font-weight:bold;
+font-size:1.2em;
+}
+</style>
+<script type="text/javascript">
+
+    function PrintElem(elem)
+    {
+        Popup(document.getElementById(elem).innerHTML);
+    }
+
+    function Popup(data) 
+    {
+        var mywindow = window.open('', 'rozklad', 'height=400,width=600');
+        mywindow.document.write('<html><head><title>Rozkład</title>');
+        /*optional stylesheet*/ //mywindow.document.write('<link rel="stylesheet" href="main.css" type="text/css" />');
+        mywindow.document.write('</head><body >');
+        mywindow.document.write(data);
+        mywindow.document.write('</body></html>');
+        mywindow.document.close();
+        mywindow.print();
+        return true;
+    }
+
+</script>
+
+</head>
+
+<body>
+<div style="position: relative; top:40px; left:40px;"><a href="" onclick="PrintElem('printarea');return false;" style="text-decoration:none;"><img src="/Content/printButton.png" border="0" align="middle"/> Drukuj</a></div>
+<div id="printarea">
+  
+
+<table width="100%" border="0">
+  <tr>
+    <td colspan="3" align="right"> </td>
+  </tr>
+  <tr>
+    <td colspan="3" align="center">
+	<span  class="nagl_przystanek">(01)Siedlce Romanówka (1)</span><br />
+	<span class="nagl_opis">Rozkład jazdy autobusów MPK Siedlce<br />
+	ważny od 29.06.2015&nbsp;&nbsp;&nbsp;Strefa: I</span></td>
+  </tr>
+  <tr>
+    <th colspan="2">Linia</th>
+    <th width="167">Godziny odjazdów </th>
+  </tr>
+  	 <tr>
+    <td colspan="3" style="font-size:12px;font-weight:bold;	background-color:#CCCCCC;">Dni robocze</td>
+  </tr>
+	
+  	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">3</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">PARTYZANTÓW - Armii Krajowej - Wojskowa - Sokołowska - Rynkowa - Jagiełły - Chrobrego - Mireckiego - Dąbrowskiego - Poniatowskiego - Bema - Kazimierzowska - Wyszyńskiego - Brzeska - Floriańska - Piłsudskiego - Armii Krajowej - Świętojańska - Partyzantów - Garwolińska - Romanówka - Unitów Podlaskich - LEŚNA</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">04:59k, 05:34, 06:04, 06:34, 06:54, 07:19, 07:44, 08:04, 08:24, 08:44, 09:04, 09:24, 09:44, 10:04, 10:24, 10:44, 11:04, 11:24, 11:44, 12:04, 12:24, 12:44, 13:04, 13:24, 13:44, 14:04, 14:24, 14:44, 15:04, 15:24, 15:44, 16:04, 16:24, 16:44, 17:04, 17:24, 17:44, 18:04, 18:24, 18:44, 19:04, 19:34, 20:19, 21:44, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">5</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">PARTYZANTÓW - Armii Krajowej - Piłsudskiego - Kazimierzowska - Żabokliki - GOLICE</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">05:42E, 06:37E, 07:32E, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">16</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">MONTE CASSINO - Kurpiowska - Kraszewskiego - Partyzantów - Armii Krajowej - Piłsudskiego - Starowiejska - TERESPOLSKA</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">05:22k, 06:27, 07:22, 09:07J, 10:52J, 12:17, 13:17k, 14:32, 15:37, 16:02J, 18:47J, 21:12, 22:32M, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">22</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">PARTYZANTÓW - Zbrojna - Składowa - Grabianowska - Południowa - Łukowska - Torowa - FLORIAŃSKA - Piłsudskiego - Armii Krajowej - PLAC ZDANOWSKIEGO - DW. PKP</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">08:54, 10:42, 12:47, 13:47, 16:02, 18:52, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">31</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">MONTE CASSINO - Kurpiowska - Kraszewskiego - Partyzantów - Armii Krajowej - Piłsudskiego - Floriańska - Brzeska - Ujrzanowska - TERESPOLSKA</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">05:07d, 06:29d, 07:26, 08:37, 13:07d, 14:32d, </td>
+  </tr>
+	 <tr>
+    <td colspan="3" style="font-size:12px;font-weight:bold;	background-color:#CCCCCC;">Soboty</td>
+  </tr>
+	
+  	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">3</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">PARTYZANTÓW - Armii Krajowej - Wojskowa - Sokołowska - Rynkowa - Jagiełły - Chrobrego - Mireckiego - Dąbrowskiego - Poniatowskiego - Bema - Kazimierzowska - Wyszyńskiego - Brzeska - Floriańska - Piłsudskiego - Armii Krajowej - Świętojańska - Partyzantów - Garwolińska - Romanówka - Unitów Podlaskich - LEŚNA</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">06:19, 07:19, 08:14, 08:54, 09:24, 09:54, 10:24, 10:54, 11:24, 11:54, 12:24, 12:54, 13:24, 13:54, 14:24, 14:54, 15:24, 15:54, 16:24, 16:54, 17:24, 17:54, 18:24, 19:34, 20:44, 21:44, 22:34B, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">16</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">MONTE CASSINO - Kurpiowska - Kraszewskiego - Partyzantów - Armii Krajowej - Piłsudskiego - Starowiejska - TERESPOLSKA</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">05:22, 06:32, 08:42, 11:17, 13:22, 14:32, 17:17, 20:17, </td>
+  </tr>
+	 <tr>
+    <td colspan="3" style="font-size:12px;font-weight:bold;	background-color:#CCCCCC;">Dni świąteczne</td>
+  </tr>
+	
+  	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">3</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">PARTYZANTÓW - Armii Krajowej - Wojskowa - Sokołowska - Rynkowa - Jagiełły - Chrobrego - Mireckiego - Dąbrowskiego - Poniatowskiego - Bema - Kazimierzowska - Wyszyńskiego - Brzeska - Floriańska - Piłsudskiego - Armii Krajowej - Świętojańska - Partyzantów - Garwolińska - Romanówka - Unitów Podlaskich - LEŚNA</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">06:19, 07:19, 08:14, 09:24, 10:24, 11:24, 12:24, 13:24, 14:24, 15:24, 16:24, 17:24, 18:24, 19:34, 20:44, 21:44, 22:34B, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">16</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">MONTE CASSINO - Kurpiowska - Kraszewskiego - Partyzantów - Armii Krajowej - Piłsudskiego - Starowiejska - TERESPOLSKA</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">06:57J, 10:17J, 12:12J, 14:07, 16:12, 18:17, </td>
+  </tr>
+	 <tr style="border-bottom: 1px #CCCCCC solid;">
+		<td width="48" align="center" class="linia" style="border-bottom: 1px #CCCCCC solid;">22</td>
+		<td width="171" align="center" style="border-bottom: 1px #CCCCCC solid;">PARTYZANTÓW - Zbrojna - Składowa - Grabianowska - Południowa - Łukowska - Torowa - FLORIAŃSKA - Piłsudskiego - Armii Krajowej - PLAC ZDANOWSKIEGO - DW. PKP</td>
+		<td class="odjazdy" align="left" style="border-bottom: 1px #CCCCCC solid;">10:17, 13:12, </td>
+  </tr>
+
+<tr><td colspan="3" align="left">k - kursuje przez dworzec PKP <br>E - nie kursuje w okresie letnich wakacji szkolnych <br>J - kursuje ul.Janowską i Kasztanową <br>M - kursuje do ul.Starzyńskiego <br>d - kursuje ul.Brzeska-3-go Maja <br>B - z ul.Wyszyńskiego do MPK ul.Starzyńskiego <br>Autobusy MPK kursują z tolerancją +2min. W autobusach obowiązują wyłącznie bilety MPK Siedlce <br>W dn.5.06.2015r. autobusy kursują wg. sobotniego rozkladu jazdy <br></td></tr>
+</table>
+<p>&nbsp;</p>
+</div>
+</body>
+</html>

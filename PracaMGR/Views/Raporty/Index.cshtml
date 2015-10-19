@@ -1,0 +1,22 @@
+﻿
+@{
+    ViewBag.Title = "Wybierz Raport";
+}
+
+<h2>Raporty</h2>
+<h3>Wybierz rodzaj Raportu</h3>
+<br />
+<table class="table">
+    <tr>
+        <td>
+            @Html.ActionLink("Raport popularności Linii", "LinieRaport", null, new { @class = "btn btn-default" })
+        </td>
+    </tr>
+    <tr>
+        <td>
+            @Html.ActionLink("Raport popularności przystanków", "PrzystankiRaport", null, new { @class = "btn btn-default" })
+        </td>
+    </tr>
+
+
+</table>

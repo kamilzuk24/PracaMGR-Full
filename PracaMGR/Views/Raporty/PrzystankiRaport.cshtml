@@ -1,0 +1,83 @@
+﻿@model PracaMGR.Models.LinieRaportViewModel
+
+@{
+    ViewBag.Title = "Raport Przystanki";
+}
+
+<h2>Raport Przystanków</h2>
+<h3>Raport najczęściej wyszukiwanych przystanków w trasach.</h3>
+
+<div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12">
+        <div id="map" style="background-color: white;"></div>
+    </div>
+</div>
+<div class="modal fade" id="dialogs">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+                <h4 class="modal-title">Rozkład</h4>
+            </div>
+            <div class="modal-body" id="dialog_body">a</div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCEx-vn9ITLCMmCwBoWt3sgPGM5VA8dQIs&sensor=false&libraries=places"></script>
+<script type="text/javascript" src="~/Scripts/rysujprzystanki.js"></script>
+<script type="text/javascript" src="~/Scripts/markermanager.js"></script>
+<script>
+    var map;
+    var markerImage = Array();
+    var markerImageM = Array();
+    markerImage[0] = new google.maps.MarkerImage('/Content/bus/busstopI.png', new google.maps.Size(32, 37), new google.maps.Point(0, 0), new google.maps.Point(16, 37));
+    markerImage[1] = new google.maps.MarkerImage('/Content/bus/busstopII.png', new google.maps.Size(32, 37), new google.maps.Point(0, 0), new google.maps.Point(16, 37));
+    markerImage[2] = new google.maps.MarkerImage('/Content/bus/busstopIII.png', new google.maps.Size(32, 37), new google.maps.Point(0, 0), new google.maps.Point(16, 37));
+    markerImageM[0] = new google.maps.MarkerImage('/Content/bus/busmI.png', new google.maps.Size(10, 10), new google.maps.Point(0, 0), new google.maps.Point(5, 5), new google.maps.Size(10, 10));
+    markerImageM[1] = new google.maps.MarkerImage('/Content/bus/busmII.png', new google.maps.Size(10, 10), new google.maps.Point(0, 0), new google.maps.Point(5, 5), new google.maps.Size(10, 10));
+    markerImageM[2] = new google.maps.MarkerImage('/Content/bus/busmIII.png', new google.maps.Size(10, 10), new google.maps.Point(0, 0), new google.maps.Point(5, 5), new google.maps.Size(10, 10));
+    var linie = Array();
+    var typLinii = Array();
+    var przystanki = Array();
+    var przystankiS = Array();
+    var przystankiM = Array();
+
+    var przystanki = [ @Model.data ];      
+    var cityCircle;
+
+    function initialize() {      
+        var mapOptions = {
+            zoom: 4,
+            center: new window.google.maps.LatLng(52.168198, 22.277508),
+            zoom: 13,
+            mapTypeId: google.maps.MapTypeId.TERRAIN
+        };
+
+        map = new google.maps.Map(document.getElementById('map'), mapOptions);
+
+        for (var i = 0; i < przystanki.length; i++) {
+            var Options = {
+                strokeColor: '#FF0000',
+                strokeOpacity: 0.8,
+                strokeWeight: 2,
+                fillColor: '#FF0000',
+                fillOpacity: 0.35,
+                map: map,
+                center: przystanki[i].center,
+                radius: Math.sqrt(przystanki[i].Ilosc)
+            };
+            cityCircle = new google.maps.Circle(Options);
+        }
+        rysujPrzystanki();
+    }
+
+    
+    google.maps.event.addDomListener(window, 'load', initialize);
+    
+</script>
+
+

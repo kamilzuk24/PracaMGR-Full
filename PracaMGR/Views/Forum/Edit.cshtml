@@ -1,0 +1,34 @@
+﻿@model PracaMGR.Kategorie
+
+@{
+    ViewBag.Title = "Edytuj";
+}
+
+<h2>Edytuj Kategorie</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>Kategorie</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.Id)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Nazwa, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.Nazwa, new { @class = "form-control" } )
+                @Html.ValidationMessageFor(model => model.Nazwa, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Zapisz" class="btn btn-default" />
+                @Html.ActionLink("Wróć", "Index", null, new { @class = "btn btn-default" })
+            </div>
+        </div>
+    </div>
+}

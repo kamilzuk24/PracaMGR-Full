@@ -1,0 +1,59 @@
+﻿@using PagedList
+@using PagedList.Mvc
+
+@model PracaMGR.Models.Post
+
+@{
+    ViewBag.Title = "Odpowiedzi";
+}
+
+<h3>Odpowiedzi na post...</h3>
+<br />
+<div id="duzy">   
+    
+    <div id="post">
+        <div id="data">
+            Autor: @Model.post.Uzytkownik
+            <br />
+            @Model.post.Data
+        </div>
+        <br />
+        <div id="tre">@Model.post.Tresc</div>
+    </div>
+    <br />
+    Odpowiedzi na post:
+    <br />
+     
+       
+        @foreach (var item in Model.odpowiedz)
+        {
+            <div id="odpowiedz">
+                <div id="data">
+                      Autor: @item.Uzytkownik
+                <br />
+                      Data: @item.Data
+                </div>
+                <br />    
+
+                <div id="tre">@item.Tresc</div>
+                @Html.ActionLink("Edytuj", "EditAnswer", new { id = item.Id }, new { @class = "btn btn-default", style = "position: absolute;top:10px;right:75px;" })
+                @Html.ActionLink("Usuń", "DeleteAnswer", new { id = item.Id }, new { @class = "btn btn-default", onclick = "return confirm('Napewno chcesz usunąć odpowiedz?')", style = "position: absolute;top:10px;right:10px;" })
+            </div>
+        }
+
+    
+
+    <form action="~/Posty/Dodaj" method="post">
+        <textarea id="area1" class="tersc" name="tresc" placeholder="Wpisz swój komentarz..." rows="5" cols="100"></textarea>
+        <input type="hidden" value="@Model.post.Id" id="post" name="post" />
+        <br />
+        <input type="submit" id="area1" value="Dodaj Komentarz" class="btn btn-default" style="margin-left: 10%;"/>
+        @Html.ActionLink("Wróć", "Index/" + Model.post.Id_kategoria, null, new { @class = "btn btn-default", id = "area1" })
+    </form>
+        
+    <div class="pagedList">
+        @Html.PagedListPager(Model.odpowiedz, page => Url.Action("Odpowiedzi", new { Model.odpowiedz, page }), PagedListRenderOptions.OnlyShowFivePagesAtATime)
+    </div>
+
+    
+</div>

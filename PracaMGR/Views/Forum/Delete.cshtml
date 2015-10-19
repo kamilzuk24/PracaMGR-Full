@@ -1,0 +1,31 @@
+﻿@model PracaMGR.Kategorie
+
+@{
+    ViewBag.Title = "Usuń";
+}
+
+<h2>Usuwanie Kategorii</h2>
+<br />
+<h3>Napewno chcesz usunąć tą Kategorie?</h3>
+<div>
+    @*<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nazwa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nazwa)
+        </dd>
+
+    </dl>*@
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Usuń" class="btn btn-default" />
+            @Html.ActionLink("Wróć", "Index", null, new { @class = "btn btn-default" })
+        </div>
+    }
+</div>

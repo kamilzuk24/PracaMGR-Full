@@ -1,0 +1,630 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="DB_9D5BE0_kamilzuk25Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="DniSwiateczne">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="data" Type="datetime" Nullable="false" />
+          <Property Name="opis" Type="varchar" MaxLength="500" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Kategorie">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nazwa" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="Linie">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Symbol" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="LinieRaport">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Id_linia" Type="int" Nullable="false" />
+          <Property Name="Wystapienia" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Oceny">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Punktualnosc" Type="int" Nullable="false" />
+          <Property Name="Czystosc" Type="int" Nullable="false" />
+          <Property Name="Kultura_os_kierowcy" Type="int" Nullable="false" />
+          <Property Name="Komfort_jazdy" Type="int" Nullable="false" />
+          <Property Name="Poczucie_bezpieczenstwa" Type="int" Nullable="false" />
+          <Property Name="Suma" Type="float" Nullable="false" />
+          <Property Name="Symbol_linii" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Uzytkownik" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Odjazdy">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nr_przystanku" Type="int" Nullable="false" />
+          <Property Name="Typ" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Symbol_linii" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="Nazwa_trasy" Type="varchar" MaxLength="1000" Nullable="false" />
+          <Property Name="Godziny" Type="varchar" MaxLength="1000" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Odpowiedzi">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Tresc" Type="nvarchar" MaxLength="500" Nullable="false" />
+          <Property Name="Uzytkownik" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="Id_Post" Type="int" Nullable="false" />
+          <Property Name="Data" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Posty">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Tresc" Type="nvarchar" MaxLength="500" Nullable="false" />
+          <Property Name="Id_kategoria" Type="int" Nullable="false" />
+          <Property Name="Data" Type="datetime" Nullable="false" />
+          <Property Name="Uzytkownik" Type="nvarchar" MaxLength="128" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Przystanki">
+          <Key>
+            <PropertyRef Name="Numer" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nazwa" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="X" Type="float" Nullable="false" />
+          <Property Name="Y" Type="float" Nullable="false" />
+          <Property Name="Numer" Type="int" Nullable="false" />
+          <Property Name="Strefa" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="Nazwa_rozklad" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="PrzystankiRaport">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Numer_Przystanek" Type="int" Nullable="false" />
+          <Property Name="Wystapienia" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Trasy">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Linia" Type="varchar" MaxLength="50" />
+          <Property Name="Przystanki" Type="varchar(max)" />
+          <Property Name="Czas" Type="varchar(max)" />
+          <Property Name="Typ" Type="varchar" MaxLength="50" />
+          <Property Name="Notka" Type="varchar" MaxLength="50" />
+          <Property Name="Znacznik" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="TrasyRaport">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Id_Trasy" Type="int" Nullable="false" />
+          <Property Name="Wystapienia" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_Odjazdy_ToTable">
+          <End Role="Przystanki" Type="Self.Przystanki" Multiplicity="1" />
+          <End Role="Odjazdy" Type="Self.Odjazdy" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Przystanki">
+              <PropertyRef Name="Numer" />
+            </Principal>
+            <Dependent Role="Odjazdy">
+              <PropertyRef Name="Nr_przystanku" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Odpowiedzi_P">
+          <End Role="Posty" Type="Self.Posty" Multiplicity="1" />
+          <End Role="Odpowiedzi" Type="Self.Odpowiedzi" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Posty">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Odpowiedzi">
+              <PropertyRef Name="Id_Post" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Posty_K">
+          <End Role="Kategorie" Type="Self.Kategorie" Multiplicity="1" />
+          <End Role="Posty" Type="Self.Posty" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Kategorie">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Posty">
+              <PropertyRef Name="Id_kategoria" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PrzystankiRaport_ToTable">
+          <End Role="Przystanki" Type="Self.Przystanki" Multiplicity="1" />
+          <End Role="PrzystankiRaport" Type="Self.PrzystankiRaport" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Przystanki">
+              <PropertyRef Name="Numer" />
+            </Principal>
+            <Dependent Role="PrzystankiRaport">
+              <PropertyRef Name="Numer_Przystanek" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Table_ToTable">
+          <End Role="Linie" Type="Self.Linie" Multiplicity="1" />
+          <End Role="LinieRaport" Type="Self.LinieRaport" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Linie">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="LinieRaport">
+              <PropertyRef Name="Id_linia" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TrasyRaport_ToTable">
+          <End Role="Trasy" Type="Self.Trasy" Multiplicity="1" />
+          <End Role="TrasyRaport" Type="Self.TrasyRaport" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Trasy">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="TrasyRaport">
+              <PropertyRef Name="Id_Trasy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="DB_9D5BE0_kamilzuk25ModelStoreContainer">
+          <EntitySet Name="DniSwiateczne" EntityType="Self.DniSwiateczne" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Kategorie" EntityType="Self.Kategorie" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Linie" EntityType="Self.Linie" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="LinieRaport" EntityType="Self.LinieRaport" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Oceny" EntityType="Self.Oceny" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Odjazdy" EntityType="Self.Odjazdy" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Odpowiedzi" EntityType="Self.Odpowiedzi" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Posty" EntityType="Self.Posty" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Przystanki" EntityType="Self.Przystanki" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PrzystankiRaport" EntityType="Self.PrzystankiRaport" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Trasy" EntityType="Self.Trasy" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TrasyRaport" EntityType="Self.TrasyRaport" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Odjazdy_ToTable" Association="Self.FK_Odjazdy_ToTable">
+            <End Role="Przystanki" EntitySet="Przystanki" />
+            <End Role="Odjazdy" EntitySet="Odjazdy" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Odpowiedzi_P" Association="Self.FK_Odpowiedzi_P">
+            <End Role="Posty" EntitySet="Posty" />
+            <End Role="Odpowiedzi" EntitySet="Odpowiedzi" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Posty_K" Association="Self.FK_Posty_K">
+            <End Role="Kategorie" EntitySet="Kategorie" />
+            <End Role="Posty" EntitySet="Posty" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PrzystankiRaport_ToTable" Association="Self.FK_PrzystankiRaport_ToTable">
+            <End Role="Przystanki" EntitySet="Przystanki" />
+            <End Role="PrzystankiRaport" EntitySet="PrzystankiRaport" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Table_ToTable" Association="Self.FK_Table_ToTable">
+            <End Role="Linie" EntitySet="Linie" />
+            <End Role="LinieRaport" EntitySet="LinieRaport" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TrasyRaport_ToTable" Association="Self.FK_TrasyRaport_ToTable">
+            <End Role="Trasy" EntitySet="Trasy" />
+            <End Role="TrasyRaport" EntitySet="TrasyRaport" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DB_9D5BE0_kamilzuk25Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="JakTraficEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="DniSwiateczne" EntityType="DB_9D5BE0_kamilzuk25Model.DniSwiateczne" />
+          <EntitySet Name="Kategorie" EntityType="DB_9D5BE0_kamilzuk25Model.Kategorie" />
+          <EntitySet Name="Linie" EntityType="DB_9D5BE0_kamilzuk25Model.Linie" />
+          <EntitySet Name="LinieRaport" EntityType="DB_9D5BE0_kamilzuk25Model.LinieRaport" />
+          <EntitySet Name="Oceny" EntityType="DB_9D5BE0_kamilzuk25Model.Oceny" />
+          <EntitySet Name="Odjazdy" EntityType="DB_9D5BE0_kamilzuk25Model.Odjazdy" />
+          <EntitySet Name="Odpowiedzi" EntityType="DB_9D5BE0_kamilzuk25Model.Odpowiedzi" />
+          <EntitySet Name="Posty" EntityType="DB_9D5BE0_kamilzuk25Model.Posty" />
+          <EntitySet Name="Przystanki" EntityType="DB_9D5BE0_kamilzuk25Model.Przystanki" />
+          <EntitySet Name="PrzystankiRaport" EntityType="DB_9D5BE0_kamilzuk25Model.PrzystankiRaport" />
+          <EntitySet Name="Trasy" EntityType="DB_9D5BE0_kamilzuk25Model.Trasy" />
+          <EntitySet Name="TrasyRaport" EntityType="DB_9D5BE0_kamilzuk25Model.TrasyRaport" />
+          <AssociationSet Name="FK_Posty_K" Association="DB_9D5BE0_kamilzuk25Model.FK_Posty_K">
+            <End Role="Kategorie" EntitySet="Kategorie" />
+            <End Role="Posty" EntitySet="Posty" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Table_ToTable" Association="DB_9D5BE0_kamilzuk25Model.FK_Table_ToTable">
+            <End Role="Linie" EntitySet="Linie" />
+            <End Role="LinieRaport" EntitySet="LinieRaport" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Odjazdy_ToTable" Association="DB_9D5BE0_kamilzuk25Model.FK_Odjazdy_ToTable">
+            <End Role="Przystanki" EntitySet="Przystanki" />
+            <End Role="Odjazdy" EntitySet="Odjazdy" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Odpowiedzi_P" Association="DB_9D5BE0_kamilzuk25Model.FK_Odpowiedzi_P">
+            <End Role="Posty" EntitySet="Posty" />
+            <End Role="Odpowiedzi" EntitySet="Odpowiedzi" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PrzystankiRaport_ToTable" Association="DB_9D5BE0_kamilzuk25Model.FK_PrzystankiRaport_ToTable">
+            <End Role="Przystanki" EntitySet="Przystanki" />
+            <End Role="PrzystankiRaport" EntitySet="PrzystankiRaport" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TrasyRaport_ToTable" Association="DB_9D5BE0_kamilzuk25Model.FK_TrasyRaport_ToTable">
+            <End Role="Trasy" EntitySet="Trasy" />
+            <End Role="TrasyRaport" EntitySet="TrasyRaport" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="DniSwiateczne">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="data" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="opis" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Kategorie">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nazwa" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Posty" Relationship="DB_9D5BE0_kamilzuk25Model.FK_Posty_K" FromRole="Kategorie" ToRole="Posty" />
+        </EntityType>
+        <EntityType Name="Linie">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Symbol" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="LinieRaport" Relationship="DB_9D5BE0_kamilzuk25Model.FK_Table_ToTable" FromRole="Linie" ToRole="LinieRaport" />
+        </EntityType>
+        <EntityType Name="LinieRaport">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Id_linia" Type="Int32" Nullable="false" />
+          <Property Name="Wystapienia" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+          <NavigationProperty Name="Linie" Relationship="DB_9D5BE0_kamilzuk25Model.FK_Table_ToTable" FromRole="LinieRaport" ToRole="Linie" />
+        </EntityType>
+        <EntityType Name="Oceny">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Punktualnosc" Type="Int32" Nullable="false" />
+          <Property Name="Czystosc" Type="Int32" Nullable="false" />
+          <Property Name="Kultura_os_kierowcy" Type="Int32" Nullable="false" />
+          <Property Name="Komfort_jazdy" Type="Int32" Nullable="false" />
+          <Property Name="Poczucie_bezpieczenstwa" Type="Int32" Nullable="false" />
+          <Property Name="Suma" Type="Double" Nullable="false" />
+          <Property Name="Symbol_linii" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Uzytkownik" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Odjazdy">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nr_przystanku" Type="Int32" Nullable="false" />
+          <Property Name="Typ" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Symbol_linii" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Nazwa_trasy" Type="String" Nullable="false" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Name="Godziny" Type="String" Nullable="false" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Przystanki" Relationship="DB_9D5BE0_kamilzuk25Model.FK_Odjazdy_ToTable" FromRole="Odjazdy" ToRole="Przystanki" />
+        </EntityType>
+        <EntityType Name="Odpowiedzi">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Tresc" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Uzytkownik" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="Id_Post" Type="Int32" Nullable="false" />
+          <Property Name="Data" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="Posty" Relationship="DB_9D5BE0_kamilzuk25Model.FK_Odpowiedzi_P" FromRole="Odpowiedzi" ToRole="Posty" />
+        </EntityType>
+        <EntityType Name="Posty">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Tresc" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Id_kategoria" Type="Int32" Nullable="false" />
+          <Property Name="Data" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Uzytkownik" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Kategorie" Relationship="DB_9D5BE0_kamilzuk25Model.FK_Posty_K" FromRole="Posty" ToRole="Kategorie" />
+          <NavigationProperty Name="Odpowiedzi" Relationship="DB_9D5BE0_kamilzuk25Model.FK_Odpowiedzi_P" FromRole="Posty" ToRole="Odpowiedzi" />
+        </EntityType>
+        <EntityType Name="Przystanki">
+          <Key>
+            <PropertyRef Name="Numer" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nazwa" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="X" Type="Double" Nullable="false" />
+          <Property Name="Y" Type="Double" Nullable="false" />
+          <Property Name="Numer" Type="Int32" Nullable="false" />
+          <Property Name="Strefa" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Nazwa_rozklad" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Odjazdy" Relationship="DB_9D5BE0_kamilzuk25Model.FK_Odjazdy_ToTable" FromRole="Przystanki" ToRole="Odjazdy" />
+          <NavigationProperty Name="PrzystankiRaport" Relationship="DB_9D5BE0_kamilzuk25Model.FK_PrzystankiRaport_ToTable" FromRole="Przystanki" ToRole="PrzystankiRaport" />
+        </EntityType>
+        <EntityType Name="PrzystankiRaport">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Numer_Przystanek" Type="Int32" Nullable="false" />
+          <Property Name="Wystapienia" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+          <NavigationProperty Name="Przystanki" Relationship="DB_9D5BE0_kamilzuk25Model.FK_PrzystankiRaport_ToTable" FromRole="PrzystankiRaport" ToRole="Przystanki" />
+        </EntityType>
+        <EntityType Name="Trasy">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Linia" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Przystanki" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Czas" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Typ" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Notka" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Znacznik" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="TrasyRaport" Relationship="DB_9D5BE0_kamilzuk25Model.FK_TrasyRaport_ToTable" FromRole="Trasy" ToRole="TrasyRaport" />
+        </EntityType>
+        <EntityType Name="TrasyRaport">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Id_Trasy" Type="Int32" Nullable="false" />
+          <Property Name="Wystapienia" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+          <NavigationProperty Name="Trasy" Relationship="DB_9D5BE0_kamilzuk25Model.FK_TrasyRaport_ToTable" FromRole="TrasyRaport" ToRole="Trasy" />
+        </EntityType>
+        <Association Name="FK_Posty_K">
+          <End Type="DB_9D5BE0_kamilzuk25Model.Kategorie" Role="Kategorie" Multiplicity="1" />
+          <End Type="DB_9D5BE0_kamilzuk25Model.Posty" Role="Posty" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Kategorie">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Posty">
+              <PropertyRef Name="Id_kategoria" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Table_ToTable">
+          <End Type="DB_9D5BE0_kamilzuk25Model.Linie" Role="Linie" Multiplicity="1" />
+          <End Type="DB_9D5BE0_kamilzuk25Model.LinieRaport" Role="LinieRaport" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Linie">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="LinieRaport">
+              <PropertyRef Name="Id_linia" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Odjazdy_ToTable">
+          <End Type="DB_9D5BE0_kamilzuk25Model.Przystanki" Role="Przystanki" Multiplicity="1" />
+          <End Type="DB_9D5BE0_kamilzuk25Model.Odjazdy" Role="Odjazdy" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Przystanki">
+              <PropertyRef Name="Numer" />
+            </Principal>
+            <Dependent Role="Odjazdy">
+              <PropertyRef Name="Nr_przystanku" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Odpowiedzi_P">
+          <End Type="DB_9D5BE0_kamilzuk25Model.Posty" Role="Posty" Multiplicity="1" />
+          <End Type="DB_9D5BE0_kamilzuk25Model.Odpowiedzi" Role="Odpowiedzi" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Posty">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Odpowiedzi">
+              <PropertyRef Name="Id_Post" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PrzystankiRaport_ToTable">
+          <End Type="DB_9D5BE0_kamilzuk25Model.Przystanki" Role="Przystanki" Multiplicity="1" />
+          <End Type="DB_9D5BE0_kamilzuk25Model.PrzystankiRaport" Role="PrzystankiRaport" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Przystanki">
+              <PropertyRef Name="Numer" />
+            </Principal>
+            <Dependent Role="PrzystankiRaport">
+              <PropertyRef Name="Numer_Przystanek" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TrasyRaport_ToTable">
+          <End Type="DB_9D5BE0_kamilzuk25Model.Trasy" Role="Trasy" Multiplicity="1" />
+          <End Type="DB_9D5BE0_kamilzuk25Model.TrasyRaport" Role="TrasyRaport" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Trasy">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="TrasyRaport">
+              <PropertyRef Name="Id_Trasy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="DB_9D5BE0_kamilzuk25ModelStoreContainer" CdmEntityContainer="JakTraficEntities">
+          <EntitySetMapping Name="DniSwiateczne">
+            <EntityTypeMapping TypeName="DB_9D5BE0_kamilzuk25Model.DniSwiateczne">
+              <MappingFragment StoreEntitySet="DniSwiateczne">
+                <ScalarProperty Name="opis" ColumnName="opis" />
+                <ScalarProperty Name="data" ColumnName="data" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Kategorie">
+            <EntityTypeMapping TypeName="DB_9D5BE0_kamilzuk25Model.Kategorie">
+              <MappingFragment StoreEntitySet="Kategorie">
+                <ScalarProperty Name="Nazwa" ColumnName="Nazwa" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Linie">
+            <EntityTypeMapping TypeName="DB_9D5BE0_kamilzuk25Model.Linie">
+              <MappingFragment StoreEntitySet="Linie">
+                <ScalarProperty Name="Symbol" ColumnName="Symbol" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LinieRaport">
+            <EntityTypeMapping TypeName="DB_9D5BE0_kamilzuk25Model.LinieRaport">
+              <MappingFragment StoreEntitySet="LinieRaport">
+                <ScalarProperty Name="Wystapienia" ColumnName="Wystapienia" />
+                <ScalarProperty Name="Id_linia" ColumnName="Id_linia" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Oceny">
+            <EntityTypeMapping TypeName="DB_9D5BE0_kamilzuk25Model.Oceny">
+              <MappingFragment StoreEntitySet="Oceny">
+                <ScalarProperty Name="Uzytkownik" ColumnName="Uzytkownik" />
+                <ScalarProperty Name="Symbol_linii" ColumnName="Symbol_linii" />
+                <ScalarProperty Name="Suma" ColumnName="Suma" />
+                <ScalarProperty Name="Poczucie_bezpieczenstwa" ColumnName="Poczucie_bezpieczenstwa" />
+                <ScalarProperty Name="Komfort_jazdy" ColumnName="Komfort_jazdy" />
+                <ScalarProperty Name="Kultura_os_kierowcy" ColumnName="Kultura_os_kierowcy" />
+                <ScalarProperty Name="Czystosc" ColumnName="Czystosc" />
+                <ScalarProperty Name="Punktualnosc" ColumnName="Punktualnosc" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Odjazdy">
+            <EntityTypeMapping TypeName="DB_9D5BE0_kamilzuk25Model.Odjazdy">
+              <MappingFragment StoreEntitySet="Odjazdy">
+                <ScalarProperty Name="Godziny" ColumnName="Godziny" />
+                <ScalarProperty Name="Nazwa_trasy" ColumnName="Nazwa_trasy" />
+                <ScalarProperty Name="Symbol_linii" ColumnName="Symbol_linii" />
+                <ScalarProperty Name="Typ" ColumnName="Typ" />
+                <ScalarProperty Name="Nr_przystanku" ColumnName="Nr_przystanku" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Odpowiedzi">
+            <EntityTypeMapping TypeName="DB_9D5BE0_kamilzuk25Model.Odpowiedzi">
+              <MappingFragment StoreEntitySet="Odpowiedzi">
+                <ScalarProperty Name="Data" ColumnName="Data" />
+                <ScalarProperty Name="Id_Post" ColumnName="Id_Post" />
+                <ScalarProperty Name="Uzytkownik" ColumnName="Uzytkownik" />
+                <ScalarProperty Name="Tresc" ColumnName="Tresc" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Posty">
+            <EntityTypeMapping TypeName="DB_9D5BE0_kamilzuk25Model.Posty">
+              <MappingFragment StoreEntitySet="Posty">
+                <ScalarProperty Name="Uzytkownik" ColumnName="Uzytkownik" />
+                <ScalarProperty Name="Data" ColumnName="Data" />
+                <ScalarProperty Name="Id_kategoria" ColumnName="Id_kategoria" />
+                <ScalarProperty Name="Tresc" ColumnName="Tresc" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Przystanki">
+            <EntityTypeMapping TypeName="DB_9D5BE0_kamilzuk25Model.Przystanki">
+              <MappingFragment StoreEntitySet="Przystanki">
+                <ScalarProperty Name="Nazwa_rozklad" ColumnName="Nazwa_rozklad" />
+                <ScalarProperty Name="Strefa" ColumnName="Strefa" />
+                <ScalarProperty Name="Numer" ColumnName="Numer" />
+                <ScalarProperty Name="Y" ColumnName="Y" />
+                <ScalarProperty Name="X" ColumnName="X" />
+                <ScalarProperty Name="Nazwa" ColumnName="Nazwa" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PrzystankiRaport">
+            <EntityTypeMapping TypeName="DB_9D5BE0_kamilzuk25Model.PrzystankiRaport">
+              <MappingFragment StoreEntitySet="PrzystankiRaport">
+                <ScalarProperty Name="Wystapienia" ColumnName="Wystapienia" />
+                <ScalarProperty Name="Numer_Przystanek" ColumnName="Numer_Przystanek" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Trasy">
+            <EntityTypeMapping TypeName="DB_9D5BE0_kamilzuk25Model.Trasy">
+              <MappingFragment StoreEntitySet="Trasy">
+                <ScalarProperty Name="Znacznik" ColumnName="Znacznik" />
+                <ScalarProperty Name="Notka" ColumnName="Notka" />
+                <ScalarProperty Name="Typ" ColumnName="Typ" />
+                <ScalarProperty Name="Czas" ColumnName="Czas" />
+                <ScalarProperty Name="Przystanki" ColumnName="Przystanki" />
+                <ScalarProperty Name="Linia" ColumnName="Linia" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TrasyRaport">
+            <EntityTypeMapping TypeName="DB_9D5BE0_kamilzuk25Model.TrasyRaport">
+              <MappingFragment StoreEntitySet="TrasyRaport">
+                <ScalarProperty Name="Wystapienia" ColumnName="Wystapienia" />
+                <ScalarProperty Name="Id_Trasy" ColumnName="Id_Trasy" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
