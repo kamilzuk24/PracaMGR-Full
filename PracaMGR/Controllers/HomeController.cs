@@ -166,7 +166,7 @@ namespace Praca.Controllers
                 }           
             }
 
-            list = (from a in list orderby a.do_odjazdu, a.czas_przejazdu select a).Take(3).ToList();
+            list = (from a in list orderby a.czas_przyjazdu, a.do_odjazdu, a.czas_przejazdu select a).ToList();
 
             return Json(JsonConvert.SerializeObject(list));
         }
@@ -600,8 +600,12 @@ namespace Praca.Controllers
                             }
 
                             wysiadkaT = startT.Add(new TimeSpan(0, przejazd1, 0));
-                            h = wysiadkaT.Hours;
-                            m = wysiadkaT.Minutes;
+
+                            int minDodacZaOdleglosc = (int)(odleglosc * 10);
+                             
+                            var nextTime = wysiadkaT.Add(new TimeSpan(0, minDodacZaOdleglosc, 0));
+                            h = nextTime.Hours;
+                            m = nextTime.Minutes;
                             foreach (Odjazdy o in result2)
                             {
                                 String[] godziny = o.Godziny.Split(new String[] { ", " }, StringSplitOptions.RemoveEmptyEntries);
@@ -658,8 +662,9 @@ namespace Praca.Controllers
                             pr.tekst = "<li class='list-group-item'><b>Wejdź na: " + przystanki.Single(i => i.Numer == int.Parse(pr.przystanki[0])).Nazwa_rozklad + "</b></li>" +
                                        "<li class='list-group-item'><b>Odjazd: " + pr.czas_odjazdu + "</b></li>" +
                                        "<li class='list-group-item'><b>Wyjdź: " + wysiadkaT + " na " + przystanki.Single(i => i.Numer == dogodny1).Nazwa_rozklad + "</b></li>" +
+                                       ((odleglosc*10)>0 ? "<li class='list-group-item'><b>Przejdź: " + Math.Round(odleglosc,2) + " km ("+ (int)(Math.Round(odleglosc, 2)*10) + " min)</b></li>" : "") +
                                        "<li class='list-group-item'><b>Poczekaj " + pr.czekanie + " min</b></li>" +
-                                       "<li class='list-group-item'><b>Wsiądz: " + wsiadanieT + " na " + przystanki.Single(i => i.Numer == dogodny2).Nazwa_rozklad + "</b></li>" +
+                                       "<li class='list-group-item'><b>Wsiądź: " + wsiadanieT + " na " + przystanki.Single(i => i.Numer == dogodny2).Nazwa_rozklad + "</b></li>" +
                                        "<li class='list-group-item'><b>Wyjdź: " + koniecT + " na " + przystanki.Single(i => i.Numer == int.Parse(pr.przystanki[pr.przystanki.Length - 2])).Nazwa_rozklad + "</b></li>" +
                                        "<li class='list-group-item'><b>Na Miejscu: " + pr.czas_przyjazdu + "</b></li>" +
                                        "<li class='list-group-item'><b>Czas podróży: " + pr.czas_przejazdu + " min</b></li>";

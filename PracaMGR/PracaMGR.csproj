@@ -252,10 +252,6 @@
     <Compile Include="ViewModels\LiniaViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\JakTrafic.mdf" />
-    <Content Include="App_Data\JakTrafic_log.ldf">
-      <DependentUpon>JakTrafic.mdf</DependentUpon>
-    </Content>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\bus\busmI.png" />
@@ -1042,7 +1038,9 @@
       <DependentUpon>201505311427460_nowa.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
