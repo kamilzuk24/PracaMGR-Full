@@ -5,7 +5,6 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="7b8c100a7bbd46f8bfca04e128c4340e" Name="Diagram1">
-        <EntityTypeShape EntityType="DB_9D5BE0_kamilzuk25Model.DniSwiateczne" Width="1.5" PointX="5.75" PointY="8.75" />
         <EntityTypeShape EntityType="DB_9D5BE0_kamilzuk25Model.Kategorie" Width="1.5" PointX="5.75" PointY="1.375" />
         <EntityTypeShape EntityType="DB_9D5BE0_kamilzuk25Model.Linie" Width="1.5" PointX="0.75" PointY="9" />
         <EntityTypeShape EntityType="DB_9D5BE0_kamilzuk25Model.LinieRaport" Width="1.5" PointX="3" PointY="8.875" />
@@ -23,6 +22,7 @@
         <AssociationConnector Association="DB_9D5BE0_kamilzuk25Model.FK_Odpowiedzi_P" />
         <AssociationConnector Association="DB_9D5BE0_kamilzuk25Model.FK_PrzystankiRaport_ToTable" />
         <AssociationConnector Association="DB_9D5BE0_kamilzuk25Model.FK_TrasyRaport_ToTable" />
+        <EntityTypeShape EntityType="DB_9D5BE0_kamilzuk25Model.DniSwiateczne" Width="1.5" PointX="10.375" PointY="4.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

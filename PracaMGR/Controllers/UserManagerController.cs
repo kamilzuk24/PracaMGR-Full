@@ -3,6 +3,7 @@ using Microsoft.AspNet.Identity.EntityFramework;
 using PracaMGR.Models;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -12,11 +13,64 @@ namespace PracaMGR.Controllers
     [Authorize(Roles = "Admin")]
     public class UserManagerController : Controller
     {
+        private JakTraficEntities db = new JakTraficEntities();
+
         // GET: UserManager
         public ActionResult Index()
         {            
             return View();
         }
+
+        public ActionResult Days()
+        {
+            var days = db.DniSwiateczne.ToList();
+            return View(days);
+        }
+
+        public ActionResult AddDay()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult AddDay(FormCollection collection)
+        {
+            DniSwiateczne a = new DniSwiateczne();
+            a.data = DateTime.ParseExact(collection["data"].ToString(),"dd-MM-yyyy", CultureInfo.InvariantCulture);
+            a.opis = collection["opis"].ToString();
+
+            db.DniSwiateczne.Add(a);
+            db.SaveChanges();
+
+            return RedirectToAction("Days");
+        }
+
+        public ActionResult EditDay(int id)
+        {
+            var days = db.DniSwiateczne.FirstOrDefault(x => x.Id == id);           
+            return View(days);
+        }
+        [HttpPost]
+        public ActionResult EditDay(FormCollection collection)
+        {
+            int id = int.Parse(collection["Id"].ToString());
+            var a = db.DniSwiateczne.FirstOrDefault(x => x.Id == id);
+            a.data = DateTime.ParseExact(collection["data"].ToString(), "dd-MM-yyyy", CultureInfo.InvariantCulture);
+            a.opis = collection["opis"].ToString();
+            db.SaveChanges();
+
+            return RedirectToAction("Days");
+        }
+
+        public ActionResult DeleteDay(int id)
+        {
+            var days = db.DniSwiateczne.FirstOrDefault(x => x.Id == id);
+            db.DniSwiateczne.Remove(days);
+            db.SaveChanges();
+
+            return RedirectToAction("Days");
+        }
+
+
 
         public ActionResult SimpleUsers()
         {

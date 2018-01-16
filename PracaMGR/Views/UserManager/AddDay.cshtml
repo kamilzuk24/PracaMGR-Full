@@ -1,0 +1,46 @@
+﻿@model PracaMGR.DniSwiateczne
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+   
+    <div class="form-horizontal">
+        <h4>Dodaj Dzień świąteczny</h4>
+        <hr />
+        @Html.ValidationSummary(true)
+        <div class="form-group">
+            <label class="control-label col-md-2">Wybierz dzień</label>
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.data, new { @class = "form-control", id ="data2" })
+                @Html.ValidationMessageFor(model => model.data)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Opis</label>
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.opis, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.opis)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Dodaj" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+<div>
+    @Html.ActionLink("Wróć", "Days",null, new { @class = "btn btn-default"})
+</div>
+
+<script>
+            $("#data2").datetimepicker({
+                lang: 'pl',
+                timepicker: false,
+                format: 'd-m-Y',
+                formatDate: 'd-m-Y',
+                step: 10
+            });
+</script>

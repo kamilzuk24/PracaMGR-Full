@@ -8,35 +8,17 @@
                     </li>
                     <li class="list-group-item">                     
                         <div class="btn-group" data-toggle="buttons">
-                            <label class="btn btn-primary active">
-                                <input type="radio" id="radio1" name="radio" value="1" autocomplete="off" onclick="SetRadio(this.value)" checked>Domyślnie
+                            <label class="btn btn-primary active" onclick="SetRadio('1')">
+                                <input type="radio" id="radio1" name="radio" value="1" autocomplete="off" checked>Domyślnie
                             </label>
-                            <label class="btn btn-primary">
-                                <input type="radio" id="radio2" name="radio" value="2" autocomplete="off" onclick="SetRadio(this.value)">Wg ocen
+                            <label class="btn btn-primary" onclick="SetRadio('2')">
+                                <input type="radio" id="radio2" name="radio" value="2" autocomplete="off" >Wg ocen
                             </label>
-                            <label class="btn btn-primary">
-                                <input type="radio" id="radio3" name="radio" value="3" autocomplete="off" onclick="SetRadio(this.value)">Wg popularności
+                            <label class="btn btn-primary" onclick="SetRadio('3')">
+                                <input type="radio" id="radio3" name="radio" value="3" autocomplete="off">Wg popularności
                             </label>
                         </div>
                     </li>
-                    @*<li class="list-group-item">
-                        <label style="margin-bottom: 0;">
-                            <input type="radio" name="group1" value="1" onclick="SetRadio(this.value)" checked="checked">
-                            Domyślne
-                        </label>
-                    </li>
-                    <li class="list-group-item">
-                        <label style="margin-bottom: 0;">
-                            <input type="radio" name="group1" value="2" onclick="SetRadio(this.value)">
-                            Wg oceny linii
-                        </label>
-                    </li>
-                    <li class="list-group-item">
-                        <label style="margin-bottom: 0;">
-                            <input type="radio" name="group1" value="3" onclick="SetRadio(this.value)">
-                            Wg popularności linii
-                        </label>
-                    </li>*@
                     <li class="list-group-item">
                         <div class="input-group">
                             <span class="input-group-addon" id="basic-addon1">Wybierz Datę:</span>

@@ -2,8 +2,8 @@
     ViewBag.Title = "Zarządzanie użytkownikami";
 }
 
-<h2>Zarządzanie użytkownikami</h2>
-<h3>Wybierz typ użytkowników</h3>
+<h2>Funkcej Administracyjne</h2>
+<h3>Wybierz opcję:</h3>
 <br />
 <table class="table">
     <tr>
@@ -19,6 +19,11 @@
     <tr>
         <td>
             @Html.ActionLink("Dodaj konto Administracyjne", "AddAdminAccount", null, new { @class = "btn btn-default" })
+        </td>
+    </tr>
+    <tr>
+        <td>
+            @Html.ActionLink("Dni Świąteczne", "Days", null, new { @class = "btn btn-default" })
         </td>
     </tr>
 </table>

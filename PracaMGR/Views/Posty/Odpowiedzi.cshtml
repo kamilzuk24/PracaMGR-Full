@@ -37,7 +37,7 @@
 
                 <div id="tre">@item.Tresc</div>
                 @Html.ActionLink("Edytuj", "EditAnswer", new { id = item.Id }, new { @class = "btn btn-default", style = "position: absolute;top:10px;right:75px;" })
-                @Html.ActionLink("Usuń", "DeleteAnswer", new { id = item.Id }, new { @class = "btn btn-default", onclick = "return confirm('Napewno chcesz usunąć odpowiedz?')", style = "position: absolute;top:10px;right:10px;" })
+                @Html.ActionLink("Usuń", "DeleteAnswer", new { id = item.Id }, new { @class = "btn btn-default", onclick = "return confirm('Na pewno chcesz usunąć odpowiedz?')", style = "position: absolute;top:10px;right:10px;" })
             </div>
         }
 

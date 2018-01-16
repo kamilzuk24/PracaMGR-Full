@@ -20,5 +20,7 @@ namespace PracaMGR.Models
         public System.Data.Entity.DbSet<PracaMGR.Posty> Posties { get; set; }
 
         public System.Data.Entity.DbSet<PracaMGR.Odpowiedzi> Odpowiedzis { get; set; }
+
+        public System.Data.Entity.DbSet<PracaMGR.DniSwiateczne> DniSwiatecznes { get; set; }
     }
 }

@@ -9,7 +9,7 @@
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="data" Type="datetime" Nullable="false" />
           <Property Name="opis" Type="varchar" MaxLength="500" Nullable="false" />
         </EntityType>
@@ -235,7 +235,6 @@
     <edmx:ConceptualModels>
       <Schema Namespace="DB_9D5BE0_kamilzuk25Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityContainer Name="JakTraficEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="DniSwiateczne" EntityType="DB_9D5BE0_kamilzuk25Model.DniSwiateczne" />
           <EntitySet Name="Kategorie" EntityType="DB_9D5BE0_kamilzuk25Model.Kategorie" />
           <EntitySet Name="Linie" EntityType="DB_9D5BE0_kamilzuk25Model.Linie" />
           <EntitySet Name="LinieRaport" EntityType="DB_9D5BE0_kamilzuk25Model.LinieRaport" />
@@ -271,15 +270,8 @@
             <End Role="Trasy" EntitySet="Trasy" />
             <End Role="TrasyRaport" EntitySet="TrasyRaport" />
           </AssociationSet>
+          <EntitySet Name="DniSwiateczne" EntityType="DB_9D5BE0_kamilzuk25Model.DniSwiateczne" />
         </EntityContainer>
-        <EntityType Name="DniSwiateczne">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" />
-          <Property Name="data" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="opis" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="false" />
-        </EntityType>
         <EntityType Name="Kategorie">
           <Key>
             <PropertyRef Name="Id" />
@@ -471,21 +463,20 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <EntityType Name="DniSwiateczne">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="data" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="opis" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="false" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="DB_9D5BE0_kamilzuk25ModelStoreContainer" CdmEntityContainer="JakTraficEntities">
-          <EntitySetMapping Name="DniSwiateczne">
-            <EntityTypeMapping TypeName="DB_9D5BE0_kamilzuk25Model.DniSwiateczne">
-              <MappingFragment StoreEntitySet="DniSwiateczne">
-                <ScalarProperty Name="opis" ColumnName="opis" />
-                <ScalarProperty Name="data" ColumnName="data" />
-                <ScalarProperty Name="Id" ColumnName="Id" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="Kategorie">
             <EntityTypeMapping TypeName="DB_9D5BE0_kamilzuk25Model.Kategorie">
               <MappingFragment StoreEntitySet="Kategorie">
@@ -600,6 +591,15 @@
               <MappingFragment StoreEntitySet="TrasyRaport">
                 <ScalarProperty Name="Wystapienia" ColumnName="Wystapienia" />
                 <ScalarProperty Name="Id_Trasy" ColumnName="Id_Trasy" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DniSwiateczne">
+            <EntityTypeMapping TypeName="DB_9D5BE0_kamilzuk25Model.DniSwiateczne">
+              <MappingFragment StoreEntitySet="DniSwiateczne">
+                <ScalarProperty Name="opis" ColumnName="opis" />
+                <ScalarProperty Name="data" ColumnName="data" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>

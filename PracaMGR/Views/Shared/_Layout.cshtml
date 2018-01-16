@@ -33,7 +33,7 @@
                     @if (User.IsInRole("Admin"))
                     {
                     <li>@Html.ActionLink("Raporty", "Index", "Raporty")</li>
-                    <li>@Html.ActionLink("Użytkownicy", "Index", "UserManager")</li>
+                    <li>@Html.ActionLink("Administracja", "Index", "UserManager")</li>
                     }
                 </ul>
                 @Html.Partial("_LoginPartial")

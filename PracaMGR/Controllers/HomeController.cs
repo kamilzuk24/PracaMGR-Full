@@ -44,8 +44,8 @@ namespace Praca.Controllers
             {
                 foreach (var b in stop1)
                 {
-                    list.AddRange(Pobierz(a.p.Numer, b.p.Numer, data_start));
-                    list.AddRange(PobierzT(a.p.Numer, b.p.Numer, data_start));
+                    list.AddRange(Pobierz(a.p.Numer, b.p.Numer, data_start, a.odl, b.odl));
+                    list.AddRange(PobierzT(a.p.Numer, b.p.Numer, data_start, a.odl, b.odl));
                 }
             }
 
@@ -166,7 +166,21 @@ namespace Praca.Controllers
                 }           
             }
 
-            list = (from a in list orderby a.czas_przyjazdu, a.do_odjazdu, a.czas_przejazdu select a).ToList();
+            //1:Domyślnie
+            //2:Wg ocen
+            //3:Wg popularności
+            if (model.rodzaj == 1)
+            {
+                list = (from a in list orderby a.czas_przyjazdu, a.do_odjazdu, a.czas_przejazdu select a).ToList();
+            }
+            else if (model.rodzaj == 2)
+            {
+                list = list.Take(1).ToList();
+            }
+            else
+            {
+                list = list.Take(2).ToList();
+            }
 
             return Json(JsonConvert.SerializeObject(list));
         }
@@ -201,7 +215,7 @@ namespace Praca.Controllers
             return (Math.PI / 180.0) * angle;
         }
 
-        public List<Propozycja> Pobierz(int start, int stop, DateTime data_start)
+        public List<Propozycja> Pobierz(int start, int stop, DateTime data_start, double odlegloscS, double odlegloscK)
         {
             var propozycje = new List<Propozycja>();
             var przystanki = new List<Przystanki>(from a in data.Przystanki select a);
@@ -230,6 +244,9 @@ namespace Praca.Controllers
                     }
                 }
             }
+
+            int midDodacStart = (int)(odlegloscS * 10);
+            data_start = data_start.Add(new TimeSpan(0, midDodacStart, 0));
 
             int h = data_start.Hour;
             int m = data_start.Minute;
@@ -391,6 +408,10 @@ namespace Praca.Controllers
                 pr.linia1 = a.Linia;
                 pr.czas_odjazdu = new TimeSpan(od_h, od_m, 0);
                 pr.czas_przyjazdu = new TimeSpan((int)(Math.Floor(na_miejscu / 60.0)), (int)(Math.Floor(na_miejscu % 60.0)), 0);
+
+                int midDodacKoniec = (int)(odlegloscK * 10);
+                pr.czas_przyjazdu = pr.czas_przyjazdu.Add(new TimeSpan(0, midDodacKoniec, 0));
+
                 pr.czas_przejazdu = (stop_min - start_min);
                 pr.do_odjazdu = do_odjazdu;
                 pr.przystanki = przystanki_odwiedzane.Split(new String[] { "," }, StringSplitOptions.None);
@@ -421,7 +442,7 @@ namespace Praca.Controllers
             return propozycje;
         }
 
-        public List<Propozycja> PobierzT(int start, int stop, DateTime data_start)
+        public List<Propozycja> PobierzT(int start, int stop, DateTime data_start, double odlegloscS, double odlegloscK)
         {
             var propozycje = new List<Propozycja>();
             var przystanki = new List<Przystanki>(from a in data.Przystanki select a);
@@ -485,11 +506,14 @@ namespace Praca.Controllers
                         String[] przystanekS = b.Przystanki.Split(new[] { "," }, StringSplitOptions.RemoveEmptyEntries);
 
                         int poczatek = Array.IndexOf(przystanekP, start.ToString());
-                        int koniec = Array.IndexOf(przystanekS, stop.ToString());
+                        int koniec = Array.IndexOf(przystanekS, stop.ToString());                     
+                        
+                        int midDodacStart = (int)(odlegloscS * 10);
+                        data_start = data_start.Add(new TimeSpan(0, midDodacStart, 0));
 
                         int h = data_start.Hour;
                         int m = data_start.Minute;
-
+                       
                         if (poczatek >= 0 && koniec >= 0)//Określenie dogodnej przesiadki
                         {
                             for (int i = poczatek + 1; i < przystanekP.Length; i++)
@@ -588,7 +612,7 @@ namespace Praca.Controllers
                                         int h1 = int.Parse(godziny[i].Substring(0, 2));
                                         int m1 = int.Parse(godziny[i].Substring(3, 2));
 
-                                        if ((h * 60 + m) < (h1 * 60 + m1))
+                                        if ((h * 60 + m) <= (h1 * 60 + m1))
                                         {
                                             startT = new TimeSpan(h1, m1, 0);
                                             i = godziny.Length;
@@ -616,6 +640,7 @@ namespace Praca.Controllers
                                 if (h * 60 + m > h1t * 60 + m1t)
                                 {
                                     wsiadanieT = new TimeSpan(int.Parse(godziny[0].Substring(0, 2)), int.Parse(godziny[0].Substring(3, 2)), 0);
+                                    czekanieT = (int)(wsiadanieT.TotalMinutes + (1440 - wysiadkaT.TotalMinutes));
                                 }
                                 else
                                 {
@@ -627,12 +652,13 @@ namespace Praca.Controllers
                                         if ((h * 60 + m) < (h1 * 60 + m1))
                                         {
                                             wsiadanieT = new TimeSpan(h1, m1, 0);
+                                            czekanieT = (int)(wsiadanieT.TotalMinutes - wysiadkaT.TotalMinutes);
                                             i = godziny.Length;
                                         }
                                     }
                                 }
                             }
-                            czekanieT = (int)(wsiadanieT.TotalMinutes - wysiadkaT.TotalMinutes);
+                            
 
                             koniecT = wsiadanieT.Add(new TimeSpan(0, przejazd2, 0));
 
@@ -642,7 +668,9 @@ namespace Praca.Controllers
                             pr.czas_odjazdu = startT;
                             pr.wysiadka = wysiadkaT;
                             pr.przesiadka = wsiadanieT;
-                            pr.czas_przyjazdu = koniecT;
+
+                            int midDodacKoniec = (int)(odlegloscK * 10);
+                            pr.czas_przyjazdu = koniecT.Add(new TimeSpan(0, midDodacKoniec, 0));
                             pr.czekanie = czekanieT;
                             pr.przystanki = przystanki_odwiedzane.Split(new String[] { "," }, StringSplitOptions.None);
 
@@ -656,7 +684,7 @@ namespace Praca.Controllers
                             pr.czas_przejazdu = (int)(koniecT.TotalMinutes - startT.TotalMinutes);
                             if (pr.czas_przejazdu <= 0)
                             {
-                                pr.czas_przejazdu = (int)((3600 - startT.TotalMinutes) + koniecT.TotalMinutes);
+                                pr.czas_przejazdu = (int)((1440 - startT.TotalMinutes) + koniecT.TotalMinutes);
                             }
 
                             pr.tekst = "<li class='list-group-item'><b>Wejdź na: " + przystanki.Single(i => i.Numer == int.Parse(pr.przystanki[0])).Nazwa_rozklad + "</b></li>" +

@@ -1018,6 +1018,9 @@
     <Content Include="Views\Posty\Error.cshtml" />
     <Content Include="Views\Posty\Edit.cshtml" />
     <Content Include="Views\Posty\EditAnswer.cshtml" />
+    <Content Include="Views\UserManager\Days.cshtml" />
+    <Content Include="Views\UserManager\AddDay.cshtml" />
+    <Content Include="Views\UserManager\EditDay.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

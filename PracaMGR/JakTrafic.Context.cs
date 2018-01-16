@@ -25,7 +25,6 @@ namespace PracaMGR
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<DniSwiateczne> DniSwiateczne { get; set; }
         public virtual DbSet<Kategorie> Kategorie { get; set; }
         public virtual DbSet<Linie> Linie { get; set; }
         public virtual DbSet<LinieRaport> LinieRaport { get; set; }
@@ -37,5 +36,6 @@ namespace PracaMGR
         public virtual DbSet<PrzystankiRaport> PrzystankiRaport { get; set; }
         public virtual DbSet<Trasy> Trasy { get; set; }
         public virtual DbSet<TrasyRaport> TrasyRaport { get; set; }
+        public virtual DbSet<DniSwiateczne> DniSwiateczne { get; set; }
     }
 }
