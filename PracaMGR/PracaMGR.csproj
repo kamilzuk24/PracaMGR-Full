@@ -252,10 +252,6 @@
     <Compile Include="ViewModels\LiniaViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\aspnet-PracaMGR-20150531125854.mdf" />
-    <Content Include="App_Data\aspnet-PracaMGR-20150531125854_log.ldf">
-      <DependentUpon>aspnet-PracaMGR-20150531125854.mdf</DependentUpon>
-    </Content>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\bus\busmI.png" />
@@ -289,6 +285,7 @@
     <Content Include="Content\jquery-ui.theme.css" />
     <Content Include="Content\jquery-ui.theme.min.css" />
     <Content Include="Content\jquery.datetimepicker.css" />
+    <Content Include="JakTrafic.edmx.sql" />
     <Content Include="Scripts\jquery.datetimepicker.js" />
     <Content Include="Content\logo.png" />
     <Content Include="Content\naglowek.jpg" />
@@ -1045,7 +1042,9 @@
       <DependentUpon>201505311427460_nowa.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
